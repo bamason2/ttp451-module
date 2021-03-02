@@ -45,14 +45,14 @@ The following data has been provided by JLR to help set the context for the exer
 
 ### Overall BSFC and BSNOx for a production engine
 
-![image](/coursework/figs/contour_plot_bsfc.png)
+![image](figs/contour_plot_bsfc.png)
 
-![image](/coursework/figs/contour_plot_nox.png)
+![image](figs/contour_plot_nox.png)
 
 ### An EGR sweep at a single speed load point
 
-![image](/coursework/figs/PM_NOx_tradeoff.png)
+![image](figs/PM_NOx_tradeoff.png)
 
 ### Data illustrating SCR performance
 
-![image](/coursework/figs/catalyst.png)
+![image](figs/catalyst.png)
