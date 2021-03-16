@@ -3,7 +3,7 @@ layout: page
 mathjax: true
 ---
 
-# Lesson 3: Modelling Principles
+# Lab 3: Modelling Principles
 
 ## Topics
 

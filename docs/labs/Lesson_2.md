@@ -3,7 +3,7 @@ layout: page
 mathjax: true
 ---
 
-# Lesson 2: Design of Experiments
+# Lab 2: Design of Experiments
 
 ## Topics
 

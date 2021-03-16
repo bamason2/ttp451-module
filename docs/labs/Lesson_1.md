@@ -3,7 +3,7 @@ layout: page
 mathjax: true
 ---
 
-# Lesson 1: Optimisation
+# Lab 1: Optimisation
 
 ## Topics
 

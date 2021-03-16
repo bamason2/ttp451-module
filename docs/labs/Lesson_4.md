@@ -3,7 +3,7 @@ layout: page
 mathjax: true
 ---
 
-# Lesson 4: Modelling a V8 Engine
+# Lab 4: Modelling a V8 Engine
 
 ## Topics
 

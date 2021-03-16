@@ -3,7 +3,7 @@ layout: page
 mathjax: true
 ---
 
-# Lesson 5: Feature Calibration V8 Engine Example
+# Lab 5: Feature Calibration V8 Engine Example
 
 ## Topics
 
