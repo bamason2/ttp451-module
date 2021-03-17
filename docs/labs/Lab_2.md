@@ -55,9 +55,9 @@ Design of experiments process flowchart;
 
 ### Introduction to DOE
 
-The MBC toolbox design browser can be used to design experiments (DOE) for collecting data (i.e engine performance responses like emission, torque output and fuel consumption). The design browser is a powerful tool which can be used to create complex experimental designs. Experimental design is important because it creates test sequences comprising of input variable values in the most efficient manner.
+The MBC toolbox design browser can be used to design experiments (DOE) for collecting data (i.e engine performance responses like emission, torque output and fuel consumption). The design browser is a powerful tool which can be used to create complex experimental designs. Experimental design is important because it creates test sequences comprising input variable values in the most efficient manner.
 
-The progress flow chart for designing an experiment and testing is shown in the figure below. Three different designs  will be used for comparison purposes. The designs will be compared by testing each one in a “DOE testing kit” script. The outcome can be observed and changes/observations recorded.
+The flow chart for designing an experiment and testing is shown in the figure below. Three different designs will be used for comparison purposes. The designs will be compared by testing each one in a “DOE testing kit” script. The outcome can be observed and changes/observations recorded.
 
 ![image](figs/lab2/fig_2_MBC_DOE_process.png)
 
@@ -67,11 +67,11 @@ The figure below shows the process of generating DOE using model browser:
 
 ### Introduction to Cam Timing Design Exercise
 
-An engine is fitted with Variable Cam Timing (VCT) for both exhaust and intake cams. Each of the cams changes with engine speed and load. For a particular engine speed and load, the changes of cam timing will affect the engine fuel consumption. The figure below shows a valve lift diagram for intake and exhaust. Advancing or retarding a cam will affect intake reversion, scavenging or exhaust backpressure. These changes are influenced by the amount of overlap and the degree where the intake/exhaust valve closes which in turn affects the fuel consumption.
+An engine is fitted with Variable Cam Timing (VCT) for both exhaust and intake cams. Each of the cams changes with engine speed and load. For a particular engine speed and load the changes of cam timing will affect the engine fuel consumption. The figure below shows a valve lift diagram for intake and exhaust. Advancing or retarding a cam will affect intake, scavenging or exhaust backpressure. These changes are influenced by the amount of overlap and intake/exhaust valve opening/closing which in turn affects the fuel consumption and other factors.
 
 ![image](figs/lab2/fig_4_Intake_exhaust_vallve_lift_diagram.png)
 
-Recall that a calibration task was given to map the engine fuel consumption across a range of intake and exhaust cam settings. An experimental design is required to do this in the most efficient method, which is, running with the least experimental points and covering as much area in the operating range while be able to accurately map the fuel consumption. It was decided that before going into actual testing, the DOE design needs to be determined first using a target function. We will generate several DOE designs for this case study.
+Recall that the calibration task is to map the engine fuel consumption across a range of intake and exhaust cam settings. An experimental design is required to do this in the most efficient manner by running the fewest experiments and obtaining the most information to accurately map the fuel consumption. We will generate several DOE designs for this case study.
 
 The relationship between fuel consumption and intake/exhaust cam timing for a particular engine can be expressed as:
 
@@ -83,7 +83,7 @@ Input variable limits;
 
 $$0<=x_{EVC}<=60, 0<=y_{IVC}<=60$$
 
-To determine how well the DOE able to give best response surface predictions, we will compare it against the same target function but mapped in high resolution. 
+To determine how well the DOE able to give best response surface predictions, we will compare it against the same target function but mapped at high resolution.
 
 ![image](figs/lab2/fig_5_graphical_representation_of_map.png)
 
@@ -98,7 +98,7 @@ There are four distinct tasks in this exercise, which are listed below:
 - Constrained Designs
 - Optional Exercise
 
-Before you begin dowload the files required for this exercise from LEARN or [here](https://lunet-my.sharepoint.com/:u:/g/personal/ttbm2_lunet_lboro_ac_uk/EdY_zo2jZgZFnWikxFrXx9wBpgXgi9jIybiiGc8buIoOdw?e=UjmUY9)
+Before you begin download the files required for this exercise from LEARN or [here](https://lunet-my.sharepoint.com/:u:/g/personal/ttbm2_lunet_lboro_ac_uk/EdY_zo2jZgZFnWikxFrXx9wBpgXgi9jIybiiGc8buIoOdw?e=UjmUY9)
 
 ---
 
@@ -106,13 +106,9 @@ Before you begin dowload the files required for this exercise from LEARN or [her
 
 - Start MBC Toolbox Interface
 
-Double-click the MATLAB&copy; icon to start MATLAB&copy;. Once initialisation is complete, enter ``<mbcmodel>`` at the command prompt to start the MBC Toolbox. The Model Browser window appears.
-
-![image](figs/lab2/fig_6_model_browser_gui.png)
+Double-click the MATLAB&copy; icon to start MATLAB&copy;. Once initialisation is complete enter ``<mbcmodel>`` at the command prompt to start MBC Toolbox. The Model Browser window appears.
 
 Choose [File >> New Test Plan] in the menu. A test plan frame appears. Select [One-Stage Model]. Click [OK].
-
-![image](figs/lab2/fig_7_new_test_plan.png)
 
 - Specify the input factor names and ranges
 
@@ -124,23 +120,23 @@ Double-click the Local Model Inputs block in the diagram. Increase the number of
 
 - Creating classical design (full factorial option)
 
-Right-click the local model in the diagram and choose set up model. Ensure the model class is set to linear model and then click ok (The type of model doesn’t matter at this stage). Next, right-click the local model in the diagram and choose design experiment.
+Right-click the local model in the diagram and choose set up model. Ensure the model class is set to linear model and then click [OK] (The type of model doesn’t matter at this stage). Next, right-click the local model in the diagram and choose [Design Experiment].
 
 ![image](figs/lab2/fig_10_design_editor_setup.png)
 
 ![image](figs/lab2/fig_11_design_editor_window.png)
 
-Choose [File >> New Design] or click New Design button in the toolbar. A new node called Linear Model Design appears. Click the new node, a 2D projection appears on the right. Rename the new node Linear Model Design to Classical_F by clicking the name and press F2 or right click mouse then select Rename Design from the menu.
+Choose [File >> New Design] or click the [New Design] button in the toolbar. A new node called Linear Model Design appears. Click the new node, a 2D projection appears on the right. Rename the new node Linear Model Design to Classical_F by clicking the name and press F2 or right mouse button then select Rename Design from the menu.
 
 ![image](figs/lab2/fig_13_full_factorial_design.png)
 
-Choose a classical design by clicking the [Classical Design] button in the toolbar, or choose [Design >> Classical >> Design Browser] then select [Full Factorial] from the [Design type] drop-down menu.
+Choose a classical design by clicking the [Classical Design] button in the toolbar or choose [Design >> Classical >> Design Browser] then select [Full Factorial] from the [Design type] drop-down menu.
 
 ![image](figs/lab2/fig_14_design_editor.png)
 
 Increase the number of levels for each factor from 2 to 6, keep the number of center points as 0. The total size of design is 36, you may view your design in different projections using the tabs (1-D, 2-D) under the display.
 
-1-D: you may select a different factor to view each level of this factor. The frequency indicates the number of each level that appears among the all design test points (36). From the view of this design, we may see in full factorial design, the test points are evenly distributed among the factor space.
+1-D: you may select a different factor to view each level of this factor. The frequency indicates the number of each level that appears among all design test points (36). From the view of this design we see a full factorial design the test points are evenly distributed among the factor space.
 
 ![image](figs/lab2/fig_15_design_projections_1.png)
 
@@ -152,7 +148,7 @@ Click [OK] to close the Classical Design Browser and return to the Design Editor
 
 ![image](figs/lab2/fig_16_design_table_2.png)
 
-You may copy the data to other programs such as Excel by selecting [Edit >> Copy Design Data] from the menu or right click the mouse on any part of the Design Table and select Copy. For the case study, we need to export the design into a *.csv file. Save the design as “Classical_F.csv”.
+You may copy the data to other programs such as Excel by selecting [Edit >> Copy Design Data] from the menu or right click the mouse on any part of the Design Table and select [Copy]. For the case study, we need to export the design into a *.csv file. Save the design as “Classical_F.csv”.
 
 ![image](figs/lab2/fig_17_doe_export_1.png)
 
@@ -160,7 +156,8 @@ You may copy the data to other programs such as Excel by selecting [Edit >> Copy
 
 - Creating Space Filling Design (Latin Hypercube option)
 
-Create another design called Spacefilling_LH by clicking [File >> New design]. Select this design node, then open the Space Filling Design Browser by clicking [Design >> Space Filling >> Design Browser] from the menu or click the [Space Filling Design] button in the toolbar.
+Create another design called Spacefilling_LH by clicking [File >> New design]. Select this design node then open the Space Filling Design Browser by clicking [Design >> Space Filling >> Design Browser] from the menu or click the [Space Filling Design] button in the toolbar.
+
 A dialog box asking about DOE points modification may appear, select [Replace the current points with new design].
 
 ![image](figs/lab2/fig_18_space_filling_design_browser_1.png)
@@ -169,23 +166,23 @@ A dialog box asking about DOE points modification may appear, select [Replace th
 
 ![image](figs/lab2/fig_18_space_filling_design_browser_3.png)
 
-In the Space Filling Design Browser window, select Latin Hypercube Sampling design type, and try different selection criteria to see its effect on the design points from the projection view. Set number of points to 36. Click [OK] when done.
+In the Space Filling Design Browser window, select [Latin Hypercube Sampling] design type and try different selection criteria to see its effect on the design points from the projection view. Set the number of points to 36. Click [OK] when done.
 
 ![image](figs/lab2/fig_19_lh_hypercube_sampling_design.png)
 
-Now, export the design into a *.csv file. Save the design as “Spacefilling_LH.csv”.
+Now export the design to a *.csv file. Save the design as “Spacefilling_LH.csv”.
 
 ![image](figs/lab2/fig_20_export_doe_design.png)
 
 - Creating Optimal Design
 
-Create another new design called Optim_V. Select this new child node, then open the Optimal Design Browser by choosing Design>>Optimal from the menu or click the Optimal Design button in the toolbar.
+Create another new design called Optim_V. Select this new child node then open the Optimal Design Browser by choosing [Design >> Optimal] from the menu or click the [Optimal Design] button in the toolbar.
 
 ![image](figs/lab2/fig_21_optimal_design_window_1.png)
 
 ![image](figs/lab2/fig_21_optimal_design_window_2.png)
 
-In the Optimal Design setting window, set the optimal design parameters to the ones shown in the figures below. All are kept default except the Optimality criteria “V-Optimal” and total number of points “36”. Click the [OK] button to start optimizing the design. The optimization process would stop when the number of iterations without improvement reaches the pre-set value (here is 36) or number of iterations performed reach the pre-set value in Algorithm tab.
+In the Optimal Design setting window, set the optimal design parameters to the ones shown in the figures below. All are kept default except the Optimality criteria “V-Optimal” and total number of points “36”. Click the [OK] button to start optimizing the design. The optimization process stops when the number of iterations without improvement reaches the pre-set value (36) or number of iterations performed reach the pre-set value in Algorithm tab.
 
 ![image](figs/lab2/fig_22_optimal_design_window_1.png)
 
@@ -195,11 +192,11 @@ In the Optimal Design setting window, set the optimal design parameters to the o
 
 ![image](figs/lab2/fig_22_optimal_design_window_4.png)
 
-When the optimisation process ends, you may see the design table and projection view in the Design Editor window.
+When the optimisation process ends you may see the design table and projection view in the Design Editor window.
 
 ![image](figs/lab2/fig_23_projection_view_of_design.png)
 
-Now, export the design into a *.csv file. Save the design as “Optim_V.csv”.
+Now export the design into a *.csv file. Save the design as “Optim_V.csv”.
 
 ---
 
@@ -207,11 +204,11 @@ Now, export the design into a *.csv file. Save the design as “Optim_V.csv”.
 
 - Load DOE test kit
 
-Change the MATLAB&copy; current folder to the current folder. In that folder, run the DOE_testkit_V11_R7.p in MATLAB&copy;, Right click and run the script. 
+Change the MATLAB&copy; current folder to the current folder. In that folder run the DOE_testkit_V11_R7.p in MATLAB&copy;, Right click and run the script.
 
 ![image](figs/lab2/fig_24_tas_2015_folder.png)
 
-It is easier to run the script with undocked command window.
+It is easier to run the script with command window undocked.
 
 ![image](figs/lab2/fig_25_undock_command_window_1.png)
 
@@ -219,59 +216,55 @@ It is easier to run the script with undocked command window.
 
 - DOE testing kit overview
 
-This testing kit helps to visualize the effects of a 2D DOE design to a response model. The model estimation capabilities depend partially on the quality of the DOE. Less DOE points are going to cause the model to miss some important characteristics of the system.
+This testing kit helps to visualize the effects of a 2D DOE design to a response model. The model estimation capabilities depend partially on the quality of the DOE. Fewer test points are going to cause the model to miss some important characteristics of the system.
 
-The testing kit is a universal program which can accept any type of DOE and equations as target functions. It can create custom DOE within the program itself, as well as add or remove existing DOE design loaded from a csv file. Finally, the user will be able to save the design together with the predicted output. The testing kit is still under development but is able achieve this workshop’s requirements. The figure below shows the interface of the testing kit.
+The testing kit is a universal program which can accept any type of DOE and equations as target functions. It can create a custom DOE within the program itself, as well as add or remove existing DOE design loaded from a csv file. Finally, the user will be able to save the design together with the predicted output. The figure below shows the interface of the testing kit.
 
 ![image](figs/lab2/fig_26_overview_of_doe_testing_script.png)
 
 - Load DOE
 
-Select option “2” in the program and press enter to load DOE. Select “DOE_poor_design.csv” which is located in the current folder and press enter. The program status will indicate a DOE has been loaded. A figure will appear which contains the subplot for the DOE points distribution along with its histogram.
-
-![image](figs/lab2/fig_27_selection_option_1.png)
-
-![image](figs/lab2/fig_27_selection_option_2.png)
+Select [Option 2] and press enter to load the DOE. Select “DOE_poor_design.csv” which is located in the current folder and press enter. The program status will indicate a DOE has loaded. A figure will appear which contains the subplot for the DOE test point distribution along with its histogram.
 
 ![image](figs/lab2/fig_27_doe_scatter_subplot.png)
 
 - Define target system response
 
-Select option “5” to enter the BSFC response function from the problem statement. Enter the following function:
+Select [Option 5] to enter the BSFC response function from the problem statement. Enter the following function:
 
-![image](figs/lab2/fig_28_bsfc_response_function_1.png)
+```matlab
+(((x-32)/4)^2+((y-58)/3.8)^2)+2*y+112
+```
 
-![image](figs/lab2/fig_28_bsfc_response_function_2.png)
-
-The function will be plotted on the DOE design.  The stem plot of subplot 2 shows the position of the DOE on the target surface response. Observe the position of the DOE points, the DOE only covers the outer part of the target response. It misses the center region of the response which may lead to poor modeling results. The key of designing a good experiment is the distribution of DOEs at critical locations on the target response. Since we already knew how the characteristic of the surface response is going to be, we predicted that the center region of the surface is going to under fit. Normally, for unknown systems, randomly positioned DOE points are important to scatter points in the operating boundary.
+The function will be plotted on the DOE design.  The stem plot of subplot 2 shows the position of the DOE on the target surface response. Observe the position of the DOE points, the DOE only covers the outer part of the target response. It misses the center region of the response which may lead to poor modeling results. The key to designing a good experiment is the distribution of points at critical locations. Since we already the surface characteristics we predict that the center region of the surface is going to under fit. Normally, for unknown systems, randomly positioned DOE points are important to ensure sufficient coverage of the operating space.
 
 ![image](figs/lab2/fig_29_bsfc_response_surface_function.png)
 
 - Test the DOE points using the BSFC function
 
-Select option “9” to enter test the DOE design. The DOE design sequences are used as input variables to the target function. The input variable are IVC and EVC.
+Select [Option 9] to test the DOE design. The DOE design sequences are used as input variables to the target function. The input variable are IVC and EVC.
 
-It is expected that the model is going to fit poorly in the center region. Observed the boundary of the DOE design, the model managed to predict is pretty well. The plots shown below are the overlay of the expected response and response fit using the DOE design. The plot on the right is the contour plot of the differences between both surfaces. The differences are calculated by meshing both surface in high resolution and calculate the target BSFC output. The RMSE of both surfaces are relatively high, indicating high modeling error. 
+It is expected that the model is going to fit poorly in the center region. Observe the boundary of the DOE design the model manages to predict fairly well. The plots shown below are the overlay of the expected response and response fit using the DOE design. The plot on the right is the contour plot of the differences between both surfaces. The differences are calculated by meshing both surface in high resolution and calculate the target BSFC output. The RMSE of both surfaces are relatively high indicating high modeling error.
 
 ![image](figs/lab2/fig_30_bsfc_response_result.png)
 
 - Improving the modelling results
   
-The error can be reduced by introducing more DOE points across the operating region. This extra points provides extra information of the curvature of the response model. By adding support points in the middle of the current DOE design, it will improve the model prediction.
+The error can be reduced by introducing more DOE points across the operating space. This extra points provides extra information of the curvature of the response model. By adding support points in the middle of the current DOE design the model prediction will be improved.
 
 ![image](figs/lab2/fig_31_support_doe_points.png)
 
-To add new DOE points go to option “7”. And enter the X and Y coordinates of the new support DOE points. Enter the following coordinates, the model will be automatically updated as new points are entered. Once done, type “exit” to go back to the main menu.
+To add new DOE points go to [Option 7] and enter the X and Y coordinates of the new points. Enter the following coordinates, the model will be automatically updated as new points are entered. Once done, type “exit” to go back to the main menu.
 
 ![image](figs/lab2/fig_32_x_and_y_coordinates.png)
 
-Now, the model has improved with lesser modelling error. Take note of the center region of the response surface. The response model built using the DOE with support points has significantly improved with very low RMSE.
+Now, the model has improved with lower modelling error. Take note of the center region of the response surface. The response model built using the DOE with support points has improved with very low RMSE.
 
 ![image](figs/lab2/fig_33_improved_modelling_results.png)
 
 - Save the design and results
 
-The current DOE design along with the results and screenshot of the figure can be saved by entering option “10”. The files will be saved in the current MATLAB&copy; folder.
+The current DOE design along with the results and screenshot of the figure can be saved by entering [Option 10]. The files will be saved in the current MATLAB&copy; folder.
 
 - Repeat the step 3 to 7 for the other saved DOE designs
 
