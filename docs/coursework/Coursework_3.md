@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Coursework 3
-
+parent: Coursework Briefs
 ---
 
 ## Coursework Assignment 3: Investigating Engine Emissions

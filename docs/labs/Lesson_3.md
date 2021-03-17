@@ -1,17 +1,30 @@
 ---
 layout: page
 mathjax: true
+parent: Computer Labs
 ---
 
 # Lab 3: Modelling Principles
+{: .no_toc }
+
+<details close markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 ## Topics
+{: .no_toc }
 
 - Aims and Objectives
 - Overview of Exercise
 - Exercise 3: Modelling Principles
 
 ## Learning Outcomes
+{: .no_toc }
 
 By the end of this lesson, you will be able to:
 

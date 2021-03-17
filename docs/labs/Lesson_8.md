@@ -1,11 +1,23 @@
 ---
 layout: page
 mathjax: true
+parent: Computer Labs
 ---
 
 # Lab 8: MBC Based PI Controller Calibration
+{: .no_toc }
+
+<details close markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 ## Topics
+{: .no_toc }
 
 - Aims and Objectives
 - Overview of Exercise
@@ -13,6 +25,7 @@ mathjax: true
 - Exercise 8: MBC Based PI Controller Calibration
 
 ## Learning Outcomes
+{: .no_toc }
 
 By the end of this lesson, you will be able to:
 
@@ -241,7 +254,7 @@ Check the overrides setting as shown below. Make sure all overrides are set to �
 
 ---
 
-### Exercise 8-7: Controller calibration optimisation
+### Task 8-7: Controller calibration optimisation
 
 - Start CAGE, by typing ``<cage>`` in the Matlab command window. In the toolbar, go to File >> Import from project. The models from the model browser will load automatically. Select all models (“shift + left click” each item) and then click “Import Selected Items…”. When prompted to confirm importing the models, click “Ok”. Then, click “Close”.
 ![image](figs/lab8/fig_46_.png)
@@ -279,7 +292,7 @@ Check the overrides setting as shown below. Make sure all overrides are set to �
 
 ---
 
-### Exercise 8-8: Gain map update
+### Task 8-8: Gain map update
 
 - Open P and I gain tables in Simulink. You can find tables in the following subsystem.
 ![image](figs/lab8/fig_60_.png)

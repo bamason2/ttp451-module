@@ -1,11 +1,23 @@
 ---
 layout: page
 mathjax: true
+parent: Computer Labs
 ---
 
 # Lab 2: Design of Experiments
+{: .no_toc }
+
+<details close markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 ## Topics
+{: .no_toc }
 
 - Aims and Objectives
 - Background Information
@@ -13,6 +25,7 @@ mathjax: true
 - Exercise 2-2: JLR Example (Eight Inputs)
 
 ## Learning Outcomes
+{: .no_toc }
 
 By the end of this lesson, you will be able to:
 
@@ -24,7 +37,7 @@ By the end of this lesson, you will be able to:
 
 The aim of this exercise is to develop an understanding of the experimental design aspects of the calibration task, this will include the creation of several DoE proposals. Introductions will be given to constraints and evaluating model fits for particular designs.
 
-The calibration task focuses on mapping the engine fuel consumption across a range of intake and exhaust cam settings. In order to do this effectively an experimental design is required to minimise the amount of testing required whilst covering as much of the operating space while being able to accurately map the fuel consumption. One possible approach before physical testing is to determine the DOE using a target function. We will generate several DOE proposals for this case study. The relationship between fuel consumption and intake/exhaust cam timing for a particular engine can be expressed as:
+The calibration task focuses on mapping the engine fuel consumption across a range of intake and exhaust cam settings. In order to do this effectively an experimental design is required to minimise the amount of testing required whilst covering as much of the operating space to accurately map fuel consumption. One possible approach before physical testing is to determine the DOE using a target function. We will generate several DOE proposals for this case study. The relationship between fuel consumption and intake/exhaust cam timing for a particular engine can be expressed as:
 
 $$ f_{bsfc}(x_{EVC}, y_{IVC}) = (((x_{EVC}-32)/4)^2 + ((y_{IVC}-58)/3.8)^2)+2*y_{IVC}+112$$
 
@@ -42,11 +55,9 @@ Design of experiments process flowchart;
 
 ### Introduction to DOE
 
-The MBC toolbox design browser can be used to design experiments (DOE) for collecting data (i.e engine performance responses like emission, torque output and fuel consumption). The design browser is a powerful tool which can be used to create complex experimental designs. Experimental design is important because it creates test sequences comprising of input variable values in the most efficient manner; while being able to make a good prediction of a system’s response.
+The MBC toolbox design browser can be used to design experiments (DOE) for collecting data (i.e engine performance responses like emission, torque output and fuel consumption). The design browser is a powerful tool which can be used to create complex experimental designs. Experimental design is important because it creates test sequences comprising of input variable values in the most efficient manner.
 
-This part of the workshop lab is structured to provide a proactive learning approach. The lab session is supported by practical examples and real observations. This is to give the user an understanding of the implications of each experimental design in relation to the actual modelling of a system.
-
-The progress flow chart for designing an experiment and testing is shown in the figure below. Three different design styles will be used for comparison purposes. The designs will be compared by testing each one in a “DOE testing kit” script. The outcome can be observed and changes/observations recorded. This manual contains the steps for completing these tasks.
+The progress flow chart for designing an experiment and testing is shown in the figure below. Three different designs  will be used for comparison purposes. The designs will be compared by testing each one in a “DOE testing kit” script. The outcome can be observed and changes/observations recorded.
 
 ![image](figs/lab2/fig_2_MBC_DOE_process.png)
 
@@ -86,6 +97,8 @@ There are four distinct tasks in this exercise, which are listed below:
 - DoE Testing and evaluation
 - Constrained Designs
 - Optional Exercise
+
+Before you begin dowload the files required for this exercise from LEARN or [here](https://lunet-my.sharepoint.com/:u:/g/personal/ttbm2_lunet_lboro_ac_uk/EdY_zo2jZgZFnWikxFrXx9wBpgXgi9jIybiiGc8buIoOdw?e=UjmUY9)
 
 ---
 

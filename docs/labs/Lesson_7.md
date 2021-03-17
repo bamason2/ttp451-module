@@ -1,11 +1,23 @@
 ---
 layout: page
 mathjax: true
+parent: Computer Labs
 ---
 
 # Lab 7: MBC Based PI Controller Calibration
+{: .no_toc }
+
+<details close markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 ## Topics
+{: .no_toc }
 
 - Aims and Objectives
 - Overview of Exercise
@@ -13,6 +25,7 @@ mathjax: true
 - Exercise 7: Optimisation Calibration for a V8 Engine (via RBF Modelling)
 
 ## Learning Outcomes
+{: .no_toc }
 
 By the end of this lesson, you will be able to:
 

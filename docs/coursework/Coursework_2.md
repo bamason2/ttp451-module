@@ -1,6 +1,7 @@
 ---
 layout: page
-title: "Coursework 2"
+title: Coursework 2
+parent: Coursework Briefs
 ---
 
 ## Coursework Assignment 2: Planning experiments (25%)

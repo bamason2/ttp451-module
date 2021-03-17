@@ -1,11 +1,23 @@
 ---
 layout: page
 mathjax: true
+parent: Computer Labs
 ---
 
 # Lab 1: Optimisation
+{: .no_toc }
+
+<details close markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 ## Topics
+{: .no_toc }
 
 - Aims and Objectives
 - Overview and Exercise
@@ -13,6 +25,7 @@ mathjax: true
 - Exercise 1: Optimisation
 
 ## Learning Outcomes
+{: .no_toc }
 
 By the end of this lesson, you will be able to:
 
@@ -36,7 +49,7 @@ The MATLAB&copy; Optimisation Toolbox provides functions for finding parameters 
 
 ### Exercise 1: Optimisation
 
-In the exercise folder find the “Optimization lab” folder or download it from LEARN  and unzip it, it contains several important files for this exercise.
+Download the data for this exercise from LEARN or [here](https://lunet-my.sharepoint.com/:u:/g/personal/ttbm2_lunet_lboro_ac_uk/EaWFBqyWqS9MnCYFTZvKvg8BP8PvtVwTBrUIMcqkGKh36w?e=8kN2lN)
 
 ---
 
@@ -48,7 +61,7 @@ $$J_1(p)=p^2_1+e^{p_2}+e^{-p_2}+p_1p_2+p_2$$
 
 in MATLAB&copy;.
 
-- Evaluate $$J_1$$ for a number of points and try to get a feeling for it, you can use a simple call with two arguments such as J1(1,2).
+- Evaluate $$J_1$$ for a number of points and try to get a feeling for it, you can use a simple call with two arguments such as ``<J1(arg1,arg2)>``.
 - Visualise this function. The "ez" plot functions are convenient to do this, such as ``<ezsurf(J1)>`` or ``<ezcontour(@J1)>``. Which kind of plot is most suitable?
 - Use ``<fminsearch>`` to find the minimum: ``<fminsearch(@J1vect,[0 0])>``, ``<fminsearch>`` expects a function with a single vector argument therefore the version defined in J1vect.m has to be used. Try different starting points.
 - How many evaluations are required by ``<fminsearch>``?
