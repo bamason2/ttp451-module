@@ -67,7 +67,7 @@ The figure below shows the process of generating DOE using model browser:
 
 ### Introduction to Cam Timing Design Exercise
 
-An engine is fitted with Variable Cam Timing (VCT) for both exhaust and intake cams. Each of the cams changes with engine speed and load. For a particular engine speed and load the changes of cam timing will affect the engine fuel consumption. The figure below shows a valve lift diagram for intake and exhaust. Advancing or retarding a cam will affect intake, scavenging or exhaust backpressure. These changes are influenced by the amount of overlap and intake/exhaust valve opening/closing which in turn affects the fuel consumption and other factors.
+An engine is fitted with Variable Cam Timing (VCT) for both exhaust and intake cams. For a particular engine speed and load the changes of cam timing will affect the engine fuel consumption. The figure below shows a valve lift diagram for intake and exhaust. Advancing or retarding a cam will affect intake, scavenging or exhaust backpressure. These changes are influenced by the amount of overlap and intake/exhaust valve opening/closing which in turn affects the fuel consumption and other factors.
 
 ![image](figs/lab2/fig_4_Intake_exhaust_vallve_lift_diagram.png)
 
@@ -81,7 +81,9 @@ $$ f_{bsfc}(x_{EVC}, y_{IVC}) = (((x_{EVC}-32)/4)^2 + ((y_{IVC}-58)/3.8)^2)+2*y_
 
 Input variable limits;
 
-$$0<=x_{EVC}<=60, 0<=y_{IVC}<=60$$
+$$0<=x_{EVC}<=60$$
+
+$$0<=y_{IVC}<=60$$
 
 To determine how well the DOE able to give best response surface predictions, we will compare it against the same target function but mapped at high resolution.
 
@@ -91,15 +93,15 @@ To determine how well the DOE able to give best response surface predictions, we
 
 ### Exercise 2-1: Cam Timing Design
 
+Before you begin download the files required for this exercise from LEARN or [here](https://lunet-my.sharepoint.com/:u:/g/personal/ttbm2_lunet_lboro_ac_uk/EdY_zo2jZgZFnWikxFrXx9wBpgXgi9jIybiiGc8buIoOdw?e=UjmUY9)
+
 There are four distinct tasks in this exercise, which are listed below:
 
 - Generate several DoE proposals
 - DoE Testing and evaluation
 - Constrained Designs
 - Optional Exercise
-
-Before you begin download the files required for this exercise from LEARN or [here](https://lunet-my.sharepoint.com/:u:/g/personal/ttbm2_lunet_lboro_ac_uk/EdY_zo2jZgZFnWikxFrXx9wBpgXgi9jIybiiGc8buIoOdw?e=UjmUY9)
-
+  
 ---
 
 #### Task 2-1.1: Generate several DoE proposals
@@ -112,7 +114,7 @@ Choose [File >> New Test Plan] in the menu. A test plan frame appears. Select [O
 
 - Specify the input factor names and ranges
 
-Double-click the Local Model Inputs block in the diagram. Increase the number of factors to two. Change the symbols of the two input factors to IVC and EVC and enter the input factors range as shown in figure below.
+Double-click the Local Model Inputs block in the diagram. Increase the number of factors to two. Change the symbols of the two input factors to IVC and EVC and enter the input factors range as shown in the figure below.
 
 ![image](figs/lab2/fig_8_one_stage_plan.png)
 
@@ -120,13 +122,11 @@ Double-click the Local Model Inputs block in the diagram. Increase the number of
 
 - Creating classical design (full factorial option)
 
-Right-click the local model in the diagram and choose set up model. Ensure the model class is set to linear model and then click [OK] (The type of model doesn’t matter at this stage). Next, right-click the local model in the diagram and choose [Design Experiment].
+Right-click the local model in the diagram and choose set up model. Ensure the model class is set to linear model and then click [OK] (the type of model doesn’t matter at this stage). Next, right-click the local model in the diagram and choose [Design Experiment].
 
 ![image](figs/lab2/fig_10_design_editor_setup.png)
 
-![image](figs/lab2/fig_11_design_editor_window.png)
-
-Choose [File >> New Design] or click the [New Design] button in the toolbar. A new node called Linear Model Design appears. Click the new node, a 2D projection appears on the right. Rename the new node Linear Model Design to Classical_F by clicking the name and press F2 or right mouse button then select Rename Design from the menu.
+Choose [File >> New Design] or click the [New Design] button in the toolbar. A new node called Linear Model Design appears. Click the new node, a 2D projection appears on the right. Rename the new node Linear Model Design to Classical_F by clicking the name and press F2 or the right mouse button then select [Rename Design] from the menu.
 
 ![image](figs/lab2/fig_13_full_factorial_design.png)
 
@@ -182,7 +182,7 @@ Create another new design called Optim_V. Select this new child node then open t
 
 ![image](figs/lab2/fig_21_optimal_design_window_2.png)
 
-In the Optimal Design setting window, set the optimal design parameters to the ones shown in the figures below. All are kept default except the Optimality criteria “V-Optimal” and total number of points “36”. Click the [OK] button to start optimizing the design. The optimization process stops when the number of iterations without improvement reaches the pre-set value (36) or number of iterations performed reach the pre-set value in Algorithm tab.
+In the Optimal Design setting window, set the optimal design parameters to the ones shown in the figures below. All are kept at default values except the Optimality criteria “V-Optimal” and total number of points “36”. Click the [OK] button to start optimising the design. The optimisation process stops when the number of iterations without improvement reaches the pre-set value (36) or number of iterations performed reach the pre-set value in Algorithm tab.
 
 ![image](figs/lab2/fig_22_optimal_design_window_1.png)
 
@@ -208,17 +208,15 @@ Change the MATLAB&copy; current folder to the current folder. In that folder run
 
 ![image](figs/lab2/fig_24_tas_2015_folder.png)
 
-It is easier to run the script with command window undocked.
+It is easier to run the script with the command window undocked.
 
 ![image](figs/lab2/fig_25_undock_command_window_1.png)
-
-![image](figs/lab2/fig_25_undock_command_window_2.png)
 
 - DOE testing kit overview
 
 This testing kit helps to visualize the effects of a 2D DOE design to a response model. The model estimation capabilities depend partially on the quality of the DOE. Fewer test points are going to cause the model to miss some important characteristics of the system.
 
-The testing kit is a universal program which can accept any type of DOE and equations as target functions. It can create a custom DOE within the program itself, as well as add or remove existing DOE design loaded from a csv file. Finally, the user will be able to save the design together with the predicted output. The figure below shows the interface of the testing kit.
+The testing kit can accept any type of DOE and equation as target functions. It can create a custom DOE within the program itself as well as add or remove existing DOE design loaded from a csv file. Finally, the user will be able to save the design together with the predicted output. The figure below shows the interface of the testing kit.
 
 ![image](figs/lab2/fig_26_overview_of_doe_testing_script.png)
 
@@ -250,7 +248,7 @@ It is expected that the model is going to fit poorly in the center region. Obser
 
 - Improving the modelling results
   
-The error can be reduced by introducing more DOE points across the operating space. This extra points provides extra information of the curvature of the response model. By adding support points in the middle of the current DOE design the model prediction will be improved.
+The error can be reduced by introducing more DOE points across the operating space. This extra points provide extra information about the curvature of the response model. By adding support points in the middle of the current DOE design the model prediction will be improved.
 
 ![image](figs/lab2/fig_31_support_doe_points.png)
 

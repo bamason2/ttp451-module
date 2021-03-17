@@ -70,6 +70,9 @@ in MATLAB&copy;.
 
 - Evaluate $$J_1$$ for a number of points and try to get a feeling for it, you can use a simple call with two arguments such as ``<J1(arg1,arg2)>``.
 - Visualise this function. The "ez" plot functions are convenient to do this, such as ``<ezsurf(J1)>`` or ``<ezcontour(@J1)>``. Which kind of plot is most suitable?
+
+![image](figs/lab1/j1.gif)  
+
 - Use ``<fminsearch>`` to find the minimum: ``<fminsearch(@J1vect,[0 0])>``, ``<fminsearch>`` expects a function with a single vector argument therefore the version defined in J1vect.m has to be used. Try different starting points.
 - How many evaluations are required by ``<fminsearch>``?
 
@@ -92,13 +95,13 @@ $$\frac{\partial J_1}{\partial p_1} = 2p_1+p_2$$
 
 $$\frac{\partial J)_1}{\partial p_2} = e^{p_2} + -e^{-p_2}+p_1+1$$
 
-- Try a constraint minimisation using the solver ``<fmincon>``. You have to supply bounds for $$p$$ such as Lower: $$[-10 -10]$$ and Upper: $$[10 10]$$. What happens if you only allow positive values?
+- Try a constraint minimisation using the solver ``<fmincon>``. You have to supply bounds for $$p$$ such as Lower: $$[-10, -10]$$ and Upper: $$[10, 10]$$. What happens if you only allow positive values?
 
 ---
 
 #### Task 1-3: Optimal Engine Calibration
 
-The model_V8NA_V2 is a simple engine model of a naturally aspirated spark ignition V8 engine at a fixed engine speed. It takes a single vector argument with three values: the relative load (0 to 100), the spark advance angle (0 to 35), and the normalised air fuel ratio (0.8 to 1.1). The output is a vector of 6 measurements: BMEP (in bar), SD of BMEP (in bar), exhaust mass flow (in kg/h), exhaust temperature (in C), fuel consumption (in kg/h) and BSFC (in g/kWh).
+The file model_V8NA_V2 is a simple engine model of a naturally aspirated spark ignition V8 engine at a fixed engine speed. It takes a single vector argument with three values: the relative load (0 to 100), the spark advance angle (0 to 35) and the normalised air fuel ratio (0.8 to 1.1). The output is a vector of 6 measurements: BMEP (in bar), SD of BMEP (in bar), exhaust mass flow (in kg/h), exhaust temperature (in C), fuel consumption (in kg/h) and BSFC (in g/kWh).
 
 - For a relative load of 50 and an air fuel ratio of 1 find the best BSFC. You can use unconstrained optimisation with ``<fminsearch>`` or constraint optimisation using ``<X = fmincon(FUN,X0,A,B)>`` for this. You will need to write your own cost function that calls the model function.
 - When an electronic throttle control is used the throttle setting does not correspond completely to the torque request. A better formulation of this problem is to find the best BSFC for a given BMEP say 6 bar. You can either use a separate function to solve the model for a given BMEP using ``<fsolve>`` or you can use another variation of constrained optimisation: ``<X = fmincon(FUN,X0,A,B,Aeq,Beq,LB,UB,NONLCON)>`` where ``<NONLCON>`` is a function returning the BMEP deviation as an equality constraint.
@@ -113,7 +116,7 @@ Consider the following variation of the multicriteria cost function used in Sect
 $$J_4(p) = \alpha \frac{50}{p_1} + \alpha \frac{50}{p_2} + 5\frac{p_1}{60}^2 + 4\frac{p_2}{60}^2$$
 
 - Plot the function above. Is it convex?
-- Find the optimum for a set of hourly costs. You have to edit the function J4.m to change $$\alpha$$. (If you are more advanced in MATLAB&copy; programming you can also automate this process.)
+- Find the optimum for a set of hourly costs. You have to edit the function J4.m to change $$\alpha$$. (If you are more advanced in MATLAB&copy; programming you can also automate this process).
 - How can the results be visualized? Create a diagram with the key relationships.
 
 ---
