@@ -59,6 +59,13 @@ The file "J1.m" implements the following “nicely shaped” cost function:
 
 $$J_1(p)=p^2_1+e^{p_2}+e^{-p_2}+p_1p_2+p_2$$
 
+as a function;
+
+```matlab
+function [cost]=J1(p1,p2)
+cost=p1.^2+exp(p2)+exp(-p2)+p1.*p2+p2;
+```
+
 in MATLAB&copy;.
 
 - Evaluate $$J_1$$ for a number of points and try to get a feeling for it, you can use a simple call with two arguments such as ``<J1(arg1,arg2)>``.
