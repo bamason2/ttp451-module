@@ -5,5 +5,5 @@
 layout: home
 ---
 
-# Welcome to the Powertrain Calibration Optimisation Course
+Welcome to the Powertrain Calibration Optimisation Course
 

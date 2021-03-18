@@ -7,3 +7,6 @@ nav_order: 1
 ## Lecture Slides
 
 <object data="slides_all.pdf" type="application/pdf" width="100%" height="420px"></object>
+
+
+The lecture notes are available for download [here](https://lunet-my.sharepoint.com/:b:/g/personal/ttbm2_lunet_lboro_ac_uk/EcY82XS-FUhIpuGTI5IjygIBieW2nj4pGXUDBspUI4VsTw?e=yUJahZ)

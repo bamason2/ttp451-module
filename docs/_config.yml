@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: ttp451 Powertrain
+title: PCO
 email: b.mason2@lboro.ac.uk
 description: >- # this means to ignore newlines until "baseurl:"
   Powertrain Calibration Optimisation Module.
