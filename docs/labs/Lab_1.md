@@ -73,14 +73,10 @@ in MATLAB&copy;.
 
 - Evaluate $$J_1$$ for a number of points and try to get a feeling for it, you can use a simple call with two arguments such as ``<J1(arg1,arg2)>``.
 - Visualise this function. The "ez" plot functions are convenient to do this, such as ``<ezsurf(J1)>`` or ``<ezcontour(@J1)>``. Which kind of plot is most suitable?
-<<<<<<< HEAD:docs/labs/Lab_1.md
 
 ![image](figs/lab1/j1.gif)  
 
 - Use ``<fminsearch>`` to find the minimum: ``<fminsearch(@J1vect,[0 0])>``, ``<fminsearch>`` expects a function with a single vector argument therefore the version defined in J1vect.m has to be used. Try different starting points.
-=======
-- Use ``<fminsearch>`` to find the minimum: ``<fminsearch(@J1vect,[0 0])>``, ``<fminsearch>`` expects a function with a single vector argument therefore the version defined in J1vect.m has to be used. Try different starting points other than [0 0].
->>>>>>> 73d5f9e6a46dfcc77a0ebd2a396878fa03cb478b:docs/labs/Lesson_1.md
 - How many evaluations are required by ``<fminsearch>``?
 
 ---
@@ -102,21 +98,13 @@ $$\frac{\partial J_1}{\partial p_1} = 2p_1+p_2$$
 
 $$\frac{\partial J_1}{\partial p_2} = e^{p_2} + -e^{-p_2}+p_1+1$$
 
-<<<<<<< HEAD:docs/labs/Lab_1.md
 - Try a constraint minimisation using the solver ``<fmincon>``. You have to supply bounds for $$p$$ such as Lower: $$[-10, -10]$$ and Upper: $$[10, 10]$$. What happens if you only allow positive values?
-=======
-- Try a constraint minimisation using the solver ``<fmincon>``. You have to supply bounds for $$p$$ such as Lower: $$[-10 -10]$$ and Upper: $$[10  10]$$. What happens if you only allow positive values?
->>>>>>> 73d5f9e6a46dfcc77a0ebd2a396878fa03cb478b:docs/labs/Lesson_1.md
 
 ---
 
 #### Task 1-3: Optimal Engine Calibration
 
-<<<<<<< HEAD:docs/labs/Lab_1.md
 The file model_V8NA_V2 is a simple engine model of a naturally aspirated spark ignition V8 engine at a fixed engine speed. It takes a single vector argument with three values: the relative load (0 to 100), the spark advance angle (0 to 35) and the normalised air fuel ratio (0.8 to 1.1). The output is a vector of 6 measurements: BMEP (in bar), SD of BMEP (in bar), exhaust mass flow (in kg/h), exhaust temperature (in C), fuel consumption (in kg/h) and BSFC (in g/kWh).
-=======
-The model "V8NA_V2" is a simple engine model of a naturally aspirated spark ignition V8 engine, running at a fixed engine speed. It takes a single vector argument with three values: the relative load (0 to 100), the spark advance angle (0 to 35) and the normalised air fuel ratio (0.8 to 1.1). The output is a vector of 6 measurements: BMEP (in bar), SD of BMEP (in bar), exhaust mass flow (in kg/h), exhaust temperature (in C), fuel consumption (in kg/h) and BSFC (in g/kWh).
->>>>>>> 73d5f9e6a46dfcc77a0ebd2a396878fa03cb478b:docs/labs/Lesson_1.md
 
 - For a relative load of 50 and an Air-Fuel Ratio of 1, find the best BSFC. You can use unconstrained optimisation with ``<fminsearch>`` or constrained optimisation using ``<X = fmincon(FUN,X0,A,B)>`` for this. You will need to write your own cost function that calls the model function.
 - When an electronic throttle control is used the throttle setting does not correspond completely to the torque request. A better formulation of this problem is to find the best BSFC for a given BMEP (6 bar as a good example).
