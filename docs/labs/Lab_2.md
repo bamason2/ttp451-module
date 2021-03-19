@@ -44,7 +44,7 @@ The calibration task focuses on mapping the engine fuel consumption across a ran
 
 $$ f_{bsfc}(x_{EVC}, y_{IVC}) = (((x_{EVC}-32)/4)^2 + ((y_{IVC}-58)/3.8)^2)+2*y_{IVC}+112$$
 
- In order to calibrate effectively, an experimental design that minimises the amount of testing whilst covering as much of the operating space as possible is required. One possible approach before physical testing is to determine the DOE using a "target function". We will generate several DOE proposals for this case study, using the above BSFC equation as the target function.
+In order to calibrate effectively, an experimental design that minimises the amount of testing whilst covering as much of the operating space as possible is required. One possible approach before physical testing is to determine the DOE using a "target function". We will generate several DOE proposals for this case study, using the above BSFC equation as the target function.
 
 We will limit the input variables as below:
 
@@ -60,15 +60,9 @@ The below flowchart shows the general DOE procedure:
 
 ### Introduction to DOE
 
-<<<<<<< HEAD:docs/labs/Lab_2.md
 The MBC toolbox design browser can be used to design experiments (DOE) for collecting data (i.e engine performance responses like emission, torque output and fuel consumption). The design browser is a powerful tool which can be used to create complex experimental designs. Experimental design is important because it creates test sequences comprising input variable values in the most efficient manner.
 
 The flow chart for designing an experiment and testing is shown in the figure below. Three different designs will be used for comparison purposes. The designs will be compared by testing each one in a “DOE testing kit” script. The outcome can be observed and changes/observations recorded.
-=======
-The MATLAB&copy MBC Toolbox design browser can be used to design experiments for collecting data (i.e engine performance responses like emission, torque output and fuel consumption). Experimental design is important because it creates test sequences that set input variable values in the most efficient manner.
-
-The progress flow chart for designing an experiment and testing is shown in the figure below. Three different designs  will be used for comparison purposes. The designs will be compared by testing each one in a “DoE testing kit” script. The outcome can be observed and changes/observations recorded.
->>>>>>> 73d5f9e6a46dfcc77a0ebd2a396878fa03cb478b:docs/labs/Lesson_2.md
 
 ![image](figs/lab2/fig_2_MBC_DOE_process.png)
 
@@ -78,7 +72,6 @@ The figure below shows the process of generating DOE using model browser:
 
 ### Introduction to Cam Timing Design Exercise
 
-<<<<<<< HEAD:docs/labs/Lab_2.md
 An engine is fitted with Variable Cam Timing (VCT) for both exhaust and intake cams. For a particular engine speed and load the changes of cam timing will affect the engine fuel consumption. The figure below shows a valve lift diagram for intake and exhaust. Advancing or retarding a cam will affect intake, scavenging or exhaust backpressure. These changes are influenced by the amount of overlap and intake/exhaust valve opening/closing which in turn affects the fuel consumption and other factors.
 
 ![image](figs/lab2/fig_4_Intake_exhaust_vallve_lift_diagram.png)
@@ -88,13 +81,6 @@ Recall that the calibration task is to map the engine fuel consumption across a 
 The relationship between fuel consumption and intake/exhaust cam timing for a particular engine can be expressed as:
 
 Target function:
-=======
-An engine is fitted with Variable Cam Timing (VCT) for both exhaust and intake cams. Each of the cams changes with engine speed and load. For a particular engine speed and load, the changes of cam timing will affect the engine fuel consumption. The figure below shows a valve lift diagram for intake and exhaust. Advancing or retarding a cam will affect intake reversion, scavenging or exhaust backpressure. These changes are influenced by the amount of overlap in intake/exhaust opening, which in turn affects the fuel consumption.
-
-![image](figs/lab2/fig_4_Intake_exhaust_vallve_lift_diagram.png)
-
-Recall that our calibration task is to map the engine fuel consumption across a range of intake and exhaust cam settings, designing several experiments to approximate the target function:
->>>>>>> 73d5f9e6a46dfcc77a0ebd2a396878fa03cb478b:docs/labs/Lesson_2.md
 
 $$ f_{bsfc}(x_{EVC}, y_{IVC}) = (((x_{EVC}-32)/4)^2 + ((y_{IVC}-58)/3.8)^2)+2*y_{IVC}+112 $$
 
@@ -104,11 +90,7 @@ $$0<=x_{EVC}<=60$$
 
 $$0<=y_{IVC}<=60$$
 
-<<<<<<< HEAD:docs/labs/Lab_2.md
 To determine how well the DOE able to give best response surface predictions, we will compare it against the same target function but mapped at high resolution.
-=======
-To determine the quality of each DOE, we will use the data produced by each to produce **Response Surface Models**, which we will in turn compare against the target function, mapped in high resolution.
->>>>>>> 73d5f9e6a46dfcc77a0ebd2a396878fa03cb478b:docs/labs/Lesson_2.md
 
 ![image](figs/lab2/fig_5_graphical_representation_of_map.png)
 
@@ -124,13 +106,7 @@ There are four distinct tasks in this exercise, which are listed below:
 - DoE Testing and Evaluation
 - Constrained Designs
 - Optional Exercise
-<<<<<<< HEAD:docs/labs/Lab_2.md
   
-=======
-
-Before you begin, download the files required for this exercise from LEARN or [here](https://lunet-my.sharepoint.com/:u:/g/personal/ttbm2_lunet_lboro_ac_uk/EdY_zo2jZgZFnWikxFrXx9wBpgXgi9jIybiiGc8buIoOdw?e=UjmUY9)
-
->>>>>>> 73d5f9e6a46dfcc77a0ebd2a396878fa03cb478b:docs/labs/Lesson_2.md
 ---
 
 #### Task 2-1.1: Generate several DoE proposals
@@ -165,11 +141,7 @@ Choose a classical design by clicking the [Classical Design] button in the toolb
 
 Increase the number of levels for each factor from 2 to 6, keep the number of center points as 0. The total size of design is 36, you may view your design in different projections using the tabs (1-D, 2-D) under the display.
 
-<<<<<<< HEAD:docs/labs/Lab_2.md
 1-D: you may select a different factor to view each level of this factor. The frequency indicates the number of each level that appears among all design test points (36). From the view of this design we see a full factorial design the test points are evenly distributed among the factor space.
-=======
-1-D: you may select each factor to view its levels. The frequency indicates the number of each level that appears among the all design test points (36). From the view of this design, we may see in full factorial design that the test points are evenly distributed among the factor space.
->>>>>>> 73d5f9e6a46dfcc77a0ebd2a396878fa03cb478b:docs/labs/Lesson_2.md
 
 ![image](figs/lab2/fig_15_design_projections_1.png)
 
@@ -181,11 +153,7 @@ Click [OK] to close the Classical Design Browser and return to the Design Editor
 
 ![image](figs/lab2/fig_16_design_table_2.png)
 
-<<<<<<< HEAD:docs/labs/Lab_2.md
 You may copy the data to other programs such as Excel by selecting [Edit >> Copy Design Data] from the menu or right click the mouse on any part of the Design Table and select [Copy]. For the case study, we need to export the design into a *.csv file. Save the design as “Classical_F.csv”.
-=======
-You may copy the data to other programs such as Excel by selecting [Edit >> Copy Design Data] from the menu or right clicking the mouse on any part of the Design Table and selecting Copy. For the case study, we need to export the design into a *.csv file. Save the design as “Classical_F.csv”.
->>>>>>> 73d5f9e6a46dfcc77a0ebd2a396878fa03cb478b:docs/labs/Lesson_2.md
 
 ![image](figs/lab2/fig_17_doe_export_1.png)
 
@@ -241,11 +209,7 @@ Now export the design into a *.csv file. Save the design as “Optim_V.csv”.
 
 - Load DOE test kit
 
-<<<<<<< HEAD:docs/labs/Lab_2.md
 Change the MATLAB&copy; current folder to the current folder. In that folder run the DOE_testkit_V11_R7.p in MATLAB&copy;, Right click and run the script.
-=======
-Change the MATLAB&copy; current folder to the current folder. In that folder, run the DOE_testkit_V11_R7.p in MATLAB&copy;, Right click and run the script.
->>>>>>> 73d5f9e6a46dfcc77a0ebd2a396878fa03cb478b:docs/labs/Lesson_2.md
 
 ![image](figs/lab2/fig_24_tas_2015_folder.png)
 
@@ -269,25 +233,13 @@ Select [Option 2] and press enter to load the DOE. Select “DOE_poor_design.csv
 
 - Define target system response
 
-<<<<<<< HEAD:docs/labs/Lab_2.md
 Select [Option 5] to enter the BSFC response function from the problem statement. Enter the following function:
-=======
-Select option “5” to enter the BSFC response function, out "target function" from the problem statement. Enter the following function:
-
-![image](figs/lab2/fig_28_bsfc_response_function_1.png)
->>>>>>> 73d5f9e6a46dfcc77a0ebd2a396878fa03cb478b:docs/labs/Lesson_2.md
 
 ```matlab
 (((x-32)/4)^2+((y-58)/3.8)^2)+2*y+112
 ```
 
-<<<<<<< HEAD:docs/labs/Lab_2.md
 The function will be plotted on the DOE design.  The stem plot of subplot 2 shows the position of the DOE on the target surface response. Observe the position of the DOE points, the DOE only covers the outer part of the target response. It misses the center region of the response which may lead to poor modeling results. The key to designing a good experiment is the distribution of points at critical locations. Since we already the surface characteristics we predict that the center region of the surface is going to under fit. Normally, for unknown systems, randomly positioned DOE points are important to ensure sufficient coverage of the operating space.
-=======
-The function will be plotted on the DOE design.  The stem plot of subplot 2 shows the position of the DOE on the target surface response. Observe the position of the DOE points, the DOE only covers the outer part of the target response. It misses the center region of the response which may lead to poor modeling results.
-
-The key of designing a good experiment is the distribution of DOEs at critical locations on the target response. Since we already knowthe characteristics of the  target surface response, we predict that the center region of the surface is going to under-fit. Normally, for unknown systems, randomly positioned DOE points are important to scatter points in the operating boundary.
->>>>>>> 73d5f9e6a46dfcc77a0ebd2a396878fa03cb478b:docs/labs/Lesson_2.md
 
 ![image](figs/lab2/fig_29_bsfc_response_surface_function.png)
 
@@ -295,13 +247,7 @@ The key of designing a good experiment is the distribution of DOEs at critical l
 
 Select [Option 9] to test the DOE design. The DOE design sequences are used as input variables to the target function. The input variable are IVC and EVC.
 
-<<<<<<< HEAD:docs/labs/Lab_2.md
 It is expected that the model is going to fit poorly in the center region. Observe the boundary of the DOE design the model manages to predict fairly well. The plots shown below are the overlay of the expected response and response fit using the DOE design. The plot on the right is the contour plot of the differences between both surfaces. The differences are calculated by meshing both surface in high resolution and calculate the target BSFC output. The RMSE of both surfaces are relatively high indicating high modeling error.
-=======
-It is expected that the model is going to fit poorly in the center region. Observe the boundary of the DOE design: the model has good predictive performance in these regions.
-
-The plots shown below are the overlay of the expected response and response fit using the DOE design. The plot on the right is the contour plot of the differences between both surfaces. The differences are calculated by meshing both surface in high resolution and calculate the target BSFC output. The RMSE of both surfaces are relatively high, indicating high modeling error.
->>>>>>> 73d5f9e6a46dfcc77a0ebd2a396878fa03cb478b:docs/labs/Lesson_2.md
 
 ![image](figs/lab2/fig_30_bsfc_response_result.png)
 
