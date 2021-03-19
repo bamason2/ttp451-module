@@ -5,6 +5,7 @@ parent: Computer Labs
 ---
 
 # Lab 3: Modelling Principles
+
 {: .no_toc }
 
 <details close markdown="block">
@@ -17,6 +18,7 @@ parent: Computer Labs
 </details>
 
 ## Topics
+
 {: .no_toc }
 
 - Aims and Objectives
@@ -24,6 +26,7 @@ parent: Computer Labs
 - Exercise 3: Modelling Principles
 
 ## Learning Outcomes
+
 {: .no_toc }
 
 By the end of this lesson, you will be able to:
@@ -39,7 +42,9 @@ The aim of this exercise is to investigate the creation of different forms of mo
 
 ## Overview of Exercise
 
-Once data has been acquired during an engine test, the first step in handling the data is the creation of a model.  The reason for developing a model is to allow ready access to the data since it is now represented in a functional form; also, it allows interpolation because the tests are conducted at discrete points, and for the calibration process, data must be available at all possible values of the controlled parameters of the engine.
+Once data has been acquired during an engine test, the first step in handling the data is the creation of a model.  The reason for developing a model is to
+
+- Allow ready access to the data since it is now represented in a functional form;  - Allow interpolation;  the tests are conducted at discrete points, and for the calibration process, data must be available at all possible values of the controlled parameters of the engine.
 
 There are many forms of model and in this workshop we will consider just a few of the more commonly used types, notably polynomial and radial basis function (RBF) models.  We will also take a look at a very simple model type that is useful in searching for relationships between data streams – cross-correlation.   The surface fitting example illustrates the utility and importance of data visualisation.  
 
@@ -113,15 +118,19 @@ Start with a second order model and seek an R-squared value of above 0.95, and o
 
 #### Task 3-3: Fitting and Error Evaluation
 
-Create 2 sub-functions which calls the fitting functions and error evaluation code. The fitting sub-function requires:
+Reproduce the code below to create 2 sub-functions which call the fitting functions and error evaluation code. The fitting sub-function requires:
 
-- Input 
-    - Ignition for BMEP response - ``<mydata(:,6)>``
-    - Lambda for Exh temp response - ``<mydata(:,9)>``
-- Output
-    - BMEP response data - ''<mydata(:,13)>``
-    - Exh temp response - ``<mydata(:,11)>''
-- Polynomial order – n
+Input:
+
+- Ignition for BMEP response - ``<mydata(:,6)>``
+- Lambda for Exh temp response - ``<mydata(:,9)>``
+
+Output:
+
+- BMEP response data - ``<mydata(:,13)>``
+- Exh temp response - ``<mydata(:,11)>``
+
+Polynomial order: n
   
 Loop the sub-function four times for generating polynomial from 1st to 4th order. The fitting models are stored in a cell array and the predicted responses are stored in multidimensional array. See coding below.
 
@@ -184,7 +193,7 @@ mydata = csvread(filename,2,0, [2,0,1050,14]);
 mydata(mydata(:,2)<3500,:)=[];>);
 ```
 
-Refer to the question for a complete list of filters required to get the data. 
+Refer to the question for a complete list of filters required to get the data.
 
 The data is filtered because it was developed using a DOE method. So, the points are scrambled in all directions in the operating space. Filtering narrows down the data to the area of interest which is to observe the trend of BMEP across ignition angle and exhaust temperature across lambda.
 
@@ -258,8 +267,8 @@ Please check the manual entry for fit for a listing of the other model types.  T
 
 #### Task 3-5: Tuning a System of RBF’s
 
-In this exercise you will tune a system of Gaussian radial basis functions to represent a complex function between two variables. 
-A function, $$y=-0.25x^4+0.42x^3+x^2-0.67x+2$$, is to be modelled using Gaussian radial basis functions. The function is to be represented by five individual functions, you must tune each of the width, the centres and the weights in order to get a good fit to the function.  We will give you the function as the m-file, RBF_manualtune_V3_exercise.m in “TAS 2017>>3. Modelling lab” folder. 
+In this exercise you will tune a system of Gaussian radial basis functions to represent a complex function between two variables.
+A function, $$y=-0.25x^4+0.42x^3+x^2-0.67x+2$$, is to be modelled using Gaussian radial basis functions. The function is to be represented by five individual functions, you must tune each of the width, the centres and the weights in order to get a good fit to the function.  We will give you the function as the m-file, RBF_manualtune_V3_exercise.m in “TAS 2017>>3. Modelling lab” folder.
 
 ![image](figs/lab3/fig_2_rbf_exercise.png)
 

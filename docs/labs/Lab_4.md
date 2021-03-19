@@ -5,6 +5,7 @@ parent: Computer Labs
 ---
 
 # Lab 4: Modelling a V8 Engine
+
 {: .no_toc }
 
 <details close markdown="block">
@@ -17,6 +18,7 @@ parent: Computer Labs
 </details>
 
 ## Topics
+
 {: .no_toc }
 
 - Aims and Objectives
@@ -25,6 +27,7 @@ parent: Computer Labs
 - Exercise 4: Engine Modelling V8 Engine Example
 
 ## Learning Outcomes
+
 {: .no_toc }
 
 By the end of this lesson, you will be able to:
@@ -45,7 +48,11 @@ In part two of the exercise, you will fit and use an RBF model in place of a pol
 
 ### Background Information
 
-A polynomial model is simply made up of terms that are multiples of the independent or control variables.  The ideal model is simple in form so that it can be interpolated quickly, accurately models the data and is capable of being generalised. For some engine phenomena a polynomial model meets these sometimes conflicting goals. However for other engine functions a polynomial is simply unable to represent the behaviour of the data and a different technique is needed.  Very often a radial basis function (RBF) is deployed. RBF techniques have been developed for other applications, and notably computer graphics, where the model if the behaviour of an image needs to be processed quickly.  The RBF can be used to represent the sometimes complex relationships in a way that is quickly computed.
+A polynomial model is simply made up of terms that are themselves functions of the independent or control variables.  The ideal model is simple in form so that it can be interpolated quickly, accurately models the data and is capable of being generalised.
+
+For some engine phenomena a polynomial model meets these sometimes conflicting goals. However for other engine functions a polynomial is simply unable to represent the behaviour of the data and a different technique is needed.  Very often a radial basis function (RBF) is deployed.
+
+ RBF techniques have been developed for other applications, and notably computer graphics, where the model if the behaviour of an image needs to be processed quickly.  The RBF can be used to represent the sometimes complex relationships in a way that is quickly computed.
 
 ![image](figs/lab4/fig_1_process_1.png)
 
@@ -66,7 +73,7 @@ A polynomial model is simply made up of terms that are multiples of the independ
 Previously, the created DoE test points were used as engine test points on the test bench. Once the engine test has finished, the test technician will send the engine test results. This stage of MBC will use the test result to create an engine model.
 
 - Start MBC Toolbox using the command ``<mbcmodel>``. Use the previous design browser setup by loading the saved test plan from previous lab “V8NA_testplan.mat”. Click [Select Data] icon to open the “Data Selection Wizard”.
-- Click the file open icon to start the “Fits Models Wizard”.
+- Click the file open icon to start the “Fit Models Wizard”.
 
 ![image](figs/lab4/fig_2_fit_models_wizard.png)
 
@@ -86,13 +93,14 @@ Previously, the created DoE test points were used as engine test points on the t
 
 ![image](figs/lab4/fig_6_polynomial_models.png)
 
-- Now create a polynomial model by right clicking on [BMEP_mean] and click [New model]. Change the model class to Linear models, define all polynomial order to 1 and interaction order to 1. Change stepwise from “None” to “Minimize PRESS”. Predicted sum of squares error (PRESS) is a measure of the predictive quality of a model. Minimize PRESS removes terms in the model to improve its predictive ability, removing those terms that reduce the PRESS of the model. Click [OK] to close the setup. To create multiple models more quickly, use build tool.  For polynomial models, the build tool will automatically include necessary interaction terms.
+- Now create a polynomial model by right clicking on [BMEP_mean] and click [New model]. Change the model class to Linear models, define all polynomial order to 1 and interaction order to 1. Change stepwise from “None” to “Minimize PRESS”. Predicted sum of squares error (PRESS) is a measure of the predictive quality of a model. Minimize PRESS removes terms in the model to improve its predictive ability, removing those terms that reduce the PRESS of the model.
+- Click [OK] to close the setup. To create multiple models more quickly, use the build tool.  For polynomial models, the build tool will automatically include necessary interaction terms.
 
 ![image](figs/lab4/fig_7_polynomial_model_results.png)
 
 - Repeat the same process and create the following models (Leave “Model class” & “Linear model subclass” as it is):
-    - Quadratic model (order: 2 Interaction order: 2)
-    - Cubic model (order: 3 Interaction order: 3)
+  - Quadratic model (order: 2 Interaction order: 2)
+  - Cubic model (order: 3 Interaction order: 3)
 - Repeat these processes (polynomial models of orders 1, 2 and 3) for the other 3 response models (BMEP_sigma, IntakeFuelMass and ExhaustTemp).
 
 ![image](figs/lab4/fig_8_polynomial_model_different_order.png)
@@ -107,7 +115,9 @@ Previously, the created DoE test points were used as engine test points on the t
 
 ![image](figs/lab4/fig_10_fit_stats.png)
 
-- Starting with “BMEP_mean” response model, click [Select] in the model browser. The “Model Selection” window will appear. Based on the RMSE, the “Cubic” offers lower RMSE, but is a much more complicated model.  Try to answer the question as to which is the best model.  (As a starting thought, consider the trade-off between accuracy and the use of a much large number of parameters).  Choose what you consider to be the best model for the “BMEP_mean” response model. Select the model and click [Assign Best]. Now, close the selection window and click [Yes] to confirm.
+- Starting with “BMEP_mean” response model, click [Select] in the model browser. The “Model Selection” window will appear.
+- Based on the RMSE, the “Cubic” offers lower RMSE, but is a much more complicated model.  Try to answer the question as to which is the best model.  (As a starting thought, consider the trade-off between accuracy and the use of a much large number of parameters).
+- Choose what you consider to be the best model for the “BMEP_mean” response model. Select the model and click [Assign Best]. Now, close the selection window and click [Yes] to confirm.
 
 ![image](figs/lab4/fig_11_cubic_model_results.png)
 
@@ -123,11 +133,12 @@ The default residual selection remove data points outside 3. Studentized residua
 
 - To remove outliers, click [Outliers >> Remove Outliers]. The outliers will be removed. Remove until all outliers have disappeared. Do this for all best models. You may remove outliers for all other polynomials. But most probably cubic design will be selected, because of its low RMSE error compared to other model types.
 
-Take extra precaution when removing outliers, always observe the PRESS RMSE while doing so. The model might get over fit if removed too many data points. This gets worse for models built using small number of data.
+Take extra precaution when removing outliers, always observe the PRESS RMSE while doing so. The model might become "over-fit" if too many data points are removed. This means that the model is too closely fit to a small number of points, and doesnt "generalise" well to data that is not included.
 
 ![image](figs/lab4/fig_14_outlier_removal_2.png)
 
-- After removing outliers, the best model selection will be removed. So, reassign best model again by repeating Step 2: no 2. Click [Select] in the model browser. [Model Selection] window will appear. Select the best model and click [Assign Best]. Now, close the selection window and click [Yes] to confirm.
+- After removing outliers, the best model selection will be removed. So, reassign best model again by repeating Step 2: no 2.
+- Click [Select] in the model browser. [Model Selection] window will appear. Select the best model and click [Assign Best]. Now, close the selection window and click [Yes] to confirm.
 
 ![image](figs/lab4/fig_15_best_model.png)
 
@@ -139,8 +150,8 @@ Take extra precaution when removing outliers, always observe the PRESS RMSE whil
 
 #### Task 4-3: Feature Calibration for a V8 Engine using Radial Basis Functions
 
-- Use “Build models” tool to add RBF models to your current response model. Generate RBF models with centres ranging from 30 to 350 with 10 models linearly spaced (as in figure below). Use ``<linspace>`` function when defining the centres of the RBF model 
-- Repeat the procedure above for all response models. Select the best model for your responses. 
+- Use “Build models” tool to add RBF models to your current response model. Generate RBF models with centres ranging from 30 to 350 with 10 models linearly spaced (as in figure below). Use ``<linspace>`` function when defining the centres of the RBF model.
+- Repeat the procedure above for all response models. Select the best model for your responses.
 
 ![image](figs/lab4/fig_17_rbf_model.png)
 
