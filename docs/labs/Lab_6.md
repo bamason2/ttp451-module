@@ -72,13 +72,13 @@ The workflow for this exercise is as follows;
 
 ---
 
-### Task 6-1: Load saved model from previous workshop
+#### Task 6-1: Load saved model from previous workshop
 
 - Start MBC toolbox model browser, by typing ``<mbcmodel>`` in the Matlab command window. Open the project named “V8NA_1_StageModel.mat” by clicking the toolbar [File >> Open Project]. Leave the model browser open.
 
 ---
 
-### Task 6-2: Import models from model browser
+#### Task 6-2: Import models from model browser
 
 - Start CAGE, by typing ``<cage>`` in the Matlab command window. In the toolbar, go to [File >> Import] from the project. The models from the model browser will load automatically. Select all models (“shift + left click” each item) and then click [Import Selected Items]. When prompted to confirm importing the models, click [OK]. Then, click [Close].
 
@@ -90,7 +90,7 @@ The workflow for this exercise is as follows;
 
 ---
 
-### Task 6-3: Setup model variables
+#### Task 6-3: Setup model variables
 
 - Rename the inputs variable in the “Variable dictionary” in the “Data Objects” pane. Right click the name and click [Rename]. Rename the variables according to the figure below.
 
@@ -98,7 +98,7 @@ The workflow for this exercise is as follows;
 
 ---
 
-### Task 6-4: Trade-off calibration setup and model selection
+#### Task 6-4: Trade-off calibration setup and model selection
 
 - Click [Tradeoff] in the Processes pane to start the tradeoff process. Then click [File >> New >> Tradeoff]. The Cage browser will change to tradeoff mode.
 
@@ -112,7 +112,7 @@ Tradeoff List will show the tables that has been created. Tradeoff table propert
 
 ---
 
-### Task 6-5: Trade-off calibration maps setup
+#### Task 6-5: Trade-off calibration maps setup
 
 - Click [Add New Table] to create calibration tables for the tradeoff calibration. Set the table name to “Spark_best”. Set the rows and columns to 5. The Y-Input should be Speed and the X-Input, Load.  Click [Select] to assign the “Fill table with” value. In the “Select Filling Item” window change the radio button of “List Options” to “Display Variables”. Select “Spk” and click [OK]. Then click [OK] again to close the “Table Setup” window.
 
@@ -130,7 +130,7 @@ Normally in the engine calibration process, the Rows and Columns are set around 
 
 ---
 
-### Task 6-6: Manual Tradeoff Calibration
+#### Task 6-6: Manual Tradeoff Calibration
 
 - This step explains the steps to perform a manual tradeoff calibration. This method enables the user to adjust the parameters according to the calibration objectives.
 - Select “Spark_best” or “Lambda_best” tradeoff table under the tradeoff heading to change the view to the intersection plot. Now, the design browser should look like the figure below.
@@ -163,7 +163,7 @@ You can manually mask a cell by pressing “Add selection to extrapolation mask�
 
 ---
 
-### Task 6-7: Set calibration objectives and constraints in optimisation pane
+#### Task 6-7: Set calibration objectives and constraints in optimisation pane
 
 - Change the design browser to Optimization view by clicking the [Optimization] button in the Processes pane. Create optimization by clicking on the toolbar, [Tools >> Create Optimization from Model]. From the dialog box, click [BMEP_mean] to design the first criterion in the list above. Click [Next].
 
@@ -203,7 +203,7 @@ To fill-in the table quickly, use ctrl+c to copy and ctrl+v to paste the numbers
 
 ---
 
-### Task 6-8: Start Automated Trade-off Calibration
+#### Task 6-8: Start Automated Trade-off Calibration
 
 - Click “Automated tradeoff” icon and a dialog box will appear asking the user to select which optimization objective to be used. Select the “BMEP_mean_optimization” and click [OK].
 
@@ -217,7 +217,7 @@ To fill-in the table quickly, use ctrl+c to copy and ctrl+v to paste the numbers
 
 ---
 
-### Task 6-9: Randomly Check the Calibrated Test Points
+#### Task 6-9: Randomly Check the Calibrated Test Points
 
 - Once the optimization has completed, randomly click on the operating points in the table to check the intersection plot whether the criteria have been met.
 
@@ -225,7 +225,7 @@ To fill-in the table quickly, use ctrl+c to copy and ctrl+v to paste the numbers
 
 ---
 
-### Task 6-10: Save Calibration Maps in Calibration Format
+#### Task 6-10: Save Calibration Maps in Calibration Format
 
 - The generated calibration table can be found in “Tables” in the Data Objects pane. The calibration data could be exported to various type of calibration formats such as ATI vision or INCA DCM. To export the calibration tables, click on the toolbar, [File >> Export >> Calibration >> All Items].
 
