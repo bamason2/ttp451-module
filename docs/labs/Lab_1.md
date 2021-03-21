@@ -5,7 +5,6 @@ parent: Computer Labs
 ---
 
 # Lab 1: Optimisation
-
 {: .no_toc }
 
 <details close markdown="block">
@@ -18,7 +17,6 @@ parent: Computer Labs
 </details>
 
 ## Topics
-
 {: .no_toc }
 
 - Aims and Objectives
@@ -27,7 +25,6 @@ parent: Computer Labs
 - Exercise 1: Optimisation
 
 ## Learning Outcomes
-
 {: .no_toc }
 
 By the end of this lesson, you will be able to:
@@ -77,7 +74,7 @@ in MATLAB&copy;.
 ![image](figs/lab1/j1.gif)  
 
 - Use ``<fminsearch>`` to find the minimum: ``<fminsearch(@J1vect,[0 0])>``, ``<fminsearch>`` expects a function with a single vector argument therefore the version defined in J1vect.m has to be used. Try different starting points.
-- How many evaluations are required by ``<fminsearch>``?
+- How many evaluations of $$J$$ are required by ``<fminsearch>``?
 
 ---
 
@@ -86,13 +83,13 @@ in MATLAB&copy;.
 The same exercise can be achieved using the graphical interface, which presents more information about the optimisation process.
 
 - Execute the command ``<optimtool>`` to start the graphical user interface “Optimization Tool”.
-- Select the solver fminsearch.
+- Select the solver ``<fminsearch>``''``.
 - Enter the objective function ``<@J1vect>``.
 - Enter the starting point [0 0].
 - Click [Start]. How long does it take and how many iterations are required?
 - Under Plot Functions enable the options [Function Count] and [Function Value]. This shows how the function value decreases during the optimisation.
 - Try the same with the solver ``<fminunc>``. You should select the algorithm [Medium Scale] (large scale is not applicable without a derivative of the cost function). What is the main difference of this solver?
-- The function ``<J1grad>`` provides both the cost function and the gradient. Use this together with ``<fminunc>`` by selecting "Derivatives: Gradient Supplied". How does this improve the optimisation?
+- The function ``<J1grad>`` provides both the cost function and the gradient. Use this together with ``<fminunc>`` by selecting [Derivatives: Gradient Supplied]. How does this improve the optimisation?
 
 $$\frac{\partial J_1}{\partial p_1} = 2p_1+p_2$$
 
@@ -107,8 +104,7 @@ $$\frac{\partial J_1}{\partial p_2} = e^{p_2} + -e^{-p_2}+p_1+1$$
 The file model_V8NA_V2 is a simple engine model of a naturally aspirated spark ignition V8 engine at a fixed engine speed. It takes a single vector argument with three values: the relative load (0 to 100), the spark advance angle (0 to 35) and the normalised air fuel ratio (0.8 to 1.1). The output is a vector of 6 measurements: BMEP (in bar), SD of BMEP (in bar), exhaust mass flow (in kg/h), exhaust temperature (in C), fuel consumption (in kg/h) and BSFC (in g/kWh).
 
 - For a relative load of 50 and an Air-Fuel Ratio of 1, find the best BSFC. You can use unconstrained optimisation with ``<fminsearch>`` or constrained optimisation using ``<X = fmincon(FUN,X0,A,B)>`` for this. You will need to write your own cost function that calls the model function.
-- When an electronic throttle control is used the throttle setting does not correspond completely to the torque request. A better formulation of this problem is to find the best BSFC for a given BMEP (6 bar as a good example).
-- You can either use a separate function to solve the model for a given BMEP using ``<fsolve>`` or you can use another variation of constrained optimisation: ``<X = fmincon(FUN,X0,A,B,Aeq,Beq,LB,UB,NONLCON)>`` where ``<NONLCON>`` is a function returning the BMEP deviation as an equality constraint.
+- When an electronic throttle control is used the throttle setting does not correspond completely to the torque request. A better formulation of this problem is to find the best BSFC for a given BMEP (6 bar as a good example). You can either use a separate function to solve the model for a given BMEP using ``<fsolve>`` or you can use another variation of constrained optimisation: ``<X = fmincon(FUN,X0,A,B,Aeq,Beq,LB,UB,NONLCON)>`` where ``<NONLCON>`` is a function returning the BMEP deviation as an equality constraint.
 - Repeat this optimisation for a number of steps from 1 bar to 10 bar BMEP. This will result in an optimal calibration but is it realistic? Which requirements have been ignored? How could you include them?
 
 ---
@@ -120,7 +116,7 @@ Consider the following variation of the multicriteria cost function used in Sect
 $$J_4(p) = \alpha \frac{50}{p_1} + \alpha \frac{50}{p_2} + 5\frac{p_1}{60}^2 + 4\frac{p_2}{60}^2$$
 
 - Plot the function above. Is it convex?
-- Find the optimum for a set of hourly costs. You have to edit the function J4.m to change $$\alpha$$. (If you are more advanced in MATLAB&copy; programming you can also automate this process).
+- Find the optimum for a set of hourly costs $$\alpha$$. You have to edit the function J4.m to change $$\alpha$$. (If you are more advanced in MATLAB&copy; programming you can also automate this process).
 - How can the results be visualized? Create a diagram with the key relationships.
 
 ---

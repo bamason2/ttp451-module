@@ -44,7 +44,8 @@ The aim of this exercise is to investigate the creation of different forms of mo
 
 Once data has been acquired during an engine test, the first step in handling the data is the creation of a model.  The reason for developing a model is to
 
-- Allow ready access to the data since it is now represented in a functional form;  - Allow interpolation;  the tests are conducted at discrete points, and for the calibration process, data must be available at all possible values of the controlled parameters of the engine.
+- Allow ready access to the data since it is now represented in a functional form;  
+- Allow interpolation;  the tests are conducted at discrete points, and for the calibration process, data must be available at all possible values of the controlled parameters of the engine.
 
 There are many forms of model and in this workshop we will consider just a few of the more commonly used types, notably polynomial and radial basis function (RBF) models.  We will also take a look at a very simple model type that is useful in searching for relationships between data streams – cross-correlation.   The surface fitting example illustrates the utility and importance of data visualisation.  
 
@@ -61,7 +62,7 @@ Files required for this modelling workshop are located in “TAS 2017>>3. Modell
 
 - RBF_manualtune_V3_exercise.m
 - V8NA_model_lab_TestBedData.csv
-- Note: Save these files in your Matlab&copy; current folder or set the current folder to in “TAS 2015>>3. Modelling lab ”, whichever is more convenient.
+- Note: Save these files in your MATLAB&copy; current folder or set the current folder to in “TAS 2015>>3. Modelling lab ”, whichever is more convenient.
 
 The test data is provided by JLR and is in the form of a spreadsheet, generated during tests of a V8 DI spark ignition engine. The test data are saved in V8NA_model_lab_TestBedData.csv.
 
@@ -103,7 +104,7 @@ Evaluate the correlation that may exist between the following pairs of data stre
 
 Sort and filter V8NA_model_lab_TestBedData.csv in the following order:
 
-- Extract data for speed = 3500RPM
+- Extract data for speed = 3500 rpm
 - Relative engine load 50-57%
 - Remove BMEP_mean < 6.79
 

@@ -5,7 +5,6 @@ parent: Computer Labs
 ---
 
 # Lab 2: Design of Experiments
-
 {: .no_toc }
 
 <details close markdown="block">
@@ -18,7 +17,6 @@ parent: Computer Labs
 </details>
 
 ## Topics
-
 {: .no_toc }
 
 - Aims and Objectives
@@ -27,7 +25,6 @@ parent: Computer Labs
 - Exercise 2-2: JLR Example (Eight Inputs)
 
 ## Learning Outcomes
-
 {: .no_toc }
 
 By the end of this lesson, you will be able to:
@@ -209,7 +206,7 @@ Now export the design into a *.csv file. Save the design as “Optim_V.csv”.
 
 - Load DOE test kit
 
-Change the MATLAB&copy; current folder to the current folder. In that folder run the DOE_testkit_V11_R7.p in MATLAB&copy;, Right click and run the script.
+Change the MATLAB&copy; working directory to the current folder. In that folder run the DOE_testkit_V11_R7.p in MATLAB&copy;, Right click and run the script.
 
 ![image](figs/lab2/fig_24_tas_2015_folder.png)
 
