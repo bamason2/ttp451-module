@@ -37,23 +37,28 @@ By the end of this lesson, you will be able to:
 
 The aim of this exercise is to learn how to design an experiment for a calibration task, and will include the creation of several Design of Experiment (DoE) proposals. Introductions will be given to constraints and evaluating model fits for particular designs.
 
+## Overview of Exercise
+
 The calibration task focuses on mapping the engine fuel consumption across a range of intake and exhaust cam settings ($$y_{IVC},x_{EVC}$$).The relationship between Brake Specific Fuel Consumption and Intake/Exhaust Cam Timing for a particular engine can be expressed as:
 
-$$ f_{bsfc}(x_{EVC}, y_{IVC}) = (((x_{EVC}-32)/4)^2 + ((y_{IVC}-58)/3.8)^2)+2*y_{IVC}+112$$
+$$
+\begin{equation}
+f_{bsfc}(x_{EVC}, y_{IVC}) = \left(\frac{x_{EVC}-32}{4}\right)^2 + \left(\frac{y_{IVC}-58}{3.8}\right)^2+2y_{IVC}+112
+\label{eq:target_function}
+\end{equation}
+$$
 
-In order to calibrate effectively, an experimental design that minimises the amount of testing whilst covering as much of the operating space as possible is required. One possible approach before physical testing is to determine the DOE using a "target function". We will generate several DOE proposals for this case study, using the above BSFC equation as the target function.
+In order to calibrate effectively, an experimental design that minimises the amount of testing whilst covering as much of the operating space as possible is required. One possible approach before physical testing is to determine the DOE using a "target function". We will generate several DOE proposals for this case study using the above BSFC equation as the target function.
 
 We will limit the input variables as below:
 
-$$0<=x_{EVC}<=60$$
+$$0<=x_{EVC}<=60\notag$$
 
-$$0<=y_{IVC}<=60$$
-
-The below flowchart shows the general DOE procedure:
-
-![image](figs/lab2/fig_1_DOE_flowchart.png)
+$$0<=y_{IVC}<=60\notag$$
 
 ## Background Information
+
+The following provides a very brief introduction to the topic of experimental design, for a more comprehensive overview please refer to the lecture slides and prestudy material
 
 ### Introduction to DOE
 
@@ -63,10 +68,6 @@ The flow chart for designing an experiment and testing is shown in the figure be
 
 ![image](figs/lab2/fig_2_MBC_DOE_process.png)
 
-The figure below shows the process of generating DOE using model browser:
-
-![image](figs/lab2/fig_3_generation_of_experimental_designs.png)
-
 ### Introduction to Cam Timing Design Exercise
 
 An engine is fitted with Variable Cam Timing (VCT) for both exhaust and intake cams. For a particular engine speed and load the changes of cam timing will affect the engine fuel consumption. The figure below shows a valve lift diagram for intake and exhaust. Advancing or retarding a cam will affect intake, scavenging or exhaust backpressure. These changes are influenced by the amount of overlap and intake/exhaust valve opening/closing which in turn affects the fuel consumption and other factors.
@@ -75,19 +76,7 @@ An engine is fitted with Variable Cam Timing (VCT) for both exhaust and intake c
 
 Recall that the calibration task is to map the engine fuel consumption across a range of intake and exhaust cam settings. An experimental design is required to do this in the most efficient manner by running the fewest experiments and obtaining the most information to accurately map the fuel consumption. We will generate several DOE designs for this case study.
 
-The relationship between fuel consumption and intake/exhaust cam timing for a particular engine can be expressed as:
-
-Target function:
-
-$$ f_{bsfc}(x_{EVC}, y_{IVC}) = (((x_{EVC}-32)/4)^2 + ((y_{IVC}-58)/3.8)^2)+2*y_{IVC}+112 $$
-
-for input variable limits;
-
-$$0<=x_{EVC}<=60$$
-
-$$0<=y_{IVC}<=60$$
-
-To determine how well the DOE able to give best response surface predictions, we will compare it against the same target function but mapped at high resolution.
+The relationship between fuel consumption and intake/exhaust cam timing for a particular engine can be expressed using the target function, Equation \ref{eq:target_function}. To determine how well the DOE able to give best response surface predictions, we will compare it against the same target function but mapped at high resolution.
 
 ![image](figs/lab2/fig_5_graphical_representation_of_map.png)
 
@@ -107,6 +96,8 @@ There are four distinct tasks in this exercise, which are listed below:
 ---
 
 #### Task 2-1.1: Generate several DoE proposals
+
+In this task you will be creating several experimental plans for comparison classical, space filling and v-optimal.
 
 - Start MBC Toolbox Interface
 
@@ -130,11 +121,11 @@ Right-click the local model in the diagram and choose set up model. Ensure the m
 
 Choose [File >> New Design] or click the [New Design] button in the toolbar. A new node called Linear Model Design appears. Click the new node, a 2D projection appears on the right. Rename the new node Linear Model Design to Classical_F by clicking the name and press F2 or the right mouse button then select [Rename Design] from the menu.
 
-![image](figs/lab2/fig_13_full_factorial_design.png)
+![image](figs/lab2/fig_13.png)
 
 Choose a classical design by clicking the [Classical Design] button in the toolbar or choose [Design >> Classical >> Design Browser] then select [Full Factorial] from the [Design type] drop-down menu.
 
-![image](figs/lab2/fig_14_design_editor.png)
+![image](figs/lab2/fig_13_full_factorial_design.png)
 
 Increase the number of levels for each factor from 2 to 6, keep the number of center points as 0. The total size of design is 36, you may view your design in different projections using the tabs (1-D, 2-D) under the display.
 
@@ -180,9 +171,9 @@ Now export the design to a *.csv file. Save the design as “Spacefilling_LH.csv
 
 Create another new design called Optim_V. Select this new child node then open the Optimal Design Browser by choosing [Design >> Optimal] from the menu or click the [Optimal Design] button in the toolbar.
 
-![image](figs/lab2/fig_21_optimal_design_window_1.png)
-
 ![image](figs/lab2/fig_21_optimal_design_window_2.png)
+
+![image](figs/lab2/fig_21_optimal_design_window_1.png)
 
 In the Optimal Design setting window, set the optimal design parameters to the ones shown in the figures below. All are kept at default values except the Optimality criteria “V-Optimal” and total number of points “36”. Click the [OK] button to start optimising the design. The optimisation process stops when the number of iterations without improvement reaches the pre-set value (36) or number of iterations performed reach the pre-set value in Algorithm tab.
 
@@ -224,7 +215,7 @@ The testing kit can accept any type of DOE and equation as target functions. It 
 
 - Load DOE
 
-Select [Option 2] and press enter to load the DOE. Select “DOE_poor_design.csv” which is located in the current folder and press enter. The program status will indicate a DOE has loaded. A figure will appear which contains the subplot for the DOE test point distribution along with its histogram.
+Select [Option 2] and press enter to load the DOE. Select “DOE_poor_design.csv” which is located in the current folder and press [Enter]. The program status will indicate a DOE has loaded. A figure will appear which contains the subplot for the DOE test point distribution along with its histogram.
 
 ![image](figs/lab2/fig_27_doe_scatter_subplot.png)
 
@@ -246,7 +237,7 @@ Select [Option 9] to test the DOE design. The DOE design sequences are used as i
 
 It is expected that the model is going to fit poorly in the center region. Observe the boundary of the DOE design the model manages to predict fairly well. The plots shown below are the overlay of the expected response and response fit using the DOE design. The plot on the right is the contour plot of the differences between both surfaces. The differences are calculated by meshing both surface in high resolution and calculate the target BSFC output. The RMSE of both surfaces are relatively high indicating high modeling error.
 
-![image](figs/lab2/fig_30_bsfc_response_result.png)
+![image](figs/lab2/fig_30.png)
 
 - Improving the modelling results
   
@@ -294,11 +285,11 @@ The Constraint Editor dialog with available constraints appears. The default 1D 
 
 ![image](figs/lab2/fig_37_lower_boundary.png)
 
-Click OK. Your new constraint appears in the Constraint Manager list box.
+Click [OK]. Your new constraint appears in the Constraint Manager list box.
 
 - Generate optimal design within constraint boundary
 
-Select this new child node, then open the Optimal Design Browser by choosing [Design >> Optimal] from the menu or click the Optimal Design button in the toolbar.
+Select this new child node, then open the Optimal Design Browser by choosing [Design >> Optimal] from the menu or click the [Optimal Design] button in the toolbar.
 
 ![image](figs/lab2/fig_39_optimal_design_window_1.png)
 
@@ -318,6 +309,8 @@ Repeat creating constraints for the other DOE designs. The constrained DOE desig
 
 ![image](figs/lab2/fig_42_projection_of_fullfactorial_design.png)
 
+- Analyse all constrained DOE designs using DOE testing kit
+
 Load and retest each DOE designs in the script. Save the results after fitting the model.
 
 ![image](figs/lab2/fig_43_modelling_results_constrained_optimal_design.png)
@@ -334,10 +327,14 @@ Load and retest each DOE designs in the script. Save the results after fitting t
     ![image](figs/lab2/fig_44_stratified_lhs_design.png)
 
   - Space filling design (SOBOL Sequence)
+    - Try generating 10 DOE points and keep generating in sets of 10. Observe how the points are distributed.
+    - SOBOL sequence is a quasi-random design which is capable of supporting progressive augmentation of experimental design. How does this help in reducing modeling time?
 
 ### Exercise 2-2: Cam Timing Design
 
-This part of the exercise consists of an experiment design followed by virtual engine testing that forms the first part of modelling a V8 spark ignition engine. You will use a single stage model and create a space filling design. You will then use the Design of Experiments (DOE) points generated and test it using a virtual engine Simulink&copy; model. The Simulink&copy; model will provide you with the experimental test results (datasets) which will be used for creating V8 engine model during the calibration-optimization lab. The results generated from this lab task will be used for the modelling lab. Please save the generated result in the active folder (or your current MATLAB&copy; folder).
+The aim of this exercise is to continue the DoE learning process using a real-world example. This forms part of the second part of the DoE exercise.
+
+This part of the exercise consists of an experiment design followed by virtual engine testing that forms the first part of modelling a V8 spark ignition engine. You will use a single stage model and create a space filling design. You will then use the Design of Experiments (DOE) points generated and test it using a virtual engine Simulink&copy; model. The Simulink&copy; model will provide you with the experimental test results (datasets) which will be used for creating V8 engine model during the calibration-optimisation lab. The results generated from this lab task will be used for the modelling lab. Please save the generated result in the active folder (or your current MATLAB&copy; folder).
 
 The following figure shows the flowchart for this second task in the Design of Experiments Workshop
 
@@ -347,7 +344,7 @@ The following figure shows the flowchart for this second task in the Design of E
 
 #### Task 2-2.1
 
-- Start model browser by typing ``<mbcmodel>`` in command window. Create  a one stage test plan by right clicking on the [Untitled] project node and click [New Test Plan]. Select [One stage plan]. Click [OK] to make the selection.
+- Start the model browser by typing ``<mbcmodel>`` in command window. Create  a one stage test plan by right clicking on the [Untitled] project node and click [New Test Plan]. Select [One stage plan]. Click [OK] to make the selection.
 
 ![image](figs/lab2/fig_46_one_stage_plan.png)
 
@@ -391,16 +388,22 @@ For this exercise, the DoE test points were designed for an unknown system (No k
 
 ![image](figs/lab2/fig_53_data_selection.png)
 
-- The virtual engine test requires initialization. The initialization will automatically load the saved DOE points (“V8NA_TestBed_DoE.csv”) into the workspace and apply a time stamp to the design for it to be used in the virtual engine test &copy; block. Open “V8NA_TestBedData_400_Mdl_init.m” within the MATLAB&copy; environment and execute the script. Once the execution has completed, a new variable is loaded into the MATLAB&copy; workspace.
-
-![image](figs/lab2/fig_54_init_script.png)
+- The virtual engine test requires initialisation. The initialisation will automatically load the saved DOE points (“V8NA_TestBed_DoE.csv”) into the workspace and apply a time stamp to the design for it to be used in the virtual engine test &copy; block. Open  V8NA_TestBedData_400_Mdl_init.m” within the MATLAB&copy; environment and execute the script. Once the execution has completed, a new variable is loaded into the MATLAB&copy; workspace.
 
 - The DOE points are automatically loaded into the MATLAB&copy; workspace, it is important to check if the DOE points are in the correct form. Open the “V8NA_TestBed_DoE” variable in the workspace by double clicking on it and check the values in the “Variable Editor”. Take note that the 1st column is the time stamp which will be used when running the Simulink&copy; block.
 
 ![image](figs/lab2/fig_55_variable_editor.png)
 
 - Open “V8NA_TestBed_400.slx” in Simulink&copy;. Run the simulation by pressing [Start Simulation] button. The simulation time is set at 350 seconds. After the simulation has completed, the test results (“V8NA_TestBed_Data”) will be saved in the MATLAB&copy; workspace.
+
+![image](figs/lab2/fig_56.png)
+
 - Use the “Save_Test_Result.m” script to convert the test result matrix into a csv format. The test will be saved as “V8NA_TestBed_Data.csv”. We will use the test result obtained for the modelling exercise during the modelling lab.
+
+![image](figs/lab2/fig_57.png)
+
 - Now, close the Simulink&copy; model. Save the workspace items as “V8NA_testplan.mat” by clicking [File >> Save Project As]. The saved test plan will be used for the following lab classes.
+
+![image](figs/lab2/fig_58.png)
 
 ---
