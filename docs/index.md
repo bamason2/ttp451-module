@@ -7,3 +7,4 @@ layout: home
 
 Welcome to the Powertrain Calibration Optimisation Course
 
+![image](process_overview.png)
