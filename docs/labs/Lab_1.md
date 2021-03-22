@@ -69,7 +69,7 @@ cost=p1.^2+exp(p2)+exp(-p2)+p1.*p2+p2;
 in MATLAB&copy;.
 
 - Evaluate $$J_1$$ for a number of points and try to get a feeling for it, you can use a simple call with two arguments such as ``<J1(arg1,arg2)>``.
-- Visualise this function. The "ez" plot functions are convenient to do this, such as ``<ezsurf(J1)>`` or ``<ezcontour(@J1)>``. Which kind of plot is most suitable?
+- Visualise this function. The "ez" plot functions are convenient to do this, such as ``<ezsurf(@J1)>`` or ``<ezcontour(@J1)>``. Which kind of plot is most suitable?
 
 ![image](figs/lab1/j1.gif)  
 
@@ -83,7 +83,7 @@ in MATLAB&copy;.
 The same exercise can be achieved using the graphical interface, which presents more information about the optimisation process.
 
 - Execute the command ``<optimtool>`` to start the graphical user interface “Optimization Tool”.
-- Select the solver ``<fminsearch>``''``.
+- Select the solver ``<fminsearch>``.
 - Enter the objective function ``<@J1vect>``.
 - Enter the starting point [0 0].
 - Click [Start]. How long does it take and how many iterations are required?
@@ -95,7 +95,7 @@ $$\frac{\partial J_1}{\partial p_1} = 2p_1+p_2$$
 
 $$\frac{\partial J_1}{\partial p_2} = e^{p_2} + -e^{-p_2}+p_1+1$$
 
-- Try a constraint minimisation using the solver ``<fmincon>``. You have to supply bounds for $$p$$ such as Lower: $$[-10, -10]$$ and Upper: $$[10, 10]$$. What happens if you only allow positive values?
+- Try a constrained minimisation using the solver ``<fmincon>``. You have to supply bounds for $$p$$ such as Lower: $$[-10, -10]$$ and Upper: $$[10, 10]$$. What happens if you only allow positive values?
 
 ---
 
@@ -111,7 +111,7 @@ The file model_V8NA_V2 is a simple engine model of a naturally aspirated spark i
 
 #### Task 1-4: Multicriteria Optimisation (optional)
 
-Consider the following variation of the multicriteria cost function used in Section 6. It distinguishes between two stretches driven with different speeds $$p_1$$ and $$p_2$$;
+Consider the following variation of the multicriteria cost function used previously. It distinguishes between two stretches driven with different speeds $$p_1$$ and $$p_2$$;
 
 $$J_4(p) = \alpha \frac{50}{p_1} + \alpha \frac{50}{p_2} + 5\frac{p_1}{60}^2 + 4\frac{p_2}{60}^2$$
 
