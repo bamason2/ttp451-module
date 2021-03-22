@@ -111,7 +111,7 @@ The file model_V8NA_V2 is a simple engine model of a naturally aspirated spark i
 
 #### Task 1-4: Multicriteria Optimisation (optional)
 
-Consider the following variation of the multicriteria cost function used previously. It distinguishes between two stretches driven with different speeds $$p_1$$ and $$p_2$$;
+Consider the following multicriteria cost function. It distinguishes between two stretches driven with different speeds $$p_1$$ and $$p_2$$;
 
 $$J_4(p) = \alpha \frac{50}{p_1} + \alpha \frac{50}{p_2} + 5\frac{p_1}{60}^2 + 4\frac{p_2}{60}^2$$
 
