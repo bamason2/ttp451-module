@@ -384,7 +384,7 @@ For this exercise, the DoE test points were designed for an unknown system (No k
 
 #### Task 2-2.3
 
-- Make sure you have downloaded the “TAS 2015” folder from learn. The files in “TAS 2015>>2. DOE lab ” folder are required to run the virtual engine test. The files required are shown in figure below. Set the Matlab directory path to the “TAS 2015” folder or whichever folder you have saved the contents of TAS 2015 folder. Copy the “V8NA_TestBed_DoE.csv” into the current MATLAB folder so that the script will be able to find the design file.
+- Download the exercise files [here](https://lunet-my.sharepoint.com/:u:/g/personal/ttbm2_lunet_lboro_ac_uk/EUlz9MfE_-pHhm-Ie4FiMsMBQkltKJmL2tAupWTBtyDoeg?e=5e9bTY) and make sure that they are available on the MATLAB&copy; path.
 
 ![image](figs/lab2/fig_53_data_selection.png)
 
