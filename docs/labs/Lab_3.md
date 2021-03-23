@@ -38,18 +38,16 @@ By the end of this lesson, you will be able to:
 
 ## Aims and Objectives
 
-The aim of this exercise is to investigate the creation of different forms of models. A few common types of model will be discussed, notably polynomial and radial basis functions (RBF’s). Also, the user will gain expertise in some common Matlab&copy; functions and the constructs that Matlab&copy; facilitates.
+The aim of this exercise is to investigate the creation of different forms of models. A few common types of model will be discussed, notably polynomial and radial basis functions (RBF’s). Also, the user will gain expertise in some common MATLAB&copy; functions and the constructs that MATLAB&copy; facilitates.
 
 ## Overview of Exercise
 
-Once data has been acquired during an engine test, the first step in handling the data is the creation of a model.  The reason for developing a model is to
+Once data has been acquired during a powertrain system test the first step in handling the data is the creation of a model. The reason for developing a model is to;
 
 - Allow ready access to the data since it is now represented in a functional form;  
-- Allow interpolation;  the tests are conducted at discrete points, and for the calibration process, data must be available at all possible values of the controlled parameters of the engine.
+- Allow interpolation; the tests are conducted at discrete points and for the calibration process, data must be available at all possible values of the controlled parameters of the engine.
 
-There are many forms of model and in this workshop we will consider just a few of the more commonly used types, notably polynomial and radial basis function (RBF) models.  We will also take a look at a very simple model type that is useful in searching for relationships between data streams – cross-correlation.   The surface fitting example illustrates the utility and importance of data visualisation.  
-
-The other purpose of the workshop is to give you an opportunity to practice some commonly needed skills in the use of Matlab&copy; functions and the constructs that Matlab&copy; facilitates.
+There are many forms of model and in this workshop we will consider just a few of the more commonly used types, notably polynomial and radial basis function (RBF) models.  We will also take a look at a very simple method useful in searching for relationships between data streams called cross-correlation.
 
 The exercises consist of the following:
 
@@ -58,157 +56,106 @@ The exercises consist of the following:
 - Fitting a surface that describes data and allows the data to be evaluated
 - Fitting time response data using radial basis functions.
 
-Files required for this modelling workshop are located in “TAS 2017>>3. Modelling lab ” folder:
+Files required for this modelling workshop can be downloaded [here](https://lunet-my.sharepoint.com/:u:/g/personal/ttbm2_lunet_lboro_ac_uk/EalgEOsYMElDgBgllbNGU8cB6Y0g3bPsMjW6L_fb_WQQBA?e=eFI01o) or on LEARN, they are;
 
 - RBF_manualtune_V3_exercise.m
 - V8NA_model_lab_TestBedData.csv
-- Note: Save these files in your MATLAB&copy; current folder or set the current folder to in “TAS 2015>>3. Modelling lab ”, whichever is more convenient.
 
-The test data is provided by JLR and is in the form of a spreadsheet, generated during tests of a V8 DI spark ignition engine. The test data are saved in V8NA_model_lab_TestBedData.csv.
+The test data is provided in the form of a spreadsheet, generated during tests of a V8 DI spark ignition engine. The test data are saved in the file V8NA_model_lab_TestBedData.csv.
 
-You can load the data into Matlab&copy; using the import command (Matlab&copy; file submenu), then use the construct: ``<mydata = data(:,n)>`` to extract the nth column.
+You can load the data into MATLAB&copy; using the import command (MATLAB&copy; file submenu), then use the construct: ``<mydata = data(:,n)>`` to extract the nth column.
 
 ### Exercise 3: Modelling Principles
 
-There are 5 Tasks comprising this lesson:
+There are five tasks comprising this lesson:
 
-- Exercise 1: Testing xcorr
-- Exercise 2: Sorting and filtering data
-- Exercise 3: Fitting and error evaluation
-- Exercise 4: Creating a surface plot
-- Exercise 5: Tuning a system of RBFs
+- Task 3-1: Testing ``<xcorr>``
+- Task 3-2: Sorting and filtering data
+- Task 3-3: Fitting and error evaluation
+- Task 3-4: Creating a surface plot
+- Task 3-5: Tuning a system of RBFs
 
 ---
 
-#### Task 3-1: Testing ``<xcorr>``
+#### Task 3-1: Using ``<xcorr>`` to find correlations between data
 
-Test the xcorr function using the following example:
+Try the ``<xcorr>`` function using the following example:
 
 ```matlab
 x = 0:0.01:10;
 X = sin(x); 
 Y = cos(x); 
-[r,lags]=xcorr(X,'coeff'); 
-plot(lags,r)
+[r,lags] = xcorr(X, 'coeff'); 
+plot(lags, r)
 ```
 
-Evaluate the correlation that may exist between the following pairs of data streams.  In each case comment on the physical significance of the result.
+Import the data in the file V8NA_model_lab_TestVedData.csv using the [Import Data] on the MATLAB&copy; toolstrip.  Be sure to import the data as a Numeric Matrix by changing the [Output Type] in the MATLAB&copy; toolstrip.
+
+Evaluate correlations that may exist between the following pairs of data streams in the data file.  In each case think about the physical significance of the result.
 
 - AFR (column 9) and exhaust temperature (column 11)
 - Exhaust temperature (column 11) and BMEP (column 13)
-- Use the function detrend to remove the mean value of the data before running the xcorr function.  Why is this necessary?
+
+Use the function ``<detrend>`` to remove the mean value of the data before running the ``<xcorr>`` function.  Why is this necessary?
 
 ---
 
-#### Task 3-2: Sorting and Filtering Data
+#### Task 3-2: Importing and filtering the data
 
-Sort and filter V8NA_model_lab_TestBedData.csv in the following order:
+In this task you will be creating a functions that imports and filters data from the V8NA_model_lab_TestVedData.csv data file and files similar to it.  
 
-- Extract data for speed = 3500 rpm
-- Relative engine load 50-57%
-- Remove BMEP_mean < 6.79
+Create a function named ``<import_and_filter(filename)>`` that does the following;
 
-You can use ``<sortrows>`` array to sort the data array. Do not override the original test data. Use Matlab&copy; to do the sorting. Identify a polynomial function that relates respectively:
+- Imports the data from the V8NA_model_lab_TestVedData.csv file
 
-- BMEP (torque) [y] and ignition timing [x]
-- Exhaust temperature [y] and AFR [x]
+You may want to make use of the following code snippet in doing this;
 
-Start with a second order model and seek an R-squared value of above 0.95, and once you have identified a satisfactory fit, plot the resulting function and the residual values.  How can you test the residuals to give an impression of the quality of the model?
+```matlab
+mydata = csvread(filename, 2, 0, [2, 0, 1050, 14]);
+```
+
+- Extracts data from the data rows with speed = 3500 rpm (column 2), relative load (column 3) 50-57% and removes data with BMEP_mean (column 13) < 6.79.
+
+You may want to use a similar syntax in your filtering of data to the following code;
+
+```matlab
+%Filter data
+mydata(mydata(:,2)<3500,:)=[];
+```
 
 ---
 
 #### Task 3-3: Fitting and Error Evaluation
 
-Reproduce the code below to create 2 sub-functions which call the fitting functions and error evaluation code. The fitting sub-function requires:
+Create a function ``<model_fitting(mydata, r)>`` that fits a polynomial model of order n based on the input data, mydata.  The order of the model should be iteratively increased until the fit statistic meets the requirement, in this case an $R^2$ value of 0.95.  The measure of fit should be passed as a second argument to the function.
 
-Input:
+The function should start by fitting a model order of 2 and incrementing this until the $R^2$ value exceeds the value of the second argument, r. Once a sufficient model has been identified your function should plot the resulting function and the data points used to generate it.  On a separate plot the function should also plot the residuals i.e. the difference between the model and data points.  For each of the plots remember to include a title including the model order and axis labels.
 
-- Ignition for BMEP response - ``<mydata(:,6)>``
-- Lambda for Exh temp response - ``<mydata(:,9)>``
+The model fitted should relate (the fit of both of these should exceed the fitness specified by the second function argument, r);
 
-Output:
+- BMEP (column 13) [y] and ignition timing (column 6) [x]
+- Exhaust temperature (column 11) [y] and AFR (column 9) [x]
 
-- BMEP response data - ``<mydata(:,13)>``
-- Exh temp response - ``<mydata(:,11)>``
+To complete this task you may want to design your function along lines of the following;
 
-Polynomial order: n
-  
-Loop the sub-function four times for generating polynomial from 1st to 4th order. The fitting models are stored in a cell array and the predicted responses are stored in multidimensional array. See coding below.
+1. Pass the fitting data to the function and the fitness measure to the function.
 
-A 2nd sub-function is to calculate the $$R^2$$ and residuals. This sub-function requires actual output data from mydata and prediction output from fitting sub-function. This error sub-function will give out the R^2 and residual values which is stored in multidimensional array.
-The main body of the &copy; code stated above should be as below (You can find this main body code in “TAS2015 >>3. Modelling lab>>polyfit_lab_v3.m”:
+2. Identify the polynomial model starting at order n = 2
+
+The model can be identified using the MATLAB&copy; ``<polyfit>`` function.  
 
 ```matlab
-function polyfit_lab_v3()
-
-%-----   csv read - Follow step 2
-%-----   data filter - Follow step 3
-%-----   data sort - Follow step 4
-
-for n=1:4
-[BMEP_poly{n}, BMEP_data_poly(:,n)] = poly_fitting(mydata(:,6),mydata(:,13),n);
-[Exh_poly{n}, Exh_data_poly(:,n)] = poly_fitting(mydata(:,9),mydata(:,11),n); 
-end
-
-%Calculate R2 and residual
-for n=1:4
-[R2_BMEP(:,n), resid_BMEP(:,n)] = error_evaluation(mydata(:,13),BMEP_data_poly(:,n));
-[R2_Exh(:,n), resid_Exh(:,n)] = error_evaluation(mydata(:,11),Exh_data_poly(:,n));
-end
-
-%-----    Plot functions - Step 5(Create your own code)
-
-function [model, model_predict] = poly_fitting(input,response,n) 
-
-switch n
-    case 1
-        poly_order = 'poly1';
-    case 2
-        poly_order = 'poly2';
-    case 3
-        poly_order = 'poly3';
-    case 4
-        poly_order = 'poly4';
-end
-
-model=fit(input,response,poly_order);
-model_predict = model(input);
-
-function [Rsqred, resid] = error_evaluation(actual_data,predict_data)
-resid = actual_data - predict_data;
-SSresid = sum(resid.^2);
-SStotal = (length(actual_data)-1) * var(actual_data);
-Rsqred = 1 - SSresid/SStotal;
+[BMEP_poly{n}, BMEP_data_poly(:,n)] = polyfit(mydata(:,6),mydata(:,13),n);
+[Exh_poly{n}, Exh_data_poly(:,n)] = polyfit(mydata(:,9),mydata(:,11),n); 
 ```
 
-- Call the data file and store into mydata array. Use the following code to do this. But first assign the filename to a string called filename.
+3. Evaluate the fit statistic
 
-```matlab
-mydata = csvread(filename,2,0, [2,0,1050,14]);
-```
+Once the model has been identified evaluate the fit statistics. If the fit requirements are met i.e. $R^2$ > 0.95 then move to the next step.  If the model fit does not meet the requirement, increment n and repeat step 2. 
 
-- Use filter to remove data. For example, to filter the engine speed:
+4. Plot the models and residuals
 
-```matlab
-%Filter data
-mydata(mydata(:,2)<3500,:)=[];>);
-```
-
-Refer to the question for a complete list of filters required to get the data.
-
-The data is filtered because it was developed using a DOE method. So, the points are scrambled in all directions in the operating space. Filtering narrows down the data to the area of interest which is to observe the trend of BMEP across ignition angle and exhaust temperature across lambda.
-
-- Use sortrows to sort the column according to BMEP (column 13).
-
-```matlab
-%Sort ignition angle column 13
-mydata = sortrows(mydata,13);
-```
-
-- Generate plots for:
-  - Comparison between polynomial orders for both responses (BMEP and exhaust temperature)
-  - R2 plot for all responses. Use ``<plot cfit>`` function to plot a fitting curve.
-  - Residuals for all responses. To reduce the coding, use for loop to iterate the plot functions for all polynomial orders.
+Plot the model using ``<polyval>``.  Remember to add a title and axis labels.  Also plot the residuals for each of the models
 
 ![image](figs/lab3/fig_1_create_surface_plot_1.png)
 
@@ -275,7 +222,7 @@ A function, $$y=-0.25x^4+0.42x^3+x^2-0.67x+2$$, is to be modelled using Gaussian
 
 Note that in practice you would fit the RBFs to data.  We have given you a function to make the exercise straightforward to complete. At the end of the workshop we will distribute a model answer.
 
-Then, use the Matlab&copy; function ``<newrb`` to fit the RBF, ``<newrb>`` returns a function that can be used to evaluate the function.  Simply use that function with the input values to generate the outputs. See coding below:
+Then, use the MATLAB&copy; function ``<newrb`` to fit the RBF, ``<newrb>`` returns a function that can be used to evaluate the function.  Simply use that function with the input values to generate the outputs. See coding below:
 
 ```matlab
 %RBF configurations and targets
