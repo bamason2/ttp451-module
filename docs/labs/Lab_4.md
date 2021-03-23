@@ -146,6 +146,8 @@ Take extra precaution when removing outliers, always observe the PRESS RMSE whil
 
 ![image](figs/lab4/fig_16_other_models.png)
 
+- Save the project as “V8NA_1_StageModel.mat” and close the model browser. This model will be used later in the Feature calibration exercise.
+
 ---
 
 #### Task 4-3: Feature Calibration for a V8 Engine using Radial Basis Functions

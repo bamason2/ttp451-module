@@ -245,7 +245,7 @@ A function, $y=-0.25x^4+0.42x^3+x^2-0.67x+2$ is to be modelled using Gaussian ra
 
 Note that in practice you would fit the RBFs to data.  We have given you a function to make the exercise straightforward to complete.  
 
-Use the MATLAB&copy; function ``<newrb`` to fit the RBF, ``<newrb>`` returns a function that can be used to evaluate the function.  Simply use that function with the input values to generate the outputs. See the code below:
+Use the MATLAB&copy; function ``<newrb>`` to fit the RBF, ``<newrb>`` returns a function that can be used to evaluate the function.  Simply use that function with the input values to generate the outputs. See the code below:
 
 ```matlab
 %RBF configurations and targets

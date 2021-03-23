@@ -51,6 +51,8 @@ The MATLAB&copy; Optimisation Toolbox provides functions for finding parameters 
 
 Download the data for this exercise from LEARN or [here](https://lunet-my.sharepoint.com/:u:/g/personal/ttbm2_lunet_lboro_ac_uk/EaWFBqyWqS9MnCYFTZvKvg8BP8PvtVwTBrUIMcqkGKh36w?e=8kN2lN)
 
+or [here]({{ site.url }}/files/Exercise_1.zip)
+
 ---
 
 #### Task 1-1: Basics of Optimisation
