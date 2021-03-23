@@ -138,9 +138,10 @@ As an example you should pass the following input-output data to your function (
 
 To complete this task you may want to design your function along lines of the following;
 
-1. Pass the input-output data and the fitness measure to the function.
+1.Pass the input-output data and the fitness measure to the function.
+Sort the input data using the ``<sortrows>`` function, this will help with plotting later on in the exercise.
 
-2. Identify the polynomial model starting at order n = 2
+2.Identify the polynomial model starting at order n = 2
 
 The model can be identified using the MATLAB&copy; ``<polyfit>`` function, for example.  
 
@@ -148,19 +149,17 @@ The model can be identified using the MATLAB&copy; ``<polyfit>`` function, for e
 model_parameters = polyfit(input_data, output_data, n);
 ```
 
-3. Evaluate the fit statistic
+3.Evaluate the fit statistic
 
 Once the model has been identified evaluate the fit statistics. If the fit requirements are met i.e. $R^2$ > 0.95 then move to the next step.  If the model fit does not meet the requirement, increment n and repeat step 2.
 
-4. Plot the models and residuals on two different figures
+4.Plot the models and residuals on two different figures
 
-Plot the model using ``<polyval>`` and ``<plot>``.  Remember to add a title and axis labels.  Also plot the residuals for each of the models
+Plot the model using ``<polyval>`` and ``<plot>``.  Remember to add a title and axis labels.  Also plot the residuals for each of the models.  Example plots are shown below;
 
-![image](figs/lab3/fig_1_create_surface_plot_1.png)
+![image](labs/lab3/../../figs/lab3/residuals.png)
 
-![image](figs/lab3/fig_1_create_surface_plot_2.png)
-
-![image](figs/lab3/fig_1_create_surface_plot_3.png)
+![image](labs/lab3/../../figs/lab3/prediction_vs_data.png)
 
 ---
 
