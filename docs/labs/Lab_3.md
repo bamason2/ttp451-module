@@ -38,7 +38,7 @@ By the end of this lesson, you will be able to:
 
 ## Aims and Objectives
 
-The aim of this exercise is to investigate the creation of different forms of models. A few common types of model will be discussed, notably polynomial and radial basis functions (RBF’s). Also, the user will gain expertise in some common MATLAB&copy; functions and the constructs that MATLAB&copy; facilitates.
+The aim of this exercise is to investigate the creation of different forms of models. A few common types of model will be discussed and investigated notably polynomial and radial basis functions (RBF’s).
 
 ## Overview of Exercise
 
@@ -61,9 +61,9 @@ Files required for this modelling workshop can be downloaded [here](https://lune
 - RBF_manualtune_V3_exercise.m
 - V8NA_model_lab_TestBedData.csv
 
-The test data is provided in the form of a spreadsheet, generated during tests of a V8 DI spark ignition engine. The test data are saved in the file V8NA_model_lab_TestBedData.csv.
+The test data is provided in the form of a spreadsheet, generated during tests of a V8 DI spark ignition engine, the test data are saved in the file V8NA_model_lab_TestBedData.csv.
 
-You can load the data into MATLAB&copy; using the import command (MATLAB&copy; file submenu), then use the construct: ``<mydata = data(:,n)>`` to extract the nth column.
+You can load the data into MATLAB&copy; using the import button on the MATLAB&copy; toolstrip.  After this you may use the construct: ``<mydata = data(:,n)>`` to extract the nth column.
 
 ### Exercise 3: Modelling Principles
 
@@ -89,7 +89,7 @@ Y = cos(x);
 plot(lags, r)
 ```
 
-Import the data in the file V8NA_model_lab_TestVedData.csv using the [Import Data] on the MATLAB&copy; toolstrip.  Be sure to import the data as a Numeric Matrix by changing the [Output Type] in the MATLAB&copy; toolstrip.
+Import the data in the file V8NA_model_lab_TestVedData.csv using the [Import Data] on the MATLAB&copy; toolstrip.  Be sure to import the data as a Numeric Matrix by changing the [Output Type] on the MATLAB&copy; toolstrip.
 
 Evaluate correlations that may exist between the following pairs of data streams in the data file.  In each case think about the physical significance of the result.
 
@@ -116,7 +116,7 @@ mydata = csvread(filename, 2, 0, [2, 0, 1050, 14]);
 
 - Extracts data from the data rows with speed = 3500 rpm (column 2), relative load (column 3) 50-57% and removes data with BMEP_mean (column 13) < 6.79.
 
-You may want to use a similar syntax in your filtering of data to the following code;
+You may want to use code similar to the following when filtering your data;
 
 ```matlab
 %Filter data
@@ -127,35 +127,34 @@ mydata(mydata(:,2)<3500,:)=[];
 
 #### Task 3-3: Fitting and Error Evaluation
 
-Create a function ``<model_fitting(mydata, r)>`` that fits a polynomial model of order n based on the input data, mydata.  The order of the model should be iteratively increased until the fit statistic meets the requirement, in this case an $R^2$ value of 0.95.  The measure of fit should be passed as a second argument to the function.
+Create a function ``<model_fitting(xdata, ydata, r)>`` that fits a polynomial model of order n, using the MATLAB&copy; function ``<polyfit>``.  The function should be capable of importing input-output data of the form previously exported from the ``<import_and_filter>`` function developed in the previous exercise.  For the specified input-ouput data the order of the model should be iteratively increased until the fit statistic meets the requirement, in this case an $R^2$ value of 0.95.  The measure of fit should be passed as a third argument to the function.
 
-The function should start by fitting a model order of 2 and incrementing this until the $R^2$ value exceeds the value of the second argument, r. Once a sufficient model has been identified your function should plot the resulting function and the data points used to generate it.  On a separate plot the function should also plot the residuals i.e. the difference between the model and data points.  For each of the plots remember to include a title including the model order and axis labels.
+The function should start by fitting a model order of 2 and incrementing this until the $R^2$ value exceeds the value of r. Once a sufficient model has been identified your function should plot the resulting function and the data points used to generate it.  On a separate plot the function should also plot the residuals i.e. the difference between the model and data points.  For each of the plots remember to include a title including the model order and axis labels.
 
-The model fitted should relate (the fit of both of these should exceed the fitness specified by the second function argument, r);
+As an example you should pass the following input-output data to your function (in two separate function calls) checking to ensure that required plots are generated;
 
 - BMEP (column 13) [y] and ignition timing (column 6) [x]
 - Exhaust temperature (column 11) [y] and AFR (column 9) [x]
 
 To complete this task you may want to design your function along lines of the following;
 
-1. Pass the fitting data to the function and the fitness measure to the function.
+1. Pass the input-output data and the fitness measure to the function.
 
 2. Identify the polynomial model starting at order n = 2
 
-The model can be identified using the MATLAB&copy; ``<polyfit>`` function.  
+The model can be identified using the MATLAB&copy; ``<polyfit>`` function, for example.  
 
 ```matlab
-[BMEP_poly{n}, BMEP_data_poly(:,n)] = polyfit(mydata(:,6),mydata(:,13),n);
-[Exh_poly{n}, Exh_data_poly(:,n)] = polyfit(mydata(:,9),mydata(:,11),n); 
+model_parameters = polyfit(input_data, output_data, n);
 ```
 
 3. Evaluate the fit statistic
 
-Once the model has been identified evaluate the fit statistics. If the fit requirements are met i.e. $R^2$ > 0.95 then move to the next step.  If the model fit does not meet the requirement, increment n and repeat step 2. 
+Once the model has been identified evaluate the fit statistics. If the fit requirements are met i.e. $R^2$ > 0.95 then move to the next step.  If the model fit does not meet the requirement, increment n and repeat step 2.
 
-4. Plot the models and residuals
+4. Plot the models and residuals on two different figures
 
-Plot the model using ``<polyval>``.  Remember to add a title and axis labels.  Also plot the residuals for each of the models
+Plot the model using ``<polyval>`` and ``<plot>``.  Remember to add a title and axis labels.  Also plot the residuals for each of the models
 
 ![image](figs/lab3/fig_1_create_surface_plot_1.png)
 
