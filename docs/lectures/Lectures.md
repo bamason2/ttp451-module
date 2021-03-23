@@ -10,37 +10,41 @@ nav_order: 1
 
 ### Introduction to Calibration
 
-<object data="L1_calibration_overview.pdf" type="application/pdf" width="100%" height="420px"></object>
+<object data="{{ site.url }}/ttp451-module/files/L1_overview.pdf" type="application/pdf" width="100%" height="420px"></object>
 
-Download slides [here](https://lunet-my.sharepoint.com/:b:/g/personal/ttbm2_lunet_lboro_ac_uk/Eebe86kBl0pDg1M1tfpRIcsBo1FWPlunFyaAxn4q-QcveQ?e=fnIZMz)
+Download slides [here]({{ site.url }}/ttp451-module/files/L1_overview.pdf)
 
 ---
 
 ### Introduction to Optimisation
 
-<object data="L2_optimisation.pdf" type="application/pdf" width="100%" height="420px"></object>
+<object data="{{ site.url }}/ttp451-module/files/L2_optimisation.pdf" type="application/pdf" width="100%" height="420px"></object>
 
-Download slides [here](https://lunet-my.sharepoint.com/:b:/g/personal/ttbm2_lunet_lboro_ac_uk/EWvZ7hDe7_NBldRc18py2AsBELckGUzQkoimXsNW7-rLtg?e=n6xyyl)
+Download slides [here]({{ site.url }}/ttp451-module/files/L2_optimisation.pdf)
 
 ---
 
 ### Introduction to Statistics
 
-<object data="L3_statistics.pdf" type="application/pdf" width="100%" height="420px"></object>
+<object data="{{ site.url }}/ttp451-module/files/L3_statistics.pdf" type="application/pdf" width="100%" height="420px"></object>
 
-Download slides [here](https://lunet-my.sharepoint.com/:b:/g/personal/ttbm2_lunet_lboro_ac_uk/EdGSsdhddmpLsLbXrnKR5qcBLdCrpjmNt6lldFPBUjDWGg?e=kPcqdA)
+Download slides [here]({{ site.url }}/ttp451-module/files/L3_statistics.pdf)
 
 ---
 
 ### Introduction to Design of Experiments
 
-<object data="L4_design_of_experiments.pdf" type="application/pdf" width="100%" height="420px"></object>
+<object data="{{ site.url }}/ttp451-module/files/L4_design_of_experiments.pdf" type="application/pdf" width="100%" height="420px"></object>
 
-Download slides [here](https://lunet-my.sharepoint.com/:b:/g/personal/ttbm2_lunet_lboro_ac_uk/EWF9aY-9NV9NrLl12ZZVGNEB2NvkpoDJCFF6RDuGskBp-w?e=47QCZR)
+Download slides [here]({{ site.url }}/ttp451-module/files/L4_design_of_experiments.pdf)
 
 ---
 
 ### Introduction to Modelling
+
+<object data="{{ site.url }}/ttp451-module/files/L5_modelling.pdf" type="application/pdf" width="100%" height="420px"></object>
+
+Download slides [here]({{ site.url }}/ttp451-module/files/L5_modelling.pdf)
 
 ---
 
