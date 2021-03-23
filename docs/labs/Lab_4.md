@@ -62,7 +62,7 @@ For some engine phenomena a polynomial model meets these sometimes conflicting g
 
 ### Exercise 4: Engine Modelling – V8 Engine Example
 
-- Task 4-1: Loading JLR data
+- Task 4-1: Loading the data
 - Task 4-2: Analyse model RMSE
 - Task 4-3: Building Models for a V8 Engine using Radial Basis Functions
 
@@ -71,6 +71,8 @@ For some engine phenomena a polynomial model meets these sometimes conflicting g
 #### Task 4-1: Loading JLR Data
 
 Previously, the created DoE test points were used as engine test points on the test bench. Once the engine test has finished, the test technician will send the engine test results. This stage of MBC will use the test result to create an engine model.
+
+All of the files for this exercise can be downloaded [here]({{ site.url }}/ttp451-module/files/Exercise_4.zip)
 
 - Start MBC Toolbox using the command ``<mbcmodel>``. Use the previous design browser setup by loading the saved test plan from previous lab “V8NA_testplan.mat”. Click [Select Data] icon to open the “Data Selection Wizard”.
 - Click the file open icon to start the “Fit Models Wizard”.

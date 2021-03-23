@@ -84,7 +84,7 @@ The relationship between fuel consumption and intake/exhaust cam timing for a pa
 
 ### Exercise 2-1: Cam Timing Design
 
-Before you begin download the files required for this exercise from LEARN or [here](https://lunet-my.sharepoint.com/:u:/g/personal/ttbm2_lunet_lboro_ac_uk/EdY_zo2jZgZFnWikxFrXx9wBpgXgi9jIybiiGc8buIoOdw?e=UjmUY9)
+Before you begin download the files required for this exercise from LEARN or [here]({{ site.url }}/ttp451-module/files/Exercise_2-1.zip)
 
 There are four distinct tasks in this exercise, which are listed below:
 
@@ -384,7 +384,7 @@ For this exercise, the DoE test points were designed for an unknown system (No k
 
 #### Task 2-2.3
 
-- Download the exercise files [here](https://lunet-my.sharepoint.com/:u:/g/personal/ttbm2_lunet_lboro_ac_uk/EUlz9MfE_-pHhm-Ie4FiMsMBQkltKJmL2tAupWTBtyDoeg?e=5e9bTY) and make sure that they are available on the MATLAB&copy; path.
+- Download the exercise files [here]({{ site.url }}/ttp451-module/files/Exercise_2-2.zip) and make sure that they are available on the MATLAB&copy; path.
 
 ![image](figs/lab2/fig_53_data_selection.png)
 

@@ -53,10 +53,7 @@ The exercises consist of the following:
 - Fitting a surface that describes data and allows the data to be evaluated
 - Fitting time response data using radial basis functions.
 
-Files required for this modelling workshop can be downloaded [here](https://lunet-my.sharepoint.com/:u:/g/personal/ttbm2_lunet_lboro_ac_uk/EalgEOsYMElDgBgllbNGU8cB6Y0g3bPsMjW6L_fb_WQQBA?e=eFI01o) or on LEARN, they are;
-
-- RBF_manualtune_V3_exercise.m
-- V8NA_model_lab_TestBedData.csv
+Files required for this modelling workshop can be downloaded [here]({{ site.url }}/ttp451-module/files/Exercise_3.zip). 
 
 The test data is provided in the form of a spreadsheet, generated during tests of a V8 DI spark ignition engine, the test data are saved in the file V8NA_model_lab_TestBedData.csv.
 
