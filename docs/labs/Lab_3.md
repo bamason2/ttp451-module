@@ -89,6 +89,8 @@ Y = cos(x);
 plot(lags, r)
 ```
 
+The above code performs **auto-correlation**, i.e. the correlation between "X" and itself. To determine the correlation between two different data streams, "xcorr" must take both as inputs: ``xcorr(X,Y,'coeff')``
+
 Import the data in the file V8NA_model_lab_TestVedData.csv using the [Import Data] on the MATLAB&copy; toolstrip.  Be sure to import the data as a Numeric Matrix by changing the [Output Type] on the MATLAB&copy; toolstrip.
 
 Evaluate correlations that may exist between the following pairs of data streams in the data file.  In each case think about the physical significance of the result.
@@ -102,7 +104,7 @@ Use the function ``<detrend>`` to remove the mean value of the data before runni
 
 #### Task 3-2: Importing and filtering the data
 
-In this task you will be creating a functions that imports and filters data from the V8NA_model_lab_TestVedData.csv data file and files similar to it.  
+In this task you will be creating a function that imports and filters data from the V8NA_model_lab_TestVedData.csv data file and files similar to it.  
 
 Create a function named ``<import_and_filter(filename)>`` that does the following;
 
@@ -127,7 +129,7 @@ mydata(mydata(:,2)<3500,:)=[];
 
 #### Task 3-3: Fitting and Error Evaluation
 
-Create a function ``<model_fitting(xdata, ydata, r)>`` that fits a polynomial model of order n, using the MATLAB&copy; function ``<polyfit>``.  The function should be capable of importing input-output data of the form previously exported from the ``<import_and_filter>`` function developed in the previous exercise.  For the specified input-ouput data the order of the model should be iteratively increased until the fit statistic meets the requirement, in this case an $R^2$ value of 0.95.  The measure of fit should be passed as a third argument to the function.
+Create a function ``<model_fitting(xdata, ydata, r)>`` that fits a polynomial model of order n, using the MATLAB&copy; function ``<polyfit>``.  The function should be capable of importing input-output data of the form previously exported from the ``<import_and_filter>`` function developed in the previous exercise.  For the specified input-output data the order of the model should be iteratively increased until the fit statistic meets the requirement, in this case an $R^2$ value of 0.95.  The measure of fit should be passed as a third argument to the function.
 
 The function should start by fitting a model order of 2 and incrementing this until the $R^2$ value exceeds the value of r. Once a sufficient model has been identified your function should plot the resulting function and the data points used to generate it.  On a separate plot the function should also plot the residuals i.e. the difference between the model and data points.  For each of the plots remember to include a title including the model order and axis labels.
 
@@ -136,26 +138,51 @@ As an example you should pass the following input-output data to your function (
 - BMEP (column 13) [y] and ignition timing (column 6) [x]
 - Exhaust temperature (column 11) [y] and AFR (column 9) [x]
 
-To complete this task you may want to design your function along lines of the following;
+To complete this task you may want to design your function along the lines of the following steps:
 
-1.Pass the input-output data and the fitness measure to the function.
+#### Guide to the Task
+
+**1: Pass the input-output data and the fitness measure to the function.**
+
+Remembering your function should take the form:
+
+```matlab
+function mydata = model_fitting(xdata, ydata, r)
+```
+
+where ``xdata`` and ``ydata`` respectively are the input and output and ``r`` is the fitness measure, such as the acceptable value of R^2.
+
 Sort the input data using the ``<sortrows>`` function, this will help with plotting later on in the exercise.
 
-2.Identify the polynomial model starting at order n = 2
+**2: Identify the polynomial model starting at order n = 2**
 
-The model can be identified using the MATLAB&copy; ``<polyfit>`` function, for example.  
+The model can be identified using the MATLAB&copy; ``<polyfit>`` function, for example:
 
 ```matlab
 model_parameters = polyfit(input_data, output_data, n);
 ```
 
-3.Evaluate the fit statistic
+The output ``model_parameters`` are the parameters of the fitted polynomial model, which will be passed to the function ``<polyval>`` in the next step.
 
-Once the model has been identified evaluate the fit statistics. If the fit requirements are met i.e. $R^2$ > 0.95 then move to the next step.  If the model fit does not meet the requirement, increment n and repeat step 2.
+**3: Evaluate the fit statistic**
 
-4.Plot the models and residuals on two different figures
+Once the model has been identified evaluate the fit statistics for y, comparing the model output against validation data.
 
-Plot the model using ``<polyval>`` and ``<plot>``.  Remember to add a title and axis labels.  Also plot the residuals for each of the models.  Example plots are shown below;
+Before you can do this, you will need to evaluate the model output for your input data using the function ``<polyval>``:
+
+```matlab
+model_response = polyval(model_parameters, input_data);
+```
+
+You may then compare the model response to the original output data by simple subtraction to calculate the residuals, which you can use to calculate a fit statistic such as R^2.
+
+If the fit requirements are met i.e. $R^2$ > 0.95, then move to the next step. If the model fit does not meet the requirement, increment "n" (the polynomial order) and repeat step 2.
+
+Tip: You may want to embed the entire fitting and fit evaluation procedure for a given polynomial order inside a "for" loop.
+
+**4: Plot the models and residuals on two different figures**
+
+ Plot both your residuals and model response for the best model using ``<plot>``.  Remember to add a title and axis labels. Example plots are shown below;
 
 ![image](labs/lab3/../../figs/lab3/residuals.png)
 
