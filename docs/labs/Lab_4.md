@@ -71,12 +71,7 @@ Previously, the created DoE test points were used as engine test points on the t
 
 All of the files for this exercise can be downloaded [here]({{ site.url }}/ttp451-module/files/Exercise_4.zip)
 
-- Start MBC Toolbox using the command ``<mbcmodel>``. Use the previous design browser setup by loading the saved test plan from previous lab “V8NA_testplan.mat”. Click [Select Data] icon to open the “Data Selection Wizard”.
-- Click the file open icon to start the “Fit Models Wizard”.
-
-![image](figs/lab4/fig_2_fit_models_wizard.png)
-
-- Load the “V8NA_TestBed_Data.csv” file which is the result from Part 2 of the DOE lab. When prompted to confirm Delimited Text File format, press [OK]. Then, click [Next] in “Fits Models Wizard” window.
+- Start MBC Toolbox using the command ``<mbcmodel>`` and load the “V8NA_TestBed_Data.csv” file which are the test results from the experiments designed in the previous the DOE lab. When prompted to confirm Delimited Text File format, press [OK]. Then, click [Next] in “Fits Models Wizard” window.
   
 ![image](figs/lab4/fig_3_fit_models_wizard_next.png)
 

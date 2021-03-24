@@ -110,7 +110,7 @@ You may want to make use of the following code snippet in doing this;
 mydata = csvread(filename, 2, 0, [2, 0, 1050, 14]);
 ```
 
-- Extracts data from the data rows with speed = 3500 rpm (column 2), relative load (column 3) 50-57% and removes data with BMEP_mean (column 13) < 6.79.
+- Extracts data from the data rows with speed = 3500 rpm (column 2) and relative load (column 3) 50-57% and removes data with BMEP_mean (column 13) < 6.79.
 
 You may want to use code similar to the following when filtering your data;
 
@@ -144,7 +144,7 @@ Remembering your function should take the form:
 function mydata = model_fitting(xdata, ydata, r)
 ```
 
-where ``xdata`` and ``ydata`` respectively are the input and output and ``r`` is the fitness measure, such as the acceptable value of R^2.
+where xdata and ydata respectively are the input and output and r is the fitness measure, such as the acceptable value of $R^2$.
 
 Sort the input data using the ``<sortrows>`` function, this will help with plotting later on in the exercise.
 
@@ -181,6 +181,64 @@ Tip: You may want to embed the entire fitting and fit evaluation procedure for a
 ![image](labs/lab3/../../figs/lab3/residuals.png)
 
 ![image](labs/lab3/../../figs/lab3/prediction_vs_data.png)
+
+Here are two example functions that are solutions to the above for your reference.  For your own benefit please only use these to check your answer, rather than viewing them before you have attempted the task.  Note that these are very basic in functionality, do not include axis labels and could be improved considerably.
+
+<details close markdown="block">
+  <summary>
+    Solution: import_and_filter.m
+  </summary>
+
+```matlab
+function mydata = import_and_filter(filename)
+  mydata = csvread(filename, 2, 0, [2, 0, 1050, 14]);
+  
+  %remove rows
+  mydata(mydata(:, 2) ~= 3500, :) = [];
+  mydata(mydata(:, 3)<50, :) = []; 
+  mydata(mydata(:, 3)>57, :) = [];
+  mydata(mydata(:, 13)<6.79, :) = [];
+    
+end
+```
+
+</details>
+
+<details close markdown="block">
+  <summary>
+    Solution: model_fitting.m
+  </summary>
+
+```matlab
+function mydata = model_fitting(xdata, ydata, r)
+sorted_data = sortrows([xdata,ydata]);
+sorted_xdata = sorted_data(:,1);
+sorted_ydata = sorted_data(:,2);
+
+for i = 2: 10
+    
+    p = polyfit(sorted_xdata, sorted_ydata, i);
+
+    model_response = polyval(p, sorted_xdata);
+    residual = model_response - sorted_ydata;
+    ss_resid = sum(residual.^2);
+    ss_total = (length(sorted_xdata)-1) * var(sorted_xdata);
+    r2 = 1 - ss_resid/ss_total;
+
+    if r2 > r
+        model_order = i
+        
+        plot(residual, 'x', 'LineWidth', 2);title('Residuals');
+        
+        figure;
+        plot(sorted_xdata, model_response, '-o', 'LineWidth', 2); hold on; plot(sorted_xdata, sorted_ydata, '+', 'LineWidth', 2); title('Model prediction vs data');legend('prediction', 'data');
+        hold off;
+        return
+    end
+end
+```
+
+</details>
 
 ---
 

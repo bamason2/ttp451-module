@@ -5,7 +5,6 @@ parent: Computer Labs
 ---
 
 # Lab 6: Calibration Optimisation V8 Engine Example
-
 {: .no_toc }
 
 <details close markdown="block">
@@ -18,7 +17,6 @@ parent: Computer Labs
 </details>
 
 ## Topics
-
 {: .no_toc }
 
 - Aims and Objectives
@@ -27,7 +25,6 @@ parent: Computer Labs
 - Exercise 6: Optimisation Calibration for a V8 Engine
 
 ## Learning Outcomes
-
 {: .no_toc }
 
 By the end of this lesson, you will be able to:
@@ -52,6 +49,8 @@ You will then proceed with the automatic optimisation. The outputs of this proce
 - Explain why the particular pattern of controls was selected.
 
 The calibration you have calculated will meet the steady state performance requirements upon which the objectives of the exercise were originally set. The timeliness of torque delivery is not addressed and you are asked to consider how you would augment such a steady state control in order to achieve good transient operation.
+
+The flowchart below describes the optimisation process, whether manual or automatic.
 
 ![image](figs/lab6/fig_1_optimisation_flowchart.png)
 
@@ -80,6 +79,8 @@ The workflow for this exercise is as follows;
 - Randomly check the calibrated test points
 - Save calibration maps in calibration format
 
+The data files required for this modules are available for download [here]({{ site.url }}/ttp451-module/files/Exercise_6.zip).
+
 ---
 
 #### Task 6-1: Load saved model from previous workshop
@@ -88,7 +89,7 @@ The workflow for this exercise is as follows;
 
 ---
 
-#### Task 6-2: Import models from model browser
+#### Task 6-2: Import models from the model browser
 
 - Start CAGE, by typing ``<cage>`` in the MATLAB&copy; command window. In the toolbar, go to [File >> Import] from the project. The models from the model browser will load automatically. Select all models (“shift + left click” each item) and then click [Import Selected Items]. When prompted to confirm importing the models, click [OK]. Then, click [Close].
 
@@ -164,7 +165,7 @@ The intersection-plot provides the interface to set suitable value for the opera
 
 The extrapolation mask is the set of cells that are used as the basis for filling the table by extrapolation. This function helps to prevent large deviation of parameters after each calibrated operating point. Use this function to extrapolate the uncalibrated regions.
 
--To start extrapolating the unmasked regions, click on [Extrapolate using regions] button. Notice now, the table has been filled with values.
+- To start extrapolating the unmasked regions, click on [Extrapolate using regions] button. Notice now, the table has been filled with values.
 
 This function is only for estimating table values and not to be operated on an actual working engine. This technique helps to speed up the manual calibration process by not deviating too much from previous operating point.
 
@@ -176,7 +177,7 @@ You can manually mask a cell by pressing “Add selection to extrapolation mask�
   - Maximum performance (maximum mean-BMEP)
   - Minimum BMEP_sigma
   - Part load region: 0.99 <= Lambda <= 1.01 and full load region: 0.7 <= Lambda <= 0.9
-  - Exhaust temperature not to exceed $$700^oC$$ (Constrain exhaust temp at $$700^C$$)
+  - Exhaust temperature not to exceed $700^oC$ (Constrain exhaust temp at $700^oC$)
 - The criteria need to be set up in the optimization objective and constraints. The tradeoff calibration will use the optimisation objectives in the automated tradeoff process.
 
 ---
@@ -266,7 +267,9 @@ Explain the shape of the map and its features.  In particular:
 - How have the different controls been used to achieve the objectives?
 - Have the objectives been universally achieved?  If not why not?  
 - Try adding minimize BMEP_sigma optimization objective and observe the outcome of the optimisation. Use NBI algorithm when making a multi-optimisation problem.
-
+- Does the calibration target meet after adding BMEP_sigma? Why? Could the objectives be met by relaxing the exhaust temperature constraint or removing the BMEP_sigma optimization objective?
+- This control scheme is developed for a set of steady state criteria. How would you extend this exercise to identify the control methods you would use for control during changes of engine operating point?
+  
 ![image](figs/lab6/fig_26_add_bmep_sigma_to_optimisation.png)
 
 ---

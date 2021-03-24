@@ -43,7 +43,7 @@ The ECU strategy to be calibrated is the ECU exhaust temperature model. This mod
 
 ![image](figs/lab5/fig_1_simplified_ecu_exhaust_temp.png)
 
-This strategy calculates the static exhaust temperature (TEG_STAT_OUT) based on the base exhaust temperature map (IP_TEG_STAT_BAS) and the correction maps. The correction maps (IP_TEG_ADD_LAM and IP_TEG_ADD_IGA) are exhaust temperature correction with respect to lambda and spark respectively. The ECU strategy is given in the TAS2017 folder.
+This strategy calculates the static exhaust temperature (TEG_STAT_OUT) based on the base exhaust temperature map (IP_TEG_STAT_BAS) and the correction maps. The correction maps (IP_TEG_ADD_LAM and IP_TEG_ADD_IGA) are exhaust temperature correction with respect to lambda and spark respectively. The ECU strategy is available as one of the files for this module (see the Exercises section later in this document to obtain these).
 
 When the maps are filled with the correct values, the TEG_STAT_OUT should replicate the same output as the exhaust temperature model from the previous V8NA modelling exercise.
 
@@ -69,10 +69,10 @@ Feature calibration converts the response model to a form acceptable for ECU str
 
 The modelled system (so-called feature) in the ECU is a representation of the MBC response model in a format that is compatible with the ECU. The ECU model doesn’t require any sort of optimization because it is a model conversion from black-box to a set of ECU maps.
 
-Generally, feature calibration consists of 5 stages:
+Generally feature calibration consists of five different stages:
 
 1. Setup the models
-    - In this exercise, the variables and models will be loaded from the previous lab exercise
+    - In this exercise the variables and models will be loaded from the previous lab exercise
 2. Setup a new feature
     - Select a filling model, used to make a comparison between the feature strategy and black-box. For this exercise, the filling item is the exhaust temperature model.
 3. Setup the strategy
@@ -97,11 +97,13 @@ There are 5 tasks in this lesson:
 - Feature Calibration
 - Export Calibration
 
+The files required for this exercise are available [here](({{ site.url }}/ttp451-module/files/Exercise_5.zip))
+
 ---
 
 #### Task 5-1: Setup/Import the Response Model
 
-- Start the model browser by entering “mbcmodel” in MATLAB&copy; command window and load V8NA_1_StageModel.mat test plan (Note: V8NA_1_StageModel.mat is the model generated from previous modelling lab, if it is already open skip this step). Now, leave the model browser open.
+- Start the model browser by entering “mbcmodel” in the MATLAB&copy; command window and load V8NA_1_StageModel.mat test plan (Note: V8NA_1_StageModel.mat is the model generated from previous modelling lab, if it is already open skip this step). Now, leave the model browser open.
 
 ![image](figs/lab5/fig_5_load_model.png)
 
@@ -110,7 +112,7 @@ There are 5 tasks in this lesson:
 ![image](figs/lab5/fig_6_import_project.png)
 
 - For this exercise, this feature calibration will fill in a set of maps to predict the exhaust temperature, so the ExhaustTemp model from previous lab exercise should be loaded.
-- Click Import Selected Items to load the model. Click OK when prompted to import from MBCmodel project. Click OK when asked to reconfirm the import. Then, close the CAGE Import Tool. The model will be automatically loaded into CAGE. Use Model in the Data Object pane to observe the model responses. Save the project as “feature_teg.cag”.
+- Click Import Selected Items to load the model. Click [OK] when prompted to import from MBC project. Click [OK] when asked to reconfirm the import. Then, close the CAGE Import Tool. The model will be automatically loaded into CAGE. Use Model in the Data Object pane to observe the model responses. Save the project as “feature_teg.cag”.
 
 The model selected should be the same as the ECU strategy output. Referring to the task of this exercise, the ECU strategy output is static exhaust temperature, so the exhaust temperature model should be imported.
 
@@ -128,7 +130,7 @@ The model selected should be the same as the ECU strategy output. Referring to t
 
 ![image](figs/lab5/fig_9_strategy_formula.png)
 
-- To view the strategy as Simulink&copy; model, click [Feature >> Graphical Strategy Editor]. The Graphical Strategy Editor enables us to create or modify the current strategy. It contains a Simulink&copy; block to construct strategies. Once complete, double click on the blue output port to parse the Simulink&copy; block to the CAGE feature.
+- To view the strategy as a Simulink&copy; model, click [Feature >> Graphical Strategy Editor]. The Graphical Strategy Editor enables us to create or modify the current strategy. It contains a Simulink&copy; block to construct strategies. Once complete, double click on the blue output port to parse the Simulink&copy; block to the CAGE feature.
 
 ![image](figs/lab5/fig_10_strategy_editor.png)
 
@@ -144,7 +146,7 @@ The model selected should be the same as the ECU strategy output. Referring to t
 
 ![image](figs/lab5/fig_12_calibration_manager.png)
 
-- The calibration manager is where the calibration tables are created. The empty tables are created based on the tables defined in the ECU strategy. To do this, click on “IP_TEG_STAT_BAS” and set the number of rows and columns to 16 and set the initial values to 0. Press [Enter] and click [Apply] when done. When prompted “This operation will change the size..”, click [Continue] to proceed with the changes.s
+- The calibration manager is where the calibration tables are created. The empty tables are created based on the tables defined in the ECU strategy. To do this, click on “IP_TEG_STAT_BAS” and set the number of rows and columns to 16 and set the initial values to 0. Press [Enter] and click [Apply] when done. When prompted “This operation will change the size..”, click [Continue] to proceed with the changes.
 
 ![image](figs/lab5/fig_13_calibration_tables_1.png)
 
@@ -189,7 +191,7 @@ The model selected should be the same as the ECU strategy output. Referring to t
 
 ![image](figs/lab5/fig_21_filled_in_exhaust_temp_map.png)
 
-- The exhaust temperature correction tables require calibration. To do this click on the feature “TEG_STAT_OUT”. Then initialise the correction tables by clicking [Feature > >Initialize].
+- The exhaust temperature correction tables require calibration. To do this click on the feature “TEG_STAT_OUT”. Then initialise the correction tables by clicking [Feature >> Initialize].
 
 ![image](figs/lab5/fig_22_initialise_correction_tables.png)
 
