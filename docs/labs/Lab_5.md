@@ -5,7 +5,6 @@ parent: Computer Labs
 ---
 
 # Lab 5: Feature Calibration V8 Engine Example
-
 {: .no_toc }
 
 <details close markdown="block">
@@ -18,7 +17,6 @@ parent: Computer Labs
 </details>
 
 ## Topics
-
 {: .no_toc }
 
 - Aims and Objectives
@@ -27,7 +25,6 @@ parent: Computer Labs
 - Exercise 5: Feature Calibration for a V8 Engine
 
 ## Learning Outcomes
-
 {: .no_toc }
 
 By the end of this lesson, you will be able to:

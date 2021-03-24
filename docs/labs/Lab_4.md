@@ -5,7 +5,6 @@ parent: Computer Labs
 ---
 
 # Lab 4: Modelling a V8 Engine
-
 {: .no_toc }
 
 <details close markdown="block">
@@ -18,7 +17,6 @@ parent: Computer Labs
 </details>
 
 ## Topics
-
 {: .no_toc }
 
 - Aims and Objectives
@@ -27,7 +25,6 @@ parent: Computer Labs
 - Exercise 4: Engine Modelling V8 Engine Example
 
 ## Learning Outcomes
-
 {: .no_toc }
 
 By the end of this lesson, you will be able to:
@@ -68,7 +65,7 @@ For some engine phenomena a polynomial model meets these sometimes conflicting g
 
 ---
 
-#### Task 4-1: Loading JLR Data
+#### Task 4-1: Loading the Data
 
 Previously, the created DoE test points were used as engine test points on the test bench. Once the engine test has finished, the test technician will send the engine test results. This stage of MBC will use the test result to create an engine model.
 
@@ -111,7 +108,7 @@ All of the files for this exercise can be downloaded [here]({{ site.url }}/ttp45
 
 #### Task 4-2: Analyse Model RMSE
 
-- Click on the [BMEP_mean] response model. In the analysis pane, the RMSE of each model is calculated. To enable $$R^2$$ calculation, click on [BMEP_mean] response model and go to [Model >> Summary Statistics]. Check the PRESS $$R^2$$ and $$R^2$$ options. **Do this for all response models**.
+- Click on the [BMEP_mean] response model. In the analysis pane, the RMSE of each model is calculated. To enable $$R^2$$ calculation, click on [BMEP_mean] response model and go to [Model >> Summary Statistics]. Check the $PRESS R^2$ and $R^2$ options. **Do this for all response models**.
 
 ![image](figs/lab4/fig_9_cubic_model.png)
 
@@ -131,11 +128,13 @@ All of the files for this exercise can be downloaded [here]({{ site.url }}/ttp45
   
 The default residual selection remove data points outside 3. Studentized residuals are normalized residuals which sometimes are referred to as z-score. Literature suggests the use of z-scores between 3-3.5. As of now, we use the default residual settings.
 
+$$ StudentisedResiduals, r = \frac{y_{experiment} - y_{prediction}}{\sigma_{standard_deviation}} $$
+
 ![image](figs/lab4/fig_13_outlier_removal_1.png)
 
 - To remove outliers, click [Outliers >> Remove Outliers]. The outliers will be removed. Remove until all outliers have disappeared. Do this for all best models. You may remove outliers for all other polynomials. But most probably cubic design will be selected, because of its low RMSE error compared to other model types.
 
-Take extra precaution when removing outliers, always observe the PRESS RMSE while doing so. The model might become "over-fit" if too many data points are removed. This means that the model is too closely fit to a small number of points, and doesnt "generalise" well to data that is not included.
+Take extra precaution when removing outliers, always observe the PRESS RMSE while doing so. The model might become "over-fit" if too many data points are removed. This means that the model is too closely fit to a small number of points, and doesn't "generalise" well to data that is not included.
 
 ![image](figs/lab4/fig_14_outlier_removal_2.png)
 
@@ -154,9 +153,11 @@ Take extra precaution when removing outliers, always observe the PRESS RMSE whil
 
 #### Task 4-3: Feature Calibration for a V8 Engine using Radial Basis Functions
 
-- Use “Build models” tool to add RBF models to your current response model. Generate RBF models with centres ranging from 30 to 350 with 10 models linearly spaced (as in figure below). Use ``<linspace>`` function when defining the centres of the RBF model.
+- Use “Build models” tool to add RBF models to your current response model. Generate RBF models with centres ranging from 30 to 350 with 10 models linearly spaced (as in figure below). Use the ``<linspace>`` function when defining the centres of the RBF model.
 - Repeat the procedure above for all response models. Select the best model for your responses.
 
 ![image](figs/lab4/fig_17_rbf_model.png)
 
 Save the project when finished.
+
+Observe the model quality between the polynomial models and RBF models. If polynomial model is the better model, discuss why this could be the case? When is polynomial model superior to RBF models?
