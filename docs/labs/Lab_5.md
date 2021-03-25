@@ -97,7 +97,7 @@ There are 5 tasks in this lesson:
 - Feature Calibration
 - Export Calibration
 
-The files required for this exercise are available [here](({{ site.url }}/ttp451-module/files/Exercise_5.zip))
+The files required for this exercise are available [here]({{ site.url }}/ttp451-module/files/Exercise_5.zip)
 
 ---
 

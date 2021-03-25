@@ -58,7 +58,7 @@ The flowchart below describes the optimisation process, whether manual or automa
 
 The complete calibration process begins with formulating the control requirement. Simply put, this is an optimal condition to be achieved using a number of engine actuators. Here "optimal" refers to a condition that could be represented as a cost function with a number of constraints.
 
-In this exercise the conditions are a **maximisation** of the mean BMEP whilst at the same time **minimising** the variation in the BMEP value. These two conditions are subject to the constraint that the exhaust temperature must be **less than** $$800^oC$$.
+In this exercise the conditions are a **maximisation** of the mean BMEP whilst at the same time **minimising** the variation in the BMEP value. These two conditions are subject to the constraint that the exhaust temperature must be **less than** $800^oC$.
 
 Note that these conditions are defined for part load.  The load is defined as a relative load (based on engine air flow).  For this air flow the AFR, spark timing and valve phasing are varied according to the DOE plan that you studied during the DOE workshop.
 
