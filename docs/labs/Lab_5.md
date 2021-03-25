@@ -103,16 +103,14 @@ The files required for this exercise are available [here]({{ site.url }}/ttp451-
 
 #### Task 5-1: Setup/Import the Response Model
 
-- Start the model browser by entering “mbcmodel” in the MATLAB&copy; command window and load V8NA_1_StageModel.mat test plan (Note: V8NA_1_StageModel.mat is the model generated from previous modelling lab, if it is already open skip this step). Now, leave the model browser open.
+- Start the model browser by entering “mbcmodel” in the MATLAB&copy; command window and load V8NA_1_StageModel.mat using the [File >> Open Project] drop down menu. Now, leave the model browser open.
 
-![image](figs/lab5/fig_5_load_model.png)
-
-- Start CAGE, by entering “cage” in MATLAB&copy; command window. Import exhaust temperature model from, by clicking [File >> Import From Project].
+- Start CAGE, by entering “cage” in the MATLAB&copy; command window. Import the exhaust temperature model by clicking [File >> Import From Project].
 
 ![image](figs/lab5/fig_6_import_project.png)
 
 - For this exercise, this feature calibration will fill in a set of maps to predict the exhaust temperature, so the ExhaustTemp model from previous lab exercise should be loaded.
-- Click Import Selected Items to load the model. Click [OK] when prompted to import from MBC project. Click [OK] when asked to reconfirm the import. Then, close the CAGE Import Tool. The model will be automatically loaded into CAGE. Use Model in the Data Object pane to observe the model responses. Save the project as “feature_teg.cag”.
+- Click [Import Selected Items] to load the model. Click [OK] when prompted to import from MBC project. Click [OK] when asked to reconfirm the import. Then, close the CAGE Import Tool. The model will be automatically loaded into CAGE. Use Model in the Data Object pane to observe the model responses. Save the project as “feature_teg.cag”.
 
 The model selected should be the same as the ECU strategy output. Referring to the task of this exercise, the ECU strategy output is static exhaust temperature, so the exhaust temperature model should be imported.
 
@@ -122,7 +120,7 @@ The model selected should be the same as the ECU strategy output. Referring to t
 
 #### Task 5-2: Setup new feature and load strategy
 
-- Create a new feature by clicking on [File >> New >> Feature]. Next, load “TEG_STAT_OUT.slx” ecu control strategy. This simple strategy calculates the final exhaust temperature.
+- Create a new feature by clicking on [File >> New >> Feature]. Next, load “TEG_STAT_OUT.slx” ecu control strategy using the [File >> Import >> Strategy] dropdown menu. This simple strategy calculates the final exhaust temperature.
 
 ![image](figs/lab5/fig_8_exhaust_temp_strategy.png)
 
@@ -130,11 +128,11 @@ The model selected should be the same as the ECU strategy output. Referring to t
 
 ![image](figs/lab5/fig_9_strategy_formula.png)
 
-- To view the strategy as a Simulink&copy; model, click [Feature >> Graphical Strategy Editor]. The Graphical Strategy Editor enables us to create or modify the current strategy. It contains a Simulink&copy; block to construct strategies. Once complete, double click on the blue output port to parse the Simulink&copy; block to the CAGE feature.
+- To view the strategy as a Simulink&copy; model, click [Feature >> Edit Strategy]. The Graphical Strategy Editor enables modification of the the strategy. It contains a Simulink&copy; block to construct strategies. Once complete, double click on the blue output port to parse the Simulink&copy; block to the CAGE feature.
 
 ![image](figs/lab5/fig_10_strategy_editor.png)
 
-- Now, fill the TEG_STAT_OUT by clicking on it in the Feature pane and fill the strategy by clicking [Feature >> Select Filling Item…]. This step will use exhaust temperature model to fill in the feature maps.
+- Now, fill the TEG_STAT_OUT by clicking on it in the Feature pane and fill the strategy by clicking [Feature >> Select Model]. This step will use exhaust temperature model to fill in the feature maps. Click [OK] ensuring that the ExhaustTemp model is selected.
 
 ![image](figs/lab5/fig_11_select_filling_item.png)
 
@@ -150,9 +148,7 @@ The model selected should be the same as the ECU strategy output. Referring to t
 
 ![image](figs/lab5/fig_13_calibration_tables_1.png)
 
-- Next, create tables for the other two exhaust temperature correction maps.
-- Click on one of the table names in the tree list and set the number of rows to 16.
-- Press [enter] and click [apply]. Do this for each correction table. Close the calibration manager when done.
+- Next, create tables for the other two exhaust temperature correction maps. Click on one of the table names in the tree list and set the number of rows to 16. Press [Enter] and click [Apply]. Do this for each correction table. Close the calibration manager when done.
 
 ![image](figs/lab5/fig_14_calibration_tables_2.png)
 
@@ -176,26 +172,22 @@ The model selected should be the same as the ECU strategy output. Referring to t
 
 ![image](figs/lab5/fig_18_fill_in_exhaust_temp_map.png)
 
-- A dialog box will appear to confirm the selected filling items. Since we have selected the filling item earlier, click [Next] to continue.
-- Another dialog box will appear asking to set the input variables of the model. This is where we can set the variables that are not involved in the feature to a preset value. For instance, the exhaust models have intake and exhaust cam input variables.
-- However, these variables are not used for the feature strategy, so the cams can be set at the present value. This is because the exhaust temperature only varies with respect to lambda and IGA for this case study. Just click [Next] to continue.
+- A dialog box will appear to confirm the selected filling items. Make sure that the ExhaustTemp model is selected in and click [Next] to continue.
+- Another dialog box will appear asking to set the input variables of the model. This is where we can set the variables that are not involved in the feature to a preset value. For instance, the exhaust models have intake and exhaust cam input variables.  However, these variables are not used for the feature strategy, so the cams can be set at the present value. This is because the exhaust temperature only varies with respect to lambda and IGA for this case study. Just click [Finish] to continue.
 
 ![image](figs/lab5/fig_19_fill_in_wizard_1.png)
 
-- Next, this is the dialog box to fill in the “IP_TEG_STAT_BAS” table. Check and uncheck the following settings as in figure below. If OK, start to fill in the table by clicking on [Fill Tables]. The Feature calibration will match the model to the tables.
-- The errors are iteratively monitored and the training process is stopped when the convergence reach its tolerance value. Once training has finished, click [Finish] to continue.
-
-![image](figs/lab5/fig_20_fill_in_wizard_2.png)
-
+- The errors are iteratively monitored and the training process is stopped when the convergence reach its tolerance value.
+  
 - The “IP_TEG_STAT_BAS” is now calibrated. The figure shows the data and plot of the base exhaust temperature table.
 
 ![image](figs/lab5/fig_21_filled_in_exhaust_temp_map.png)
 
-- The exhaust temperature correction tables require calibration. To do this click on the feature “TEG_STAT_OUT”. Then initialise the correction tables by clicking [Feature >> Initialize].
+- The exhaust temperature correction tables also require calibration. To do this click on the feature “TEG_STAT_OUT”. Then initialise the correction tables by clicking [Feature >> Initialize].
 
 ![image](figs/lab5/fig_22_initialise_correction_tables.png)
 
-- Leave everything checked except for breakpoints of “IP_TEG_STAT_BAS” and Values of “IP_TEG_STAT_BAS”. This is because we have initialised and calibrated those maps earlier. Click [OK] to continue.
+- Leave everything checked except for breakpoints and Values of “IP_TEG_STAT_BAS” as we have already completed these. Click [OK] to continue.
 
 ![image](figs/lab5/fig_23_initialise_correction_tables.png)
 
@@ -215,7 +207,7 @@ The model selected should be the same as the ECU strategy output. Referring to t
 
 ![image](figs/lab5/fig_27_filled_in_correction_table_for_lambda.png)
 
-- The next step is to calibrate the “IP_TEG_ADD_IGA”. Click on the “IP_TEG_ADD_IGA” in the Feature pane. Then, click [Fill Feature]  to fill in the table. Repeat the same process as above.
+- The next step is to calibrate the “IP_TEG_ADD_IGA”. Click on the “IP_TEG_ADD_IGA” in the Feature pane. Then, click [Fill Feature] to fill in the table. Repeat the same process as above.
 
 ![image](figs/lab5/fig_28_fill_in_wizard_for_IGA_correction.png)
 
