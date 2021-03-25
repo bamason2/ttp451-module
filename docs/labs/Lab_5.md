@@ -187,7 +187,7 @@ The model selected should be the same as the ECU strategy output. Referring to t
 
 ![image](figs/lab5/fig_22_initialise_correction_tables.png)
 
-- Leave everything checked except for breakpoints and Values of “IP_TEG_STAT_BAS” as we have already completed these. Click [OK] to continue.
+- Leave everything checked except for breakpoints and values of “IP_TEG_STAT_BAS” as we have already completed these. Click [OK] to continue.
 
 ![image](figs/lab5/fig_23_initialise_correction_tables.png)
 
@@ -195,21 +195,17 @@ The model selected should be the same as the ECU strategy output. Referring to t
 
 ![image](figs/lab5/fig_24_fill_in_feature_wizard_1.png)
 
-- Click [Next] on the dialog box. Leave as it is because we have selected the filling item earlier. Again click [Next] when prompted to set the variables values. We leave them as default unless there is a need to park the intake or exhaust cams.
+- Click [Next] on the dialog box. Again click [Next] when prompted to set the variables values. We leave them as default unless there is a need to park the intake or exhaust cams.
 
 ![image](figs/lab5/fig_25_fill_in_feature_wizard_2.png)
 
-- Next, is to fill in the “IP_TEG_ADD_LAM” table. Check and uncheck the following settings as in the figure below. If OK, start filling in the table by clicking on [Fill Tables]. Once training has finished, click [Finish] to continue.
-
-![image](figs/lab5/fig_26_fill_in_correction_table.png)
+- Next, is to fill in the “IP_TEG_ADD_LAM” table with values by clicking [Fill Feature], leave “IP_TEG_ADD_LAM” checked and click [Next].
 
 - Click on “IP_TEG_ADD_LAM” in the Feature pane to view the calibrated table. The table shows the increment and decrement of exhaust temperature with respect of changes of lambda.
 
 ![image](figs/lab5/fig_27_filled_in_correction_table_for_lambda.png)
 
 - The next step is to calibrate the “IP_TEG_ADD_IGA”. Click on the “IP_TEG_ADD_IGA” in the Feature pane. Then, click [Fill Feature] to fill in the table. Repeat the same process as above.
-
-![image](figs/lab5/fig_28_fill_in_wizard_for_IGA_correction.png)
 
 - Now, the base exhaust temperature model table “IP_TEG_STAT_BAS” and the correction tables “IP_TEG_ADD_LAM” and “IP_TEG_ADD_IGA” have been calibrated. Click on them to observe the effects of the correction tables to the final exhaust temperature output.
 
