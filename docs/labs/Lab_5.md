@@ -39,7 +39,7 @@ The aim of this exercise is to fill in the tables in the ECU strategy using the 
 
 ## Overview of Exercise
 
-The ECU strategy to be calibrated is the ECU exhaust temperature model. This model is used to  predict of the exhaust temperature. The engine has an exhaust temperature limit of ~800-900degC; when the predicted value reaches this threshold, fuel injection quantity is in turn controlled to avoid exceeding it. A simplified ECU exhaust temperature model strategy is shown below:
+The ECU strategy to be calibrated is the ECU exhaust temperature model. This model is used to  predict of the exhaust temperature. The engine has an exhaust temperature limit of $~800-900^oC$; when the predicted value reaches this threshold, fuel injection quantity is in turn controlled to avoid exceeding it. A simplified ECU exhaust temperature model strategy is shown below:
 
 ![image](figs/lab5/fig_1_simplified_ecu_exhaust_temp.png)
 
@@ -97,7 +97,7 @@ There are 5 tasks in this lesson:
 - Feature Calibration
 - Export Calibration
 
-The files required for this exercise are available [here]({{ site.url }}/ttp451-module/files/Exercise_5.zip)
+The files required for this exercise are available [here]({{ site.url }}/ttp451-module/files/Exercise_5.zip).
 
 ---
 

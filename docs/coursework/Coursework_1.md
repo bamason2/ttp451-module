@@ -4,7 +4,7 @@ title: Coursework 1
 parent: Coursework Briefs
 ---
 
-## Coursework 1: MATLAB&copy; Onramp 
+## Coursework 1: MATLAB&copy; Onramp (5%)
 
 The first piece of coursework is to complete the Mathworks MATLAB&copy; Onramp Course which is an online introductory course to MATLAB&copy;. The course is available [here](https://uk.mathworks.com/learn/tutorials/matlab-onramp.html).
 
