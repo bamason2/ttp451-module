@@ -79,7 +79,3 @@ The following data has been provided to help set the context for the exercise.  
 ### Data illustrating SCR performance
 
 ![image](figs/catalyst.png)
-
----
-
-This page was last modified: {% last_modified_at %}

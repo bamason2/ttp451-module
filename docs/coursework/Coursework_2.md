@@ -49,7 +49,3 @@ The style of the report and writing is appropriate for a technical document (see
 #### Presentation (15%)
 
 The structure of the report is well considered and includes the necessary headings and sections. Graphics that are included are laid out well.  The font style, space and sizing is appropriate.  Presentation overall is appropriate. Figures are appropriately labelled. Plots include a title and axis labels as well as units (where appropriate). The report is an appropriate length (no more than 10% longer than the page limit).
-
----
-
-This page was last modified: {% last_modified_at %}
