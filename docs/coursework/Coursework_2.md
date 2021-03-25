@@ -6,15 +6,15 @@ parent: Coursework Briefs
 
 ## Coursework Assignment 2: Planning experiments (25%)
 
-In an investigation of a new gasoline engine, there are several new systems to be proven and understood and finally calibrated.
+In an investigation of a new gasoline engine there are several new systems to be proven and understood and finally calibrated.
 
-The combustion system is DI spark ignition and the engine is boosted in two stages in series, a low pressure electrically powered fan and a conventional turbocharger with VGT control. The engine is equipped with VVA on both inlet and exhaust allowing retard of IVC (for fuel efficiency), control of overlap at full load and advance of EVO to manage the energy flow to the turbocharger and to manage the exhaust temperature.
+For the new engine considered in this study the combustion system is DI spark ignition and the engine is boosted in two stages in series, a low pressure electrically powered fan and a conventional turbocharger with VGT control. The engine is equipped with VVA on both inlet and exhaust allowing retard of IVC (for fuel efficiency), control of overlap at full load and advance of EVO to manage the energy flow to the turbocharger and to manage the exhaust temperature.
 
 The “after-treatment” system is a lean NOx trap (LNT) which requires regeneration in the normal way.  The investigation will encompass control strategies to reduce the volume of the LNT by ensuring accurate control of exhaust temperature.
 
 ### Submission Requirements
 
-Write a short report describing and explaining an experimental strategy that includes investigation of:
+Write a short report, no longer than three pages in length, describing and explaining an experimental strategy that includes investigation of:
 
 - Management of valve timing.
 - Control of boost pressure.
@@ -25,7 +25,7 @@ Start the report with a description of the overall control strategy.  Using diag
 
 Pay particular attention to the overall structure of the experimental approach. Do you need global and local models for example?  What do you know in advance that will guide the choice of strategy?  You may start with a space filling design and move into classical designs to develop response surfaces. What response surfaces do you need?  What is the place of optimal methods if these are used?
 
-You should address the report to a team leader whose job it is to scope the experimental programme. The report should be no more than 3 pages in length.
+You should address the report to a team leader whose job it is to scope the experimental programme.
 
 ### Assessment
 
@@ -33,19 +33,23 @@ The report will be marked according to the following scheme with marks split bet
 
 #### Technical (65%)
 
-The facts stated are correct and relevant.  Correct statements are made about the technology and methodology proposed. The experimental strategy presented considers;
+The facts stated are correct and relevant.  Correct statements are made about the technology and methodology proposed. The experimental strategy presented considers, as stated in the brief above;
 
-- Management of valve timing
-- Control of boost pressure
-- Temperature management with the VVA and turbocharger systems working together
-- Management of LNT regeneration conditions
+- Management of valve timing.
+- Control of boost pressure.
+- Temperature management with the VVA and turbocharger systems working together.
+- Management of LNT regeneration conditions.
 
 The proposed strategy draws on evidence presented within the report and by way of reference to other sources of information that are appropriately cited. A minimum of three external sources of information (excluding course notes/slides) are included.  The sources are used in a meaningful way in the report i.e. to support the decisions made and/or provide a background/further information on the topics discussed.
 
 #### Report / Writing style (20%)
 
-The style of the report and writing is appropriate for a technical document (see the guidance provided by this document on [Report Writing](https://www.lboro.ac.uk/media/wwwlboroacuk/content/library/downloads/advicesheets/Report%20writing.pdf) for further information). The way in which it is written is convincing and includes the necessary information providing a convincing argument for the strategy proposed as judged by a person reasonably familiar with the report topic.
+The style of the report and writing is appropriate for a technical document (see the guidance provided by this document on [Report Writing](https://www.lboro.ac.uk/media/wwwlboroacuk/content/library/downloads/advicesheets/Report%20writing.pdf) for further information). The way in which it is written is convincing and includes the necessary information providing a convincing argument for the strategy proposed as would be judged by a person reasonably familiar with the topic.
 
 #### Presentation (15%)
 
 The structure of the report is well considered and includes the necessary headings and sections. Graphics that are included are laid out well.  The font style, space and sizing is appropriate.  Presentation overall is appropriate. Figures are appropriately labelled. Plots include a title and axis labels as well as units (where appropriate). The report is an appropriate length (no more than 10% longer than the page limit).
+
+---
+
+This page was last modified: {% last_modified_at %}
