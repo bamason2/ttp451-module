@@ -66,15 +66,15 @@ The structure of the report is well considered and includes the necessary headin
 
 The following data has been provided to help set the context for the exercise.  Please consider that this is a small fraction of the data typically generated during a calibration exercise.  
 
-### Typical BSFC (g/kWh) Map versus Engine Speed (rpm) and Brake Load (Nm)
+### Typical BSFC (g/kWh) Map versus Engine Speed (rpm) and Brake Torque (Nm)
 
 ![image](figs/contour_plot_bsfc.png)
 
-### Typical EGR NOx/Particulate Trade-off Curve, 1500 rpm, 130Nm Brake Torque (all units g/kWh)
+### Typical BSNOx (g/kWh) map against Engine Speed (rpm) and Brake Torque (Nm)
 
 ![image](figs/contour_plot_nox.png)
 
-### An EGR sweep at a single speed load point
+### Typical EGR NOx/Particulate Trade-off Curve, 1500 rpm, 130Nm Brake Torque (all units g/kWh)
 
 ![image](figs/PM_NOx_tradeoff.png)
 
