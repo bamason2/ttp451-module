@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Lectures
-nav_order: 1
+nav_order: 3
 ---
 
 ## Lecture Slides
@@ -10,64 +10,48 @@ nav_order: 1
 
 ### Introduction to Calibration
 
-<object data="{{ site.url }}/ttp451-module/files/L1_overview.pdf" type="application/pdf" width="100%" height="420px"></object>
-
-Download slides [here]({{ site.url }}/ttp451-module/files/L1_overview.pdf)
+Download slides [here]({{ site.url }}/ttp451-module/lectures/L1_overview.pdf)
 
 ---
 
 ### Introduction to Optimisation
 
-<object data="{{ site.url }}/ttp451-module/files/L2_optimisation.pdf" type="application/pdf" width="100%" height="420px"></object>
-
-Download slides [here]({{ site.url }}/ttp451-module/files/L2_optimisation.pdf)
+Download slides [here]({{ site.url }}/ttp451-module/lectures/L2_optimisation.pdf)
 
 ---
 
 ### Introduction to Statistics
 
-<object data="{{ site.url }}/ttp451-module/files/L3_statistics.pdf" type="application/pdf" width="100%" height="420px"></object>
-
-Download slides [here]({{ site.url }}/ttp451-module/files/L3_statistics.pdf)
+Download slides [here]({{ site.url }}/ttp451-module/lectures/L3_statistics.pdf)
 
 ---
 
 ### Introduction to Design of Experiments
 
-<object data="{{ site.url }}/ttp451-module/files/L4_design_of_experiments.pdf" type="application/pdf" width="100%" height="420px"></object>
-
-Download slides [here]({{ site.url }}/ttp451-module/files/L4_design_of_experiments.pdf)
+Download slides [here]({{ site.url }}/ttp451-module/lectures/L4_design_of_experiments.pdf)
 
 ---
 
 ### Introduction to Modelling
 
-<object data="{{ site.url }}/ttp451-module/files/L5_modelling.pdf" type="application/pdf" width="100%" height="420px"></object>
-
-Download slides [here]({{ site.url }}/ttp451-module/files/L5_modelling.pdf)
+Download slides [here]({{ site.url }}/ttp451-module/lectures/L5_modelling.pdf)
 
 ---
 
 ### Engine Testing
 
-<object data="{{ site.url }}/ttp451-module/files/L7_engine_testing.pdf" type="application/pdf" width="100%" height="420px"></object>
-
-Download slides [here]({{ site.url }}/ttp451-module/files/L7_engine_testing.pdf)
+Download slides [here]({{ site.url }}/ttp451-module/lectures/L7_engine_testing.pdf)
 
 ---
 
 ### Calibration Exercise
 
-<object data="{{ site.url }}/ttp451-module/files/L6_calibration_exercises.pdf" type="application/pdf" width="100%" height="420px"></object>
-
-Download slides [here]({{ site.url }}/ttp451-module/files/L6_calibration_exercises.pdf)
+Download slides [here]({{ site.url }}/ttp451-module/lectures/L6_calibration_exercises.pdf)
 
 ---
 
 ### Future Challenges
 
-<object data="{{ site.url }}/ttp451-module/files/L8_future_challenges.pdf" type="application/pdf" width="100%" height="420px"></object>
-
-Download slides [here]({{ site.url }}/ttp451-module/files/L8_future_challenges.pdf)
+Download slides [here]({{ site.url }}/ttp451-module/lectures/L8_future_challenges.pdf)
 
 ---
