@@ -10,7 +10,7 @@ nav_order: 3
 
 ### Introduction to Calibration
 
-Download slides [here]({{ site.url }}/ttp451-module/lectures/L1_overview.pdf)
+Download slides [here]({{ site.url }}/ttp451-module/lectures/L1_introduction.pdf)
 
 ---
 

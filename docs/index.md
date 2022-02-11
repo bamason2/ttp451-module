@@ -17,7 +17,7 @@ As more technology is added to vehicles the complexity of the control system inc
 ### Week 1 Resources
 
 | **Lecture Slides**  |
-| [Introduction]({{ site.url }}/ttp451-module/lectures/L1_overview.pdf) |
+| [Introduction]({{ site.url }}/ttp451-module/lectures/L1_introduction.pdf) |
 
 ## Week 2
 
