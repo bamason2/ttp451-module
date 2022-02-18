@@ -21,9 +21,9 @@ As more technology is added to vehicles the complexity of the control system inc
 
 ## Week 2
 
-At the core of the calibration process is the requirement to specify experiments, execute them to obtain data and create mathematical models based on this data to describe the input output behaviour of the system under study. This could include emissions control systems, electric motors, engines, etc. These mathematical models are then used within a search algorithm or optimisation routine to find calibration parameter values that achieve best performance.
+At the core of the calibration process is the requirement to specify experiments, execute them to obtain data and create mathematical models based on this data. This could include emissions control systems, electric motors, engines, etc. These mathematical models are then used within a search algorithm or optimisation routine to find calibration parameter values that achieve best performance.
 
-Underpinning all of the mathematical modelling is fundamental statistics that helps specify experiments, interpret results and create mathematical models. This week we will be looking at reviewing some fundamental statistical principles to help us as in later weeks as we consider these topics.
+Underpinning all of the mathematical modelling is fundamental statistics that helps specify experiments, interpret results and create mathematical models. This week we will be looking at reviewing some fundamental statistical principles as we begin to consider these topics.
 
 ### Week 2 Resources
 
