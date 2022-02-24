@@ -33,3 +33,17 @@ Underpinning all of the mathematical modelling is fundamental statistics that he
 | **Tutorial and Computer Labs** |
 | [MATLAB Onramp](https://uk.mathworks.com/learn/tutorials/matlab-onramp.html) |
 | [Simulink Onramp](https://uk.mathworks.com/learn/tutorials/simulink-onramp.html) |
+
+## Week 3
+
+The optimisation process is typically used to find actuator settings and controller gains that achieve the objectives of the calibration task. These may be, for example, minimum levels of noise or emissions. The model is used during optimisation as an inexpensive means of evaluating the consequence of changing actuator settings or controller gains on the outputs that relate to the calibration objectives. Without this systematic mathematical search, finding an acceptable solution for a high dimensional system would be almost impossible.
+
+This week we will be looking at the fundamentals of the optimisation task to understand how we formulate the calibration task as an optimisation problem. This includes the lecture and a set of laboratory exercises completed this week and next. Later in the course, we will put this knowledge to use within a calibration exercise.
+
+### Week 3 Resources
+
+| **Lecture Slides**  |
+|[Optimisation]({{ site.url }}/ttp451-module/lectures/L3_optimisation.pdf) |
+
+| **Computer Labs** |
+| [Optimisation Laboratory]({{ site.url }}/ttp451-module/labs/Lab_1.html) |

@@ -14,15 +14,15 @@ Download slides [here]({{ site.url }}/ttp451-module/lectures/L1_introduction.pdf
 
 ---
 
-### Introduction to Optimisation
+### Introduction to Statistics
 
-Download slides [here]({{ site.url }}/ttp451-module/lectures/L2_optimisation.pdf)
+Download slides [here]({{ site.url }}/ttp451-module/lectures/L2_statistics.pdf)
 
 ---
 
-### Introduction to Statistics
+### Introduction to Optimisation
 
-Download slides [here]({{ site.url }}/ttp451-module/lectures/L3_statistics.pdf)
+Download slides [here]({{ site.url }}/ttp451-module/lectures/L3_optimisation.pdf)
 
 ---
 
