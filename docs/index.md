@@ -47,3 +47,21 @@ This week we will be looking at the fundamentals of the optimisation task to und
 
 | **Computer Labs** |
 | [Optimisation Laboratory]({{ site.url }}/ttp451-module/labs/Lab_1.html) |
+
+## Week 4
+
+Models used within the calibration process (static or dynamic) require high levels of accuracy, due to this empirical models are used. These are built using a mathematical structure that is adjusted by comparing the model with data.
+
+The collection of data in high dimensional systems is both expensive and time consuming.  Design of experiments ensures that the experiments used for data collection are as efficient as possible collecting only the required data and no more.  
+
+This week we will look at the fundamentals of experimental design and how it can be deployed for use in data collection. Whilst the context in which we discuss this is powertrain calibration, experimental design methods, can be used wherever experimentation is undertaken.  In fact it all started with a cup of tea.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lgs7d5saFFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Week 4 Resources
+
+| **Lecture Slides**  |
+|[Design of Experiments]({{ site.url }}/ttp451-module/lectures/L4_design_of_experiments.pdf) |
+
+| **Computer Labs** |
+| [Design of Experiments]({{ site.url }}/ttp451-module/labs/Lab_2.html) |
