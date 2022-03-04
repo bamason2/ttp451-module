@@ -31,7 +31,7 @@ By the end of this lesson, you will be able to:
 
 - Evaluate and visualise a cost function.
 - Use different solvers in MATLAB&copy; to solve optimisation problems.
-- Solve real world optimisation problems relating to engines.
+- Solve real world optimisation problems relating to powertrains.
 
 ## Aims and Objectives
 
@@ -99,9 +99,9 @@ $$\frac{\partial J_1}{\partial p_2} = e^{p_2} + -e^{-p_2}+p_1+1$$
 
 ---
 
-#### Task 1-3: Optimal Engine Calibration
+#### Task 1-3: Optimal Powertrain Calibration
 
-The file model_V8NA_V2 is a simple engine model of a naturally aspirated spark ignition V8 engine at a fixed engine speed. It takes a single vector argument with three values: the relative load (0 to 100), the spark advance angle (0 to 35) and the normalised air fuel ratio (0.8 to 1.1). The output is a vector of 6 measurements: BMEP (in bar), SD of BMEP (in bar), exhaust mass flow (in kg/h), exhaust temperature (in C), fuel consumption (in kg/h) and BSFC (in g/kWh).
+The file model_V8NA_V2 is a simple model of a naturally aspirated spark ignition V8 engine at a fixed engine speed. It takes a single vector argument with three values: the relative load (0 to 100), the spark advance angle (0 to 35) and the normalised air fuel ratio (0.8 to 1.1). The output is a vector of 6 measurements: BMEP (in bar), SD of BMEP (in bar), exhaust mass flow (in kg/h), exhaust temperature (in C), fuel consumption (in kg/h) and BSFC (in g/kWh).
 
 - For a relative load of 50 and an Air-Fuel Ratio of 1, find the best BSFC. You can use unconstrained optimisation with ``<fminsearch>`` or constrained optimisation using ``<X = fmincon(FUN,X0,A,B)>`` for this. You will need to write your own cost function that calls the model function.
 - When an electronic throttle control is used the throttle setting does not correspond completely to the torque request. A better formulation of this problem is to find the best BSFC for a given BMEP (6 bar as a good example). You can either use a separate function to solve the model for a given BMEP using ``<fsolve>`` or you can use another variation of constrained optimisation: ``<X = fmincon(FUN,X0,A,B,Aeq,Beq,LB,UB,NONLCON)>`` where ``<NONLCON>`` is a function returning the BMEP deviation as an equality constraint.
