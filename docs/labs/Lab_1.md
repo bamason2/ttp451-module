@@ -55,25 +55,25 @@ Download the data for this exercise [here]({{ site.url }}/ttp451-module/files/Ex
 
 #### Task 1-1: Basics of Optimisation
 
-The file "J1.m" implements the following “nicely shaped” cost function:
+The file **J1.m** implements the following nicely shaped cost function:
 
 $$J_1(p)=p^2_1+e^{p_2}+e^{-p_2}+p_1p_2+p_2$$
 
 as a function;
 
 ```matlab
-function [cost]=J1(p1,p2)
-cost=p1.^2+exp(p2)+exp(-p2)+p1.*p2+p2;
+function [cost] = J1(p1,p2)
+cost = p1.^2 + exp(p2) + exp(-p2) + p1 .* p2 + p2;
 ```
 
 in MATLAB&copy;.
 
 - Evaluate $$J_1$$ for a number of points and try to get a feeling for it, you can use a simple call with two arguments such as ``<J1(arg1,arg2)>``.
-- Visualise this function. The "ez" plot functions are convenient to do this, such as ``<ezsurf(@J1)>`` or ``<ezcontour(@J1)>``. Which kind of plot is most suitable?
+- Visualise this function. The *ez* plot functions are convenient to do this, such as ``<ezsurf(@J1)>`` or ``<ezcontour(@J1)>``. Which kind of plot is most suitable?
 
 ![image](figs/lab1/j1.gif)  
 
-- Use ``<fminsearch>`` to find the minimum: ``<fminsearch(@J1vect,[0 0])>``, ``<fminsearch>`` expects a function with a single vector argument therefore the version defined in J1vect.m has to be used. Try different starting points.
+- Use ``<fminsearch(fun, x0)>`` to find the minimum starting the search from ``x0 = [0,0]``: ``<fminsearch(@J1vect,[0, 0])>``. The ``<fminsearch>`` expects a function with a single vector argument therefore the version defined in **J1vect.m** has to be used. Try different starting points.
 - How many evaluations of $$J$$ are required by ``<fminsearch>``?
 
 ---
@@ -82,19 +82,22 @@ in MATLAB&copy;.
 
 The same exercise can be achieved using the graphical interface, which presents more information about the optimisation process.
 
-- Execute the command ``<optimtool>`` to start the graphical user interface “Optimization Tool”.
-- Select the solver ``<fminsearch>``.
-- Enter the objective function ``<@J1vect>``.
+- Open up the MATLAB&copy; LiveScript **GetStartedWithOptimizeLiveEditorTaskExample1.mlx** from the files downloaded. This is a generic script so will need to be changed slightly as follows.
+- Familiarise yourself with the script in particular the *Optimise* task.
 - Enter the starting point [0 0].
-- Click [Start]. How long does it take and how many iterations are required?
+- Select *Unconstrained optimisation*.
+- Select the solver ``<fminsearch>``.
+- Enter the objective function ``<@J1vect>`` noting that there are a few different ways that this can be done.
+- Ensure you have selected the plot options [Evaluation count] and [Objective value]. Once you have completed making the changes about the task interface should look like the figure below.
+
+<img src="figs/lab1/optimise_task.png" width="700">
+
 - Under Plot Functions enable the options [Function Count] and [Function Value]. This shows how the function value decreases during the optimisation.
-- Try the same with the solver ``<fminunc>``. You should select the algorithm [Medium Scale] (large scale is not applicable without a derivative of the cost function). What is the main difference of this solver?
-- The function ``<J1grad>`` provides both the cost function and the gradient. Use this together with ``<fminunc>`` by selecting [Derivatives: Gradient Supplied]. How does this improve the optimisation?
+- Click [Run]. How long does it take and how many iterations are required? Your results should look like the figure shown below.
 
-$$\frac{\partial J_1}{\partial p_1} = 2p_1+p_2$$
+<img src="figs/lab1/optimise_results.png" width="500">
 
-$$\frac{\partial J_1}{\partial p_2} = e^{p_2} + -e^{-p_2}+p_1+1$$
-
+- Try the same with the solver ``<fminunc>``. What is the main difference between this and the previous solver?
 - Try a constrained minimisation using the solver ``<fmincon>``. You have to supply bounds for $$p$$ such as Lower: $$[-10, -10]$$ and Upper: $$[10, 10]$$. What happens if you only allow positive values?
 
 ---
@@ -116,7 +119,7 @@ Consider the following multicriteria cost function. It distinguishes between two
 $$J_4(p) = \alpha \frac{50}{p_1} + \alpha \frac{50}{p_2} + 5\frac{p_1}{60}^2 + 4\frac{p_2}{60}^2$$
 
 - Plot the function above. Is it convex?
-- Find the optimum for a set of hourly costs $$\alpha$$. You have to edit the function J4.m to change $$\alpha$$. (If you are more advanced in MATLAB&copy; programming you can also automate this process).
-- How can the results be visualized? Create a diagram with the key relationships.
+- Find the optimum for a set of hourly costs $$\alpha$$. You have to edit the function J4.m to change $$\alpha$$. (If you are a more advanced user of MATLAB&copy; you could automate this process).
+- How can the results be visualised? Create a diagram with the key relationships.
 
 ---
