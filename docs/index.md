@@ -61,7 +61,7 @@ This week we will look at the fundamentals of experimental design and how it can
 ### Week 4 Resources
 
 | **Lecture Slides**  |
-| [Design of Experiments]({{ site.url }}/ttp451-module/lectures/L4_design_of_experiments.pdf) |
+| [Design of Experiments]({{ site.url }}/ttp451-module/lectures/4_design_of_experiments.pdf) |
 
 | **Computer Labs** |
 | [Design of Experiments]({{ site.url }}/ttp451-module/labs/Lab_2.html) |

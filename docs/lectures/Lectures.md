@@ -28,7 +28,7 @@ Download slides [here]({{ site.url }}/ttp451-module/lectures/L3_optimisation.pdf
 
 ### Introduction to Design of Experiments
 
-Download slides [here]({{ site.url }}/ttp451-module/lectures/L4_design_of_experiments.pdf)
+Download slides [here]({{ site.url }}/ttp451-module/lectures/4_design_of_experiments.pdf)
 
 ---
 
