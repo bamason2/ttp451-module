@@ -34,7 +34,7 @@ Download slides [here]({{ site.url }}/ttp451-module/lectures/L4_design_of_experi
 
 ### Introduction to Modelling
 
-Download slides [here]({{ site.url }}/ttp451-module/lectures/L5_modelling.pdf)
+Download slides [here]({{ site.url }}/ttp451-module/lectures/5_modelling.pdf)
 
 ---
 

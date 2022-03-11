@@ -65,3 +65,21 @@ This week we will look at the fundamentals of experimental design and how it can
 
 | **Computer Labs** |
 | [Design of Experiments]({{ site.url }}/ttp451-module/labs/Lab_2.html) |
+
+## Week 5
+
+This week we will be looking at the topic of mathematical modelling in the context of powertrain calibration optimisation.  There are a huge variety of different mathematical models that could be chosen from but not all of them would be able to represent the system in a form or to the level of accuracy required for the calibration task.  
+
+In the first part of the lecture we will be thinking about the different types of models, how they are grouped and what they are used for generally. Following this overview we will be investigating how they are fitted.  The process of fitting is the one by which the coefficients (within the equations) are changed to ensure that the model output agrees with the data that has been collected during experiments.
+
+There is no such thing as a perfect model! In the final part we will be looking at model performance evaluation and what the residuals can tell us about the model that we have fitted.  Residuals are the differences observed between the model prediction (based on some inputs) and the experimental data collected.
+
+In the subsequent laboratory session you will be putting all of this into practice.
+
+### Week 5 Resources
+
+| **Lecture Slides**  |
+| [ Mathematical Modelling ]({{ site.url }}/ttp451-module/lectures/5_modelling.pdf) |
+
+| **Computer Labs** |
+| [ Modelling Principles ]({{ site.url }}/ttp451-module/labs/Lab_3.html) |
