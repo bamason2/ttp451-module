@@ -6,3 +6,7 @@ _site/
 *.pptx
 Gemfile.lock
 vendor
+.vscode/settings.json
+docs/Gemfile
+docs/Gemfile.lock
+
