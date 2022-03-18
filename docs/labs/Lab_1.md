@@ -88,7 +88,7 @@ The same exercise can be achieved using the graphical interface, which presents 
 - Select *Unconstrained optimisation*.
 - Select the solver ``<fminsearch>``.
 - Enter the objective function ``<@J1vect>`` noting that there are a few different ways that this can be done.
-- Ensure you have selected the plot options [Evaluation count] and [Objective value]. Once you have completed making the changes about the task interface should look like the figure below.
+- Ensure you have selected the plot options [Current point], [Evaluation count] and [Objective value]. Once you have completed making the changes, the task interface should look like the figure below.
 
 <img src="figs/lab1/optimise_task.png" width="700">
 
@@ -104,10 +104,10 @@ The same exercise can be achieved using the graphical interface, which presents 
 
 #### Task 1-3: Optimal Powertrain Calibration
 
-The file model_V8NA_V2 is a simple model of a naturally aspirated spark ignition V8 engine at a fixed engine speed. It takes a single vector argument with three values: the relative load (0 to 100), the spark advance angle (0 to 35) and the normalised air fuel ratio (0.8 to 1.1). The output is a vector of 6 measurements: BMEP (in bar), SD of BMEP (in bar), exhaust mass flow (in kg/h), exhaust temperature (in C), fuel consumption (in kg/h) and BSFC (in g/kWh).
+The file **model_V8NA_V2.m** is a simple model of a naturally aspirated spark ignition V8 engine at a fixed engine speed. It takes a single vector argument with three values: the relative load (0 to 100), the spark advance angle (0 to 35) and the normalised air fuel ratio (0.8 to 1.1). The output is a vector of 6 measurements: BMEP (in bar), SD of BMEP (in bar), exhaust mass flow (in kg/h), exhaust temperature (in C), fuel consumption (in kg/h) and BSFC (in g/kWh).
 
 - For a relative load of 50 and an Air-Fuel Ratio of 1, find the best BSFC. You can use unconstrained optimisation with ``<fminsearch>`` or constrained optimisation using ``<X = fmincon(FUN,X0,A,B)>`` for this. You will need to write your own cost function that calls the model function.
-- When an electronic throttle control is used the throttle setting does not correspond completely to the torque request. A better formulation of this problem is to find the best BSFC for a given BMEP (6 bar as a good example). You can either use a separate function to solve the model for a given BMEP using ``<fsolve>`` or you can use another variation of constrained optimisation: ``<X = fmincon(FUN,X0,A,B,Aeq,Beq,LB,UB,NONLCON)>`` where ``<NONLCON>`` is a function returning the BMEP deviation as an equality constraint.
+- A better formulation of this problem is to find the best BSFC for a given BMEP (6 bar as a good example). You can either use a separate function to solve the model for a given BMEP using ``<fsolve>`` or you can use another variation of constrained optimisation: ``<X = fmincon(FUN,X0,A,B,Aeq,Beq,LB,UB,NONLCON)>`` where ``<NONLCON>`` is a function returning the BMEP deviation as an equality constraint.
 - Repeat this optimisation for a number of steps from 1 bar to 10 bar BMEP. This will result in an optimal calibration but is it realistic? Which requirements have been ignored? How could you include them?
 
 ---
