@@ -2,6 +2,7 @@
 layout: page
 title: Pre-Study Material
 has_children: true
+nav_order: 5
 
 ---
 # Overview
