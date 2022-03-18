@@ -6,20 +6,18 @@ parent: Coursework Briefs
 
 ## Coursework Assignment 2: Planning experiments (25%)
 
-In an investigation of a new gasoline engine there are several new systems to be proven and understood and finally calibrated.
+In an investigation of a new gasoline plug-in hybrid-electric powertrain there are several new systems to be proven and understood and finally calibrated.
 
-For the new engine considered in this study the combustion system is DI spark ignition and the engine is boosted in two stages in series, a low pressure electrically powered fan and a conventional turbocharger with VGT control. The engine is equipped with VVA on both inlet and exhaust allowing retard of IVC (for fuel efficiency), control of overlap at full load and advance of EVO to manage the energy flow to the turbocharger and to manage the exhaust temperature.
-
-The “after-treatment” system is a lean NOx trap (LNT) which requires regeneration in the normal way.  The investigation will encompass control strategies to reduce the volume of the LNT by ensuring accurate control of exhaust temperature.
+For the new powertrain considered in this study the combustion system is naturally aspirated DI spark ignition. The 1.6l engine is equipped with VVA on both inlet and exhaust and is paired with a 49kW electric motor.  The battery system for the electric machine is 9.8kWh lithium ion.
 
 ### Submission Requirements
 
-Write a short report, no longer than three pages in length, describing and explaining an experimental strategy that includes investigation of:
+Write a short report, no longer than three pages in length (excluding appendices), describing and explaining an experimental strategy that includes investigation of:
 
 - Management of valve timing.
 - Control of boost pressure.
-- Temperature management with the VVA and turbocharger systems working together.
-- Management of LNT regeneration conditions.
+- Vehicle launch strategy using electric and hybrid power combined.
+- SOC strategy for typical driving
 
 Start the report with a description of the overall control strategy.  Using diagrams show the actuators and sensors and as you explain the experimental strategy, identify factors (usually controls or calibratable parameters) and response variables (usually quantities that we want to minimise).
 
@@ -33,14 +31,9 @@ The report will be marked according to the following scheme with marks split bet
 
 #### Technical (65%)
 
-The facts stated are correct and relevant.  Correct statements are made about the technology and methodology proposed. The experimental strategy presented considers, as stated in the brief above;
+The facts stated are correct and relevant.  Correct statements are made about the technology and methodology proposed. The experimental strategy presented considers the points outlined above.
 
-- Management of valve timing.
-- Control of boost pressure.
-- Temperature management with the VVA and turbocharger systems working together.
-- Management of LNT regeneration conditions.
-
-The proposed strategy draws on evidence presented within the report and by way of reference to other sources of information that are appropriately cited. A minimum of three external sources of information (excluding course notes/slides) are included.  The sources are used in a meaningful way in the report i.e. to support the decisions made and/or provide a background/further information on the topics discussed.
+The proposed strategy draws on evidence presented within the report and by way of reference to other sources of information that are appropriately cited. A minimum of five external sources of information (excluding course notes/slides) are included.  The sources are used in a meaningful way in the report i.e. to support the decisions made and/or provide a background/further information on the topics discussed.
 
 #### Report / Writing style (20%)
 

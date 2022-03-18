@@ -6,7 +6,7 @@ parent: Coursework Briefs
 
 ## Coursework Assignment 3: Investigating Engine Emissions (70%)
 
-One of a range of diesel powered cars is currently under review of new European emissions requirements.  PD management is interested to know the capability of the technology to support further reduction in NOx emissions without influencing other regulated emissions (particularly PM and PN) and fuel economy more than 1% BSFC. The challenge is high load conditions (across the speed range) which engineering management believes can be improved. Drivability meets all the requirements and must be maintained through any of the proposed changes.
+One of a range of diesel powered cars is currently under review of new European emissions requirements.  Management are interested to know the capability of the technology to support further reduction in NOx emissions without influencing other regulated emissions (particularly PM and PN) and fuel economy more than 1% BSFC. The challenge is high load conditions (across the speed range) which engineering management believes can be improved. Drivability meets all the requirements and must be maintained through any of the proposed changes.
 
 You have been asked to specify a project to complete a study where the scope for improvement will be examined in detail.  Some changes to the control strategy could be considered. They include:
 

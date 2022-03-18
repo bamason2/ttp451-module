@@ -1,9 +1,15 @@
 ---
 layout: default
 title: Coursework Briefs
-nav_order: 5
+nav_order: 6
 has_children: true
-published: false
+published: true
 ---
 
 ## Coursework Briefs
+
+| Coursework | Due Date |
+|---|---|
+| MATLAB Onramp | 1 March 2022 |
+| Planning Experiments | 3 May 2022 |
+| Investigating Engine Emissions | 31 May 2022 |
