@@ -89,8 +89,6 @@ In the subsequent laboratory session you will be putting all of this into practi
 In this weeks lecture we will be looking at the coursework briefs.  This will provide an introduction to each and explain how the lectures and laboratories relate to each of the requirements.  As a reminder due dates for each coursework is shown in the table below.
 
 | Coursework | Due Date |
-
-| Coursework | Due Date |
 |---|---|
 | MATLAB Onramp | 1 March 2022 |
 | Planning Experiments | 3 May 2022 |
