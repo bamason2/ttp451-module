@@ -83,3 +83,23 @@ In the subsequent laboratory session you will be putting all of this into practi
 
 | **Computer Labs** |
 | [ Modelling Principles ]({{ site.url }}/ttp451-module/labs/Lab_3.html) |
+
+## Week 6
+
+In this weeks lecture we will be looking at the coursework briefs.  This will provide an introduction to each and explain how the lectures and laboratories relate to each of the requirements.  As a reminder due dates for each coursework is shown in the table below.
+
+| Coursework | Due Date |
+
+| Coursework | Due Date |
+|---|---|
+| MATLAB Onramp | 1 March 2022 |
+| Planning Experiments | 3 May 2022 |
+| Investigating Engine Emissions | 31 May 2022 |
+
+### Week 6 Resources
+
+| **Coursework Brief 1**  |
+| [ Planning Experiments ]({{ site.url }}ttp451-module/coursework/Coursework_1.html) |
+
+| **Coursework Brief 2** |
+| [ Investigating Engine Emissions ]({{ site.url }}ttp451-module/coursework/Coursework_2.html) |
