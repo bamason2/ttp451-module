@@ -86,7 +86,7 @@ In the subsequent laboratory session you will be putting all of this into practi
 
 ## Week 6
 
-In this weeks lecture we will be looking at the coursework briefs.  This will provide an introduction to each and explain how the lectures and laboratories relate to each of the requirements.  As a reminder due dates for each coursework is shown in the table below.
+During this week we will be looking at the coursework briefs.  This will provide an introduction to each and explain how the lectures and laboratories relate to each of the requirements.  As a reminder due dates for each coursework is shown in the table below.
 
 | Coursework | Due Date |
 |---|---|
