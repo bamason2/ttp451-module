@@ -5,8 +5,8 @@ _site/
 .DS_Store
 *.pptx
 Gemfile.lock
-vendor
+vendor/
+.bundle/
 .vscode/settings.json
-docs/Gemfile
-docs/Gemfile.lock
+
 
