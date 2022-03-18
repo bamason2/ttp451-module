@@ -15,7 +15,6 @@ For the new powertrain considered in this study the combustion system is natural
 Write a short report, no longer than three pages in length (excluding appendices), describing and explaining an experimental strategy that includes investigation of:
 
 - Management of valve timing.
-- Control of boost pressure.
 - Vehicle launch strategy using electric and hybrid power combined.
 - SOC strategy for typical driving
 
