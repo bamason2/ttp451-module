@@ -1,10 +1,11 @@
 ---
 layout: page
+title: Lab 2 Design of Experiments
 mathjax: true
 parent: Computer Labs
 ---
 
-# Lab 2: Design of Experiments
+# Lab 2 Design of Experiments
 {: .no_toc }
 
 <details close markdown="block">
