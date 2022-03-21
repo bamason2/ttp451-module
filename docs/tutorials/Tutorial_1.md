@@ -1,10 +1,11 @@
 ---
 layout: page
+title: ANalysis Of VAriance
 mathjax: true
 parent: Tutorials
 ---
 
-# ANalysis Of VAriance (ANOVA)
+# ANalysis Of VAriance
 
 ANOVA is a means of comparing different groups of measurement data to establish whether there is any difference between them.  The groupings may be a result of the same experiment for example undertaken on different days or similar experiments undertaken with a slightly different approach.
 
