@@ -1,10 +1,11 @@
 ---
 layout: page
+title: Lab 4 Modelling a V8 Engine
 mathjax: true
 parent: Computer Labs
 ---
 
-# Lab 4: Modelling a V8 Engine
+# Lab 4 Modelling a V8 Engine
 {: .no_toc }
 
 <details close markdown="block">
