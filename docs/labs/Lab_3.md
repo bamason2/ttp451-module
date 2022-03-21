@@ -1,10 +1,11 @@
 ---
 layout: page
+title: Lab 3 Modelling Principles
 mathjax: true
 parent: Computer Labs
 ---
 
-# Lab 3: Modelling Principles
+# Lab 3 Modelling Principles
 {: .no_toc }
 
 <details close markdown="block">
