@@ -1,10 +1,11 @@
 ---
 layout: page
+title: Lab 5 Feature Calibration V8 Engine Example
 mathjax: true
 parent: Computer Labs
 ---
 
-# Lab 5: Feature Calibration V8 Engine Example
+# Lab 5 Feature Calibration V8 Engine Example
 {: .no_toc }
 
 <details close markdown="block">
