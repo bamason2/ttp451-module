@@ -1,10 +1,11 @@
 ---
 layout: page
+title: Lab 7 MBC Based PI Controller Calibration
 mathjax: true
 parent: Computer Labs
 ---
 
-# Lab 7: MBC Based PI Controller Calibration
+# Lab 7 MBC Based PI Controller Calibration
 
 {: .no_toc }
 
