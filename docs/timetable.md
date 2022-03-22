@@ -14,6 +14,7 @@ title: Timetable
 | 5 | Response Surface Modelling | Response Surface Modelling Lab |
 | 6 | Introduction to Coursework | Coursework Questions and Answers |
 | 7 | Calibration Exercise | Calibration Lab |
+|   | Engine Testing | |
 | 8 | Calibration Lab | Calibration Lab|
 | 9 | Future Challenges | Coursework Questions and Answers |
 | 10 | 1:1 Support as required | |
