@@ -102,3 +102,30 @@ During this week we will be looking at the coursework briefs.  This will provide
 
 | **Coursework Brief 3** |
 | [ Investigating Engine Emissions ]({{ site.url }}/ttp451-module/coursework/Coursework_2.html) |
+
+## Week 7
+
+This week we will begin the calibration exercises.  These are a sequence of exercises to help you understand how each part of the calibration process fits with the other and of course have practice at undertaking the act of calibration yourself.
+
+In addition we will be looking at the practice of engine testing within a research and development environment including a tour of an engine test facility.  This is included to help you with your coursework and gain a better understanding of how complex the data collection task can be.
+
+### Week 7 Resources
+
+| **Introduction to the Calibration Exercise**  |
+| [ Introduction to the Calibration Exercise ]({{ site.url }}/ttp451-module/lectures/7_calibration_exercises.pdf) |
+
+| **Engine Testing** |
+| [ Engine Testing ]({{ site.url }}/ttp451-module/lectures/7_engine_testing.pdf) |
+
+## Week 8
+
+This week there is no lecture.  The time allocated to the module is to be used for completing the calibration exercise.
+
+## Week 9
+
+What does the future hold for calibration.  In this weeks lecture we will be taking a look forward to try and understand how the calibration activity will evolve over the next five years. Instead of discussing particular technologies we review methods that will enable the calibrator to deal with a multitude of, as yet, unknown technologies.
+
+### Week 9 Resources
+
+| **Future Challenges**  |
+| [ Future Challenges ]({{ site.url }}/ttp451-module/lectures/9_future_challenges.pdf) |
