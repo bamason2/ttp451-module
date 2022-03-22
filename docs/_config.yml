@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: PCO
+title: ttp451
 email: b.mason2@lboro.ac.uk
 description: >- # this means to ignore newlines until "baseurl:"
   Powertrain Calibration Optimisation Module.
@@ -28,6 +28,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 remote_theme: pmarsceill/just-the-docs
+# theme: just-the-docs
 plugins:
   - jekyll-feed
   - jekyll-last-modified-at
