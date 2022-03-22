@@ -97,8 +97,8 @@ During this week we will be looking at the coursework briefs.  This will provide
 
 ### Week 6 Resources
 
-| **Coursework Brief 1**  |
-| [ Planning Experiments ]({{ site.url }}ttp451-module/coursework/Coursework_1.html) |
+| **Coursework Brief 2**  |
+| [ Planning Experiments ]({{ site.url }}/ttp451-module/coursework/Coursework_1.html) |
 
-| **Coursework Brief 2** |
-| [ Investigating Engine Emissions ]({{ site.url }}ttp451-module/coursework/Coursework_2.html) |
+| **Coursework Brief 3** |
+| [ Investigating Engine Emissions ]({{ site.url }}/ttp451-module/coursework/Coursework_2.html) |
