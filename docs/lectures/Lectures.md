@@ -39,18 +39,18 @@ Download slides [here]({{ site.url }}/ttp451-module/lectures/5_modelling.pdf)
 
 ### Engine Testing
 
-Download slides [here]({{ site.url }}/ttp451-module/lectures/L7_engine_testing.pdf)
+Download slides [here]({{ site.url }}/ttp451-module/lectures/7_engine_testing.pdf)
 
 ---
 
 ### Calibration Exercise
 
-Download slides [here]({{ site.url }}/ttp451-module/lectures/L6_calibration_exercises.pdf)
+Download slides [here]({{ site.url }}/ttp451-module/lectures/7_calibration_exercises.pdf)
 
 ---
 
 ### Future Challenges
 
-Download slides [here]({{ site.url }}/ttp451-module/lectures/L8_future_challenges.pdf)
+Download slides [here]({{ site.url }}/ttp451-module/lectures/9_future_challenges.pdf)
 
 ---
