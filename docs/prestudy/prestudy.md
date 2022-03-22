@@ -3,9 +3,9 @@ layout: page
 title: Pre-Study Material
 has_children: true
 nav_order: 5
-
 ---
-# Overview
+
+# Pre-Study Material
 
 There are three documents which form the material element of pre-study; these need to be followed prior to the commencement of the short course. A brief outline of the contents of these is given below.
 
