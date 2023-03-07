@@ -2,6 +2,7 @@
 layout: page
 title: Coursework 2 Supplementary Assessment
 parent: Coursework Briefs
+published: false
 ---
 
 ## Coursework Assignment 2 Supplementary Assessment: Planning experiments (25%)

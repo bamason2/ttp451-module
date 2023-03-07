@@ -2,7 +2,7 @@
 layout: default
 title: Coursework Briefs
 has_children: true
-published: false
+published: true
 ---
 
 ## Coursework Briefs
