@@ -3,3 +3,10 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 .DS_Store
+*.pptx
+Gemfile.lock
+vendor/
+.bundle/
+.vscode/settings.json
+
+
