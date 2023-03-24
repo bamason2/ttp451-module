@@ -9,6 +9,6 @@ published: true
 
 | Coursework | Due Date |
 |---|---|
-| MATLAB Onramp | 1 March 2023 |
-| Planning Experiments | 3 May 2023 |
-| Investigating Engine Emissions | 24 May 2023 |
+| MATLAB Onramp (Coursework 1) | 1 March 2023 |
+| Planning Experiments (Coursework 2) | 3 May 2023 |
+| Investigating Engine Emissions (Coursework 3) | 24 May 2023 |
