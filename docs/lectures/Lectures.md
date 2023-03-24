@@ -45,7 +45,7 @@ Download slides [here]({{ site.url }}/ttp451-module/lectures/7_engine_testing.pd
 
 ### Calibration Exercise
 
-Download slides [here]({{ site.url }}/ttp451-module/lectures/7_calibration_exercises.pdf)
+Download slides [here]({{ site.url }}/ttp451-module/lectures/7_calibration_exercise.pdf)
 
 ---
 
